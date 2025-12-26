@@ -7,12 +7,19 @@
   color: #D8D3CC;
 }
 
-body {
+/* Apply the hide rules to both html and body for maximum coverage */
+html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-html {
   scroll-behavior: smooth;
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;     /* Firefox */
 }
