@@ -51,7 +51,7 @@ const Reviews = () => {
     <section id="reviews" className="w-full bg-[#1B1B1B] py-32 px-8">
       <div className="max-w-[1240px] mx-auto">
         <h2 className="text-[#D8D3CC] font-inter font-semibold text-[48px] leading-[58px] tracking-[-2px] text-center mb-[80px]">
-          What People Say About Me?
+          Inspiring Words
         </h2>
 
         {/* The Grid: Aligned to the top (items-start) */}
