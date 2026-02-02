@@ -26,7 +26,7 @@ const Projects = () => {
             </div>
             <div className="flex flex-col gap-[15px]">
               
-              {/* MOBILE TEXT (Visible only on lg:hidden) */}
+              {/* MOBILE TEXT */}
               <h3 className="lg:hidden text-[#D8D3CC] text-[22px] font-semibold leading-tight tracking-[-0.5px] group-hover:text-white transition-colors">
                 Rakthro — Medical Coordination Platform
               </h3>
@@ -34,7 +34,7 @@ const Projects = () => {
                 Engineered with a reliable Java backend and streamlined CSV modules for healthcare logistics.
               </p>
 
-              {/* LAPTOP TEXT (Visible only on lg:block - Matches Screenshot) */}
+              {/* LAPTOP TEXT */}
               <h3 className="hidden lg:block text-[#D8D3CC] text-[34px] font-semibold leading-[44px] tracking-[-1px] group-hover:text-white transition-colors">
                 Rakthro — A Complete Medical Coordination Platform for Donors, Chronic Care & Hospitals
               </h3>
@@ -42,10 +42,7 @@ const Projects = () => {
                 Engineered with a reliable Java backend and streamlined CSV modules handling donation cycles, disease-specific tracking, appointments, and admin operations — now transitioning into a scalable web-based solution.
               </p>
               
-              {/* BUTTON: 
-                  Mobile: Left Aligned, Transparent
-                  Laptop: Right Aligned, Grey Background
-              */}
+              {/* BUTTON */}
               <a 
                 href="https://github.com/Shreeprasandh"
                 target="_blank"
@@ -74,7 +71,6 @@ const Projects = () => {
                 img: '/projects/lumen.png', 
                 aspect: 'aspect-[462/242]' 
               },
-              // Mobile-Only items for the 2x2 Grid
               { id: 'bloom', mobileTitle: 'Bloom & Blush', img: '/projects/bloom.png', aspect: 'aspect-[305/160]', mobileOnly: true },
               { id: 'hangman', mobileTitle: 'Hangman', img: '/projects/hangman.png', aspect: 'aspect-[305/160]', mobileOnly: true }
             ].map((proj) => (
@@ -82,7 +78,11 @@ const Projects = () => {
                 key={proj.id} 
                 className={`flex flex-col gap-[8px] md:gap-[18px] group ${proj.mobileOnly ? 'lg:hidden' : ''}`}
               >
-                <div className={`w-full ${proj.aspect} bg-[#0F0F0F] rounded-[8px] overflow-hidden border border-white/5`}>
+                {/* ASPECT RATIO FIX:
+                   - Mobile: 'aspect-[462/273]' applied to ALL cards for perfect 2x2 alignment.
+                   - Laptop: 'lg:${proj.aspect}' restores the specific height for each project.
+                */}
+                <div className={`w-full aspect-[462/273] lg:${proj.aspect} bg-[#0F0F0F] rounded-[8px] overflow-hidden border border-white/5`}>
                   <img 
                     src={proj.img} 
                     alt={proj.mobileTitle} 
@@ -90,12 +90,12 @@ const Projects = () => {
                   />
                 </div>
                 
-                {/* Mobile Title (Short) */}
+                {/* Mobile Title */}
                 <h3 className="lg:hidden text-[#D8D3CC] text-[12px] font-medium leading-tight group-hover:text-white transition-colors">
                   {proj.mobileTitle}
                 </h3>
                 
-                {/* Desktop Title (Long - Screenshot Text) */}
+                {/* Desktop Title */}
                 <h3 className="hidden lg:block text-[#D8D3CC] text-[20px] font-semibold leading-[28px] group-hover:text-white transition-colors">
                   {proj.desktopTitle}
                 </h3>
@@ -107,7 +107,6 @@ const Projects = () => {
         {/* =========================================
             BOTTOM ROW (Desktop Only) - SMALLER
            ========================================= */}
-        {/* Changed max-w from 1043px to 900px to make them physically smaller */}
         <div className="hidden lg:grid grid-cols-3 gap-[30px] max-w-[900px] mx-auto pt-10 border-t border-white/5">
           {[
             { id: 'hangman', title: 'Hangman — a standalone puzzle game: delightfully simple.', img: '/projects/hangman.png' },
@@ -115,7 +114,6 @@ const Projects = () => {
             { id: 'heallink', title: 'HealLink (UI) — Connecting patients to virtual doctors.', img: '/projects/heallink.png' }
           ].map((proj) => (
             <div key={proj.id} className="flex flex-col gap-[12px] group">
-              {/* Reduced aspect ratio height to make images more compact */}
               <div className="w-full aspect-[305/150] bg-[#0F0F0F] rounded-[8px] overflow-hidden border border-white/5">
                 <img 
                   src={proj.img} 
@@ -123,7 +121,6 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
                 />
               </div>
-              {/* Reduced font size for bottom row */}
               <h3 className="text-[#D8D3CC] text-[15px] font-medium leading-[22px] group-hover:text-white transition-colors">
                 {proj.title}
               </h3>
