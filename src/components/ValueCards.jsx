@@ -20,14 +20,16 @@ const ValueCards = () => {
   ];
 
   return (
-    <section className="w-full bg-[#1B1B1B] py-20 px-8">
+    /* 'hidden' removes it from mobile view entirely.
+       'md:block' brings it back for laptops and desktops.
+    */
+    <section className="hidden md:block w-full bg-[#1B1B1B] py-20 px-8">
       <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row justify-between items-center gap-[15px]">
         {cards.map((card, index) => (
           <div 
             key={index}
             className="group flex flex-col items-start p-[24px] gap-[16px] w-full md:w-[400px] h-[250px] bg-[#0F0F0F] border border-[#0F0F0F] rounded-[12px] transition-all duration-300 hover:border-[#D8D3CC]/20 hover:translate-y-[-5px]"
           >
-            {/* Icon Container */}
             <div className="w-[50px] h-[50px] flex items-center justify-center">
               <img 
                 src={card.icon} 
@@ -36,7 +38,6 @@ const ValueCards = () => {
               />
             </div>
 
-            {/* Text Content */}
             <div className="flex flex-col gap-[4px] self-stretch">
               <h3 className="text-[#D8D3CC] font-inter font-semibold text-[24px] leading-[36px] flex items-center">
                 {card.title}

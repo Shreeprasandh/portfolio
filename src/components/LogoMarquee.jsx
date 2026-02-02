@@ -19,22 +19,25 @@ const LogoMarquee = () => {
   const doubledLogos = [...logos, ...logos];
 
   return (
-    <section className="w-full bg-[#1B1B1B] py-14 overflow-hidden">
+    <section className="w-full bg-[#1B1B1B] py-8 md:py-14 overflow-hidden">
       <div className="relative flex items-center">
-        {/* The Marquee Container */}
-        <div className="flex animate-marquee-fast whitespace-nowrap gap-20 items-center">
+        {/* The Marquee Container 
+            Mobile: gap-10
+            Laptop: gap-20
+        */}
+        <div className="flex animate-marquee-fast whitespace-nowrap gap-10 md:gap-20 items-center">
           {doubledLogos.map((logo, index) => (
             <img
               key={index}
               src={logo}
               alt="Brand Logo"
-              className="h-[28px] w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer"
+              /* Mobile: h-[20px] | Laptop: h-[28px] */
+              className="h-[20px] md:h-[28px] w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer"
             />
           ))}
         </div>
       </div>
 
-      {/* Speed set to 75s as requested */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes marquee-infinite {
           0% { transform: translateX(0); }

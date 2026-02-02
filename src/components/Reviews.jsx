@@ -48,7 +48,10 @@ const Reviews = () => {
   ];
 
   return (
-    <section id="reviews" className="w-full bg-[#1B1B1B] py-32 px-8">
+    /* 'hidden' -> Hides section on Mobile
+       'md:block' -> Shows section on Laptop/Tablet
+    */
+    <section id="reviews" className="hidden md:block w-full bg-[#1B1B1B] py-32 px-8">
       <div className="max-w-[1240px] mx-auto">
         <h2 className="text-[#D8D3CC] font-inter font-semibold text-[48px] leading-[58px] tracking-[-2px] text-center mb-[80px]">
           Inspiring Words
@@ -60,7 +63,7 @@ const Reviews = () => {
             {column1.map((rev, i) => <ReviewCard key={i} {...rev} />)}
           </div>
           
-          {/* Middle Column Offset: Added margin-top to match the design staggered look */}
+          {/* Middle Column Offset */}
           <div className="flex flex-col gap-[20px] lg:mt-[70px]">
             {column2.map((rev, i) => <ReviewCard key={i} {...rev} />)}
           </div>

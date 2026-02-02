@@ -38,71 +38,88 @@ const Journey = () => {
   ];
 
   return (
-    <section id="journey" className="w-full bg-[#1B1B1B] py-32 px-8 overflow-hidden">
+    <section id="journey" className="w-full bg-[#1B1B1B] py-20 md:py-32 px-6 md:px-8 overflow-hidden">
       <div className="max-w-[1240px] mx-auto">
         
-        <h2 className="text-[#D8D3CC] text-[48px] font-semibold tracking-[-2px] mb-[100px] text-center">
+        {/* Updated Title */}
+        <h2 className="text-[#D8D3CC] text-[32px] md:text-[48px] font-semibold tracking-[-1px] md:tracking-[-2px] mb-12 md:mb-[100px] text-left md:text-center">
           Dream & Journey
         </h2>
 
         <div className="relative">
           
-          {/* THE LINE: Positioned exactly at the 41.2% mark to match icons */}
-            <div 
-            className="absolute left-[41.2%] w-[2px] top-0 bottom-0 hidden lg:block"
+          {/* THE LINE: 
+              - Fixed at left-[24px] for Mobile
+              - Fixed at left-[41.2%] for Laptop
+              - Fades out at the bottom (Linear Gradient)
+          */}
+          <div 
+            className="absolute left-[24px] lg:left-[41.2%] w-[1px] md:w-[2px] top-0 bottom-0 z-0"
             style={{
-                background: 'linear-gradient(180deg, rgba(182, 217, 159, 0.375) 0%, rgba(219, 224, 159, 0.375) 25%, rgba(224, 214, 175, 0.375) 50%, rgba(234, 200, 151, 0.375) 75%, rgba(27, 27, 27, 0) 100%)'
+              background: 'linear-gradient(180deg, rgba(216, 211, 204, 0.2) 0%, rgba(27, 27, 27, 0) 100%)'
             }}
-            />
+          />
 
           {stages.map((stage, index) => (
-            <div key={index} className="relative grid grid-cols-1 lg:grid-cols-[41.2%_1fr] mb-40 w-full items-start">
+            <div key={index} className="relative flex flex-col lg:grid lg:grid-cols-[41.2%_1fr] mb-16 md:mb-40 w-full">
               
-              {/* LEFT SIDE: Review Box (Fits in the 41.2% column) */}
-              <div className="lg:pr-16 flex justify-end">
-                <div className="w-full max-w-[380px] bg-[#0F0F0F] border border-[#1C1C21] rounded-[12px] p-6 flex flex-col gap-4 shadow-xl">
-                  <div className="flex gap-1 text-[#D8D3CC]">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-sm">★</span>
-                    ))}
-                  </div>
-                  <p className="text-[#D8D3CC] text-[16px] leading-[26px] opacity-80 italic font-light">
-                    "{stage.feedback}"
-                  </p>
+              {/* TIMELINE ICON */}
+              <div className="absolute top-0 left-[24px] lg:left-[41.2%] -translate-x-1/2 z-10">
+                <div className="w-[48px] h-[48px] lg:w-[60px] lg:h-[60px] bg-white rounded-full flex items-center justify-center border-[4px] lg:border-[6px] border-[#1B1B1B] shadow-2xl">
+                  <img src={stage.icon} alt="stage" className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] object-contain" />
                 </div>
               </div>
 
-              {/* CENTER ICON: Absolute positioned to sit ON the line at 41.2% */}
-              <div className="absolute left-[41.2%] -translate-x-1/2 z-10 hidden lg:block">
-                <div className="w-[60px] h-[60px] bg-white rounded-full flex items-center justify-center border-[6px] border-[#1B1B1B] shadow-2xl">
-                  <img src={stage.icon} alt="stage" className="w-[30px] h-[30px] object-contain" />
-                </div>
-              </div>
+              {/* CONTENT WRAPPER */}
+              <div className="pl-[60px] lg:pl-0 flex flex-col lg:contents">
+                
+                {/* 1. Header & Responsibilities (Right Side on Laptop) */}
+                <div className="order-1 lg:order-2 lg:pl-20 pt-1 lg:pt-0">
+                  <div className="flex flex-col gap-6">
+                    <div>
+                      <h3 className="text-[#D8D3CC] text-[24px] md:text-[32px] font-semibold tracking-tight leading-tight">
+                        {stage.title}
+                      </h3>
+                      <div className="flex items-center gap-2 mt-2 opacity-60">
+                        <span className="text-[14px] md:text-[18px]">📅 {stage.date}</span>
+                      </div>
+                    </div>
 
-              {/* RIGHT SIDE: Details (Takes up the remaining 1fr column) */}
-              <div className="lg:pl-20 mt-24 lg:mt-0">
-                <div className="flex flex-col gap-6">
-                  <div>
-                    <h3 className="text-[#D8D3CC] text-[32px] font-semibold tracking-tight">{stage.title}</h3>
-                    <div className="flex items-center gap-2 mt-2 opacity-60">
-                       <span className="text-[18px]">📅 {stage.date}</span>
+                    <div className="flex flex-col gap-3">
+                      <h4 className="text-[#D8D3CC] italic text-[16px] md:text-[18px] opacity-70">Responsibilities</h4>
+                      <ul className="flex flex-col gap-3">
+                        {stage.responsibilities.map((item, i) => (
+                          <li key={i} className="text-[#D8D3CC] text-[15px] md:text-[17px] opacity-90 leading-relaxed flex items-start gap-3">
+                            <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#D8D3CC]/40 shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
+                </div>
 
-                  <div className="flex flex-col gap-4">
-                    <h4 className="text-[#D8D3CC] italic text-[18px] opacity-70">Responsibilities</h4>
-                    <ul className="flex flex-col gap-3">
-                      {stage.responsibilities.map((item, i) => (
-                        <li key={i} className="text-[#D8D3CC] text-[17px] opacity-90 leading-relaxed flex items-start gap-3">
-                          <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#D8D3CC]/40 shrink-0" />
-                          {item}
-                        </li>
+                {/* 2. Stars & Feedback (Left Side on Laptop) */}
+                <div className="order-2 lg:order-1 lg:pr-16 flex justify-end mt-6 lg:mt-0">
+                  
+                  {/* Clean Text Wrapper (No Box Styling) */}
+                  <div className="w-full lg:max-w-[380px] flex flex-col gap-3 lg:text-right">
+                    
+                    {/* Stars - Aligned right on laptop for symmetry */}
+                    <div className="flex gap-1 text-[#D8D3CC] opacity-90 lg:justify-end">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-[14px] lg:text-sm">★</span>
                       ))}
-                    </ul>
+                    </div>
+
+                    {/* Feedback Text */}
+                    <p className="text-[#D8D3CC] text-[15px] md:text-[16px] leading-[24px] md:leading-[26px] opacity-70 lg:opacity-80 lg:italic font-light">
+                      {stage.feedback}
+                    </p>
                   </div>
                 </div>
-              </div>
 
+              </div>
             </div>
           ))}
         </div>

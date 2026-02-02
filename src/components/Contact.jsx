@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useState } from 'react';
+import React, { Suspense, useRef, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, useGLTF } from '@react-three/drei';
 import emailjs from '@emailjs/browser';
@@ -12,12 +12,22 @@ const Model = () => {
 const Contact = () => {
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check for mobile screen size to adjust 3D settings
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    handleResize(); // Check on mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSending(true);
 
-    // Credentials provided by the user
     emailjs.sendForm(
       'service_e6a0yeb', 
       'template_qdn52p8', 
@@ -26,7 +36,7 @@ const Contact = () => {
     )
     .then(() => {
         alert("Message sent successfully! I'll get back to you soon.");
-        e.target.reset(); // Clears all form fields after success
+        e.target.reset();
     }, (error) => {
         alert("Oops! Something went wrong. Please try again.");
         console.log("EmailJS Error:", error.text);
@@ -37,24 +47,28 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full bg-[#1B1B1B] py-32 px-8">
+    <section id="contact" className="w-full bg-[#1B1B1B] py-20 md:py-32 px-6 md:px-8">
       <div className="max-w-[1263px] mx-auto">
         
         {/* Main Heading */}
-        <h2 className="text-[#D8D3CC] text-[48px] font-semibold tracking-[-2px] text-center mb-[48px]">
+        <h2 className="text-[#D8D3CC] text-[32px] md:text-[48px] font-semibold tracking-[-1px] md:tracking-[-2px] text-center mb-10 md:mb-[48px]">
           Get in Touch – Let’s Connect
         </h2>
 
-        <div className="flex flex-col lg:flex-row gap-[56px] items-stretch">
+        {/* Container: Relative for mobile layering, Flex for desktop layout */}
+        <div className="relative flex flex-col lg:flex-row gap-[56px] items-stretch">
           
-          {/* Form Side */}
+          {/* 1. FORM SIDE (Placed first for Desktop Left Alignment)
+             - Mobile: Relative z-10 (Sit on top of model), Glass background
+             - Desktop: Static, Solid background
+          */}
           <form 
             ref={form}
             onSubmit={sendEmail}
-            className="w-full lg:w-[545px] bg-[#0F0F0F] border border-[#0F0F0F] rounded-[12px] p-[40px_30px] flex flex-col gap-[30px]"
+            className="w-full lg:w-[545px] relative z-10 bg-[#0F0F0F]/80 backdrop-blur-sm lg:bg-[#0F0F0F] lg:backdrop-blur-none border border-[#0F0F0F] rounded-[12px] p-[30px] md:p-[40px_30px] flex flex-col gap-[20px] md:gap-[30px]"
           >
             
-            {/* Name Input - Matches {{name}} in EmailJS Dashboard */}
+            {/* Name Input */}
             <div className="flex flex-col gap-2">
               <label className="text-[#D8D3CC] text-[16px] font-normal">Your name</label>
               <input 
@@ -66,7 +80,7 @@ const Contact = () => {
               />
             </div>
 
-            {/* Email Input - Matches {{email}} in EmailJS Dashboard */}
+            {/* Email Input */}
             <div className="flex flex-col gap-2">
               <label className="text-[#D8D3CC] text-[16px] font-normal">Your email</label>
               <input 
@@ -78,7 +92,7 @@ const Contact = () => {
               />
             </div>
 
-            {/* Message Input - Matches {{message}} in EmailJS Dashboard */}
+            {/* Message Input */}
             <div className="flex flex-col gap-2">
               <label className="text-[#D8D3CC] text-[16px] font-normal">Your message</label>
               <textarea 
@@ -101,14 +115,26 @@ const Contact = () => {
             </button>
           </form>
 
-          {/* 3D Model Side */}
-          <div className="flex-1 min-h-[400px] lg:min-h-auto bg-[#0F0F0F]/30 rounded-[20px] overflow-hidden relative">
+          {/* 2. 3D MODEL SIDE (Placed second for Desktop Right Alignment)
+             - Mobile: Absolute background, z-0, fast spin, non-interactive
+             - Desktop: Flex-1 (Right side), interactive, slow spin
+          */}
+          <div className={`
+            absolute inset-0 h-full w-full z-0 pointer-events-none opacity-30
+            lg:static lg:flex-1 lg:h-auto lg:w-auto lg:z-auto lg:pointer-events-auto lg:opacity-100 lg:bg-[#0F0F0F]/30 lg:rounded-[20px] lg:overflow-hidden lg:relative
+          `}>
             <Canvas dpr={[1, 2]} camera={{ fov: 45 }}>
               <Suspense fallback={null}>
                 <Stage environment="city" intensity={0.5} contactShadow={false}>
                   <Model />
                 </Stage>
-                <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
+                <OrbitControls 
+                  enableZoom={!isMobile} 
+                  enableRotate={!isMobile} 
+                  autoRotate 
+                  /* Mobile: Fast (5), Desktop: Slow (0.5) */
+                  autoRotateSpeed={isMobile ? 5 : 0.5} 
+                />
               </Suspense>
             </Canvas>
           </div>
@@ -119,4 +145,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact; 

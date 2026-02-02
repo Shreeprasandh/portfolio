@@ -11,7 +11,6 @@ const useCountUp = (end, duration = 2000, startAnimation = false) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       
-      // Use an "Ease Out" formula to make it slow down at the end
       const easeOutQuad = 1 - (1 - progress) * (1 - progress);
       setCount(Math.floor(easeOutQuad * end));
 
@@ -30,7 +29,6 @@ const StatCard = ({ number, label }) => {
   const ref = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
   
-  // Detection for when the card is on screen
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -52,12 +50,12 @@ const StatCard = ({ number, label }) => {
   return (
     <div 
       ref={ref}
-      className={`flex flex-col items-start justify-center p-[24px_30px] gap-[6px] w-full h-[130px] bg-[#0F0F0F] border border-[#1C1C21] rounded-[12px] transition-all duration-700 ${hasAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      className={`flex flex-col items-start justify-center p-[20px_24px] md:p-[24px_30px] gap-[4px] md:gap-[6px] w-full h-[110px] md:h-[130px] bg-[#0F0F0F] border border-[#1C1C21] rounded-[12px] transition-all duration-700 ${hasAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
     >
-      <h2 className="text-[#D8D3CC] font-bold text-[40px] leading-tight">
+      <h2 className="text-[#D8D3CC] font-bold text-[32px] md:text-[40px] leading-tight">
         {displayCount}{suffix}
       </h2>
-      <p className="text-[#D8D3CC] text-[18px] opacity-70">
+      <p className="text-[#D8D3CC] text-[14px] md:text-[18px] opacity-70">
         {label}
       </p>
     </div>
@@ -73,8 +71,12 @@ const Stats = () => {
   ];
 
   return (
-    <section className="w-full bg-[#1B1B1B] py-32 px-8">
-      <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]">
+    <section className="w-full bg-[#1B1B1B] py-20 md:py-32 px-6 md:px-8">
+      {/* Grid Logic:
+          - grid-cols-2: Mobile (2x2)
+          - lg:grid-cols-4: Laptop (keeps your original layout)
+      */}
+      <div className="max-w-[1240px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-[16px] md:gap-[20px]">
         {statsData.map((stat, index) => (
           <StatCard key={index} {...stat} />
         ))}
