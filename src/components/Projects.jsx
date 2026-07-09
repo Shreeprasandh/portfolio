@@ -71,8 +71,8 @@ const Projects = () => {
                 img: '/projects/lumen.png', 
                 aspect: 'aspect-[462/242]' 
               },
-              { id: 'bloom', mobileTitle: 'Bloom & Blush', img: '/projects/bloom.png', aspect: 'aspect-[305/160]', mobileOnly: true },
-              { id: 'hangman', mobileTitle: 'Hangman', img: '/projects/hangman.png', aspect: 'aspect-[305/160]', mobileOnly: true }
+              { id: 'edgeai', mobileTitle: 'Federated Edge AI', img: '/projects/2.png', aspect: 'aspect-[305/160]', mobileOnly: true },
+              { id: 'vanguardz', mobileTitle: 'VanguarDZ', img: '/projects/1.png', aspect: 'aspect-[305/160]', mobileOnly: true }
             ].map((proj) => (
               <div 
                 key={proj.id} 
@@ -109,9 +109,9 @@ const Projects = () => {
            ========================================= */}
         <div className="hidden lg:grid grid-cols-3 gap-[30px] max-w-[900px] mx-auto pt-10 border-t border-white/5">
           {[
-            { id: 'hangman', title: 'Hangman — a standalone puzzle game: delightfully simple.', img: '/projects/hangman.png' },
-            { id: 'bloom', title: 'Bloom & Blush — e-commerce platform for women’s accessories.', img: '/projects/bloom.png' },
-            { id: 'heallink', title: 'HealLink (UI) — Connecting patients to virtual doctors.', img: '/projects/heallink.png' }
+            { id: 'edgeai', title: 'Federated Edge AI — Aircraft component health & tamper-proof records.', img: '/projects/2.png' },
+            { id: 'heallink', title: 'HealLink (UI) — Connecting patients to virtual doctors.', img: '/projects/heallink.png' },
+            { id: 'vanguardz', title: 'VanguarDZ — a co-op cyberpunk typing shooter.', img: '/projects/1.png' }
           ].map((proj) => (
             <div key={proj.id} className="flex flex-col gap-[12px] group">
               <div className="w-full aspect-[305/150] bg-[#0F0F0F] rounded-[8px] overflow-hidden border border-white/5">
