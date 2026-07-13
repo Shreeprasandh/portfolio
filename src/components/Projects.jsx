@@ -75,7 +75,7 @@ const Projects = () => {
                 aspect: 'aspect-[462/242]' 
               },
               { id: 'edgeai', mobileTitle: 'Federated Edge AI', img: '/projects/2.png', aspect: 'aspect-[305/160]', mobileOnly: true },
-              { id: 'vanguardz', mobileTitle: 'VanguarDZ', img: '/projects/1.png', aspect: 'aspect-[305/160]', mobileOnly: true }
+              { id: 'vanguardz', mobileTitle: 'VanguarDZ', img: '/projects/NEWIMAGE.png', aspect: 'aspect-[305/160]', mobileOnly: true }
             ].map((proj) => (
               <div 
                 key={proj.id} 
@@ -117,7 +117,7 @@ const Projects = () => {
           {[
             { id: 'edgeai', title: 'Federated Edge AI — Aircraft component health & tamper-proof records.', img: '/projects/2.png' },
             { id: 'heallink', title: 'HealLink (UI) — Connecting patients to virtual doctors.', img: '/projects/heallink.png' },
-            { id: 'vanguardz', title: 'VanguarDZ — a co-op cyberpunk typing shooter.', img: '/projects/1.png' }
+            { id: 'vanguardz', title: 'VanguarDZ — a co-op cyberpunk typing shooter.', img: '/projects/NEWIMAGE.png' }
           ].map((proj) => (
             <div key={proj.id} className="flex flex-col gap-[12px] group">
               <div className="w-full aspect-[305/150] bg-[#0F0F0F] rounded-[8px] overflow-hidden border border-white/5">
