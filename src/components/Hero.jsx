@@ -28,7 +28,7 @@ const Hero = () => {
           <div 
             aria-label="Orange hamster running in a metal wheel" 
             role="img" 
-            className="wheel-and-hamster absolute bottom-full left-1/2 -translate-x-1/2 mb-4 pointer-events-none"
+            className="wheel-and-hamster"
           >
             <div className="wheel"></div>
             <div className="hamster">

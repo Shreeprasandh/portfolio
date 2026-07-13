@@ -27,10 +27,15 @@ html, body {
 /* From Uiverse.io by Nawsome */ 
 .wheel-and-hamster {
   --dur: 1s;
-  position: relative;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 16px;
   width: 12em;
   height: 12em;
   font-size: 9px;
+  pointer-events: none;
 }
 
 .wheel,
