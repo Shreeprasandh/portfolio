@@ -21,6 +21,26 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center px-6">
+        {/* Hamster Wheel Animation */}
+        <div aria-label="Orange hamster running in a metal wheel" role="img" className="wheel-and-hamster mb-8">
+          <div className="wheel"></div>
+          <div className="hamster">
+            <div className="hamster__body">
+              <div className="hamster__head">
+                <div className="hamster__ear"></div>
+                <div className="hamster__eye"></div>
+                <div className="hamster__nose"></div>
+              </div>
+              <div className="hamster__limb hamster__limb--fr"></div>
+              <div className="hamster__limb hamster__limb--fl"></div>
+              <div className="hamster__limb hamster__limb--br"></div>
+              <div className="hamster__limb hamster__limb--bl"></div>
+              <div className="hamster__tail"></div>
+            </div>
+          </div>
+          <div className="spoke"></div>
+        </div>
+
         {/* Main Name Heading */}
         <h1 className="text-[#D8D3CC] text-[clamp(40px,10vw,100px)] font-bold font-serif leading-none tracking-[-2px] text-center">
           SHREEPRASANDH
