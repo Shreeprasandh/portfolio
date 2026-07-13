@@ -14,12 +14,30 @@ const Navbar = () => {
     <nav className="w-full h-[69px] bg-[#1B1B1B] sticky top-0 z-50">
       <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-6 md:px-8">
         
-        {/* Logo */}
+        {/* Logo (Hamster Wheel Animation) */}
         <div 
           onClick={scrollToTop}
-          className="text-[#D8D3CC] text-[20px] font-bold italic tracking-tighter cursor-pointer z-[60]"
+          className="cursor-pointer z-[60] flex items-center justify-center h-8 w-8 hover:scale-110 transition-transform duration-300"
+          title="Back to top"
         >
-          SP
+          <div aria-label="Hamster running" role="img" className="wheel-and-hamster">
+            <div className="wheel"></div>
+            <div className="hamster">
+              <div className="hamster__body">
+                <div className="hamster__head">
+                  <div className="hamster__ear"></div>
+                  <div className="hamster__eye"></div>
+                  <div className="hamster__nose"></div>
+                </div>
+                <div className="hamster__limb hamster__limb--fr"></div>
+                <div className="hamster__limb hamster__limb--fl"></div>
+                <div className="hamster__limb hamster__limb--br"></div>
+                <div className="hamster__limb hamster__limb--bl"></div>
+                <div className="hamster__tail"></div>
+              </div>
+            </div>
+            <div className="spoke"></div>
+          </div>
         </div>
 
         {/* Desktop Links - Untouched */}
