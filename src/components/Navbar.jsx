@@ -17,7 +17,7 @@ const Navbar = () => {
         {/* Logo (Hamster Wheel Animation) */}
         <div 
           onClick={scrollToTop}
-          className="cursor-pointer z-[60] flex items-center justify-center h-8 w-8 hover:scale-110 transition-transform duration-300"
+          className="cursor-pointer z-[60] flex items-center justify-center h-10 w-10 hover:scale-110 transition-transform duration-300"
           title="Back to top"
         >
           <div aria-label="Hamster running" role="img" className="wheel-and-hamster">
