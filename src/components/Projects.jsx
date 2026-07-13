@@ -20,6 +20,9 @@ const Projects = () => {
               <img 
                 src="/projects/rakthro.png" 
                 alt="Rakthro" 
+                loading="lazy"
+                width="738"
+                height="405"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
@@ -86,6 +89,9 @@ const Projects = () => {
                   <img 
                     src={proj.img} 
                     alt={proj.mobileTitle} 
+                    loading="lazy"
+                    width="462"
+                    height="273"
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
                   />
                 </div>
@@ -118,6 +124,9 @@ const Projects = () => {
                 <img 
                   src={proj.img} 
                   alt={proj.title} 
+                  loading="lazy"
+                  width="305"
+                  height="150"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
                 />
               </div>

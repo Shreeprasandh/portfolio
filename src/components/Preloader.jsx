@@ -5,15 +5,15 @@ const Preloader = () => {
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    // Stage 1: Wait for a short moment (1 second)
+    // Stage 1: Wait for a short moment (600ms) to show the logo/curtain
     const timer = setTimeout(() => {
       setIsExiting(true); // Start the slide-up animation
-    }, 1200);
+    }, 600);
 
-    // Stage 2: Remove from DOM completely after animation finishes
+    // Stage 2: Remove from DOM completely after animation finishes (600ms + 800ms animation = 1400ms)
     const removeTimer = setTimeout(() => {
       setIsVisible(false);
-    }, 2000); // Matches the duration of the slide animation
+    }, 1400);
 
     return () => {
       clearTimeout(timer);
