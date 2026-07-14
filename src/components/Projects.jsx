@@ -104,7 +104,7 @@ const Projects = () => {
                       href="https://vanguardz.in"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block px-1.5 py-0.5 ml-1.5 bg-[#D8D3CC]/10 text-[#D8D3CC] border border-[#D8D3CC]/30 rounded-[4px] text-[11px] font-medium opacity-50 hover:opacity-100 hover:bg-[#D8D3CC] hover:text-black hover:border-transparent transition-all duration-300 align-middle cursor-pointer"
+                      className="inline-flex items-center px-2.5 py-[1.5px] ml-1.5 bg-[#D8D3CC]/10 text-[#D8D3CC] border border-[#D8D3CC]/30 rounded-[4px] text-[11px] font-medium opacity-50 hover:opacity-100 hover:bg-[#D8D3CC] hover:text-black hover:border-transparent transition-all duration-300 align-middle cursor-pointer leading-none"
                     >
                       -&gt;play
                     </a>
@@ -147,7 +147,7 @@ const Projects = () => {
                     href="https://vanguardz.in"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-1.5 py-0.5 ml-1.5 bg-[#D8D3CC]/10 text-[#D8D3CC] border border-[#D8D3CC]/30 rounded-[4px] text-[13px] font-medium opacity-50 hover:opacity-100 hover:bg-[#D8D3CC] hover:text-black hover:border-transparent transition-all duration-300 align-middle cursor-pointer"
+                    className="inline-flex items-center px-3 py-[2px] ml-1.5 bg-[#D8D3CC]/10 text-[#D8D3CC] border border-[#D8D3CC]/30 rounded-[4px] text-[13px] font-medium opacity-50 hover:opacity-100 hover:bg-[#D8D3CC] hover:text-black hover:border-transparent transition-all duration-300 align-middle cursor-pointer leading-none"
                   >
                     -&gt;play
                   </a>
