@@ -99,6 +99,16 @@ const Projects = () => {
                 {/* Mobile Title */}
                 <h3 className="lg:hidden text-[#D8D3CC] text-[12px] font-medium leading-tight group-hover:text-white transition-colors">
                   {proj.mobileTitle}
+                  {proj.id === 'vanguardz' && (
+                    <a
+                      href="https://vanguardz.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-1.5 py-0.5 ml-1.5 bg-[#D8D3CC]/10 text-[#D8D3CC] border border-[#D8D3CC]/30 rounded-[4px] text-[11px] font-medium opacity-50 hover:opacity-100 hover:bg-[#D8D3CC] hover:text-black hover:border-transparent transition-all duration-300 align-middle cursor-pointer"
+                    >
+                      -&gt;play
+                    </a>
+                  )}
                 </h3>
                 
                 {/* Desktop Title */}
@@ -115,7 +125,7 @@ const Projects = () => {
            ========================================= */}
         <div className="hidden lg:grid grid-cols-3 gap-[30px] max-w-[900px] mx-auto pt-10 border-t border-white/5">
           {[
-            { id: 'edgeai', title: 'Federated Edge AI — Aircraft component health & tamper-proof records.', img: '/projects/2.png' },
+            { id: 'edgeai', title: 'Federated Edge AI — Aircraft health & tamper-proof records.', img: '/projects/2.png' },
             { id: 'heallink', title: 'HealLink (UI) — Connecting patients to virtual doctors.', img: '/projects/heallink.png' },
             { id: 'vanguardz', title: 'VanguarDZ — a co-op cyberpunk typing shooter.', img: '/projects/NEWIMAGE.png' }
           ].map((proj) => (
@@ -132,6 +142,16 @@ const Projects = () => {
               </div>
               <h3 className="text-[#D8D3CC] text-[15px] font-medium leading-[22px] group-hover:text-white transition-colors">
                 {proj.title}
+                {proj.id === 'vanguardz' && (
+                  <a
+                    href="https://vanguardz.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-1.5 py-0.5 ml-1.5 bg-[#D8D3CC]/10 text-[#D8D3CC] border border-[#D8D3CC]/30 rounded-[4px] text-[13px] font-medium opacity-50 hover:opacity-100 hover:bg-[#D8D3CC] hover:text-black hover:border-transparent transition-all duration-300 align-middle cursor-pointer"
+                  >
+                    -&gt;play
+                  </a>
+                )}
               </h3>
             </div>
           ))}
