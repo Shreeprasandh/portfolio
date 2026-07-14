@@ -64,7 +64,7 @@ const StatCard = ({ number, label }) => {
 
 const Stats = () => {
   const statsData = [
-    { number: "2+", label: "Years of Experience" },
+    { number: "2+", label: "Years of Expertise/Study" },
     { number: "8+", label: "Real-world project" },
     { number: "150+", label: "Problem Solved" },
     { number: "100%", label: "Passion & Dedication" }
