@@ -36,11 +36,11 @@ const About = () => {
           </p>
           <div className="mt-4">
             <a 
-              href="/resume.pdf" 
-              download="Shreeprasandh_K_Resume.pdf"
+              href="/resume_prasandh.pdf" 
+              download="resume_prasandh.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 border border-[#D8D3CC] text-[#D8D3CC] rounded-full hover:bg-[#D8D3CC] hover:text-[#1B1B1B] transition-all duration-300 font-medium text-[16px] md:text-[18px]"
             >
-              <span>Resume</span>
+              <span>Resume</span> 
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
