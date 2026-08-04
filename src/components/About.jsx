@@ -36,8 +36,8 @@ const About = () => {
           </p>
           <div className="mt-4">
             <a 
-              href="/resume_prasandh.pdf" 
-              download="resume_prasandh.pdf"
+              href="/shreeprasandh_resume.pdf" 
+              download="shreeprasandh_resume.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 border border-[#D8D3CC] text-[#D8D3CC] rounded-full hover:bg-[#D8D3CC] hover:text-[#1B1B1B] transition-all duration-300 font-medium text-[16px] md:text-[18px]"
             >
               <span>Resume</span> 
