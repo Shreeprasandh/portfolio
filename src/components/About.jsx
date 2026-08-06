@@ -1,23 +1,23 @@
 import React from 'react';
 
 const About = () => {
-  const skills = [
+  const row1 = [
     { name: 'HTML', icon: '/icons/html.svg' },
     { name: 'CSS', icon: '/icons/css.svg' },
     { name: 'JS', icon: '/icons/js.svg' },
+    { name: 'TypeScript', icon: '/icons/typescript.webp' },
     { name: 'Figma', icon: '/icons/figma.svg' },
-    { name: 'OpenAI', icon: '/icons/openai.svg' },
-    { name: 'Python', icon: '/icons/python.svg' },
-    { name: 'C', icon: '/icons/c.svg' },
-    { name: 'C++', icon: '/icons/cpp.svg' },
+  ];
+
+  const row2 = [
     { name: 'Java', icon: '/icons/java.svg' },
-    { name: 'Vibe', icon: '/icons/vibe.svg' },
     { name: 'React', icon: '/icons/react.svg' },
     { name: 'Tailwind', icon: '/icons/tailwind.svg' },
-    { name: 'CSV', icon: '/icons/csv.svg' },
-    { name: 'MySQL', icon: '/icons/mysql.svg' },
-    { name: 'GitHub', icon: '/icons/github.svg' },
+    { name: 'Node JS', icon: '/icons/javascript-nodejs-logo-27.png' },
+    { name: 'Git', icon: '/icons/github.svg' },
   ];
+
+  const vibeSkill = { name: 'Vibe', icon: '/icons/vibe.svg' };
 
   return (
     <section id="about" className="w-full bg-[#1B1B1B] py-20 md:py-32 px-6 md:px-8">
@@ -79,32 +79,103 @@ const About = () => {
               Skills
             </h2>
             
-            {/* Fixed 5-Column Grid for both Mobile and Laptop */}
-            <div className="grid grid-cols-5 gap-3 md:gap-4 w-full max-w-[280px] md:max-w-[450px]">
-              {skills.map((skill, index) => (
-                <div 
-                  key={index}
-                  className="w-[45px] h-[45px] md:w-[60px] md:h-[60px] bg-black rounded-[8px] flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 relative group border border-white/5 overflow-hidden"
-                >
+            <div className="flex flex-col gap-3 md:gap-4 w-full">
+              {/* Row 1: HTML, CSS, JS, TypeScript, Figma */}
+              <div className="flex flex-wrap items-center gap-x-6 md:gap-x-9 gap-y-3 md:gap-y-4">
+                {row1.map((skill, index) => (
+                  <div 
+                    key={index}
+                    className="w-[45px] h-[45px] md:w-[60px] md:h-[60px] bg-black rounded-[8px] flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 relative group border border-white/5 overflow-hidden flex-shrink-0"
+                  >
+                    <img 
+                      src={skill.icon} 
+                      alt={skill.name} 
+                      className={`w-full h-full z-10 transition-transform duration-500 group-hover:scale-110 ${
+                        skill.name === 'TypeScript'
+                          ? 'object-contain p-2.5 md:p-3'
+                          : skill.name === 'Node JS'
+                          ? 'object-contain p-0.5 md:p-1'
+                          : skill.icon.endsWith('.png') || skill.icon.endsWith('.webp')
+                          ? 'object-contain p-1.5 md:p-2'
+                          : 'object-cover'
+                      }`}
+                    />
+                    
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 px-0.5">
+                      <span className={`text-white font-bold uppercase text-center leading-none whitespace-nowrap ${
+                        skill.name.length > 8 
+                          ? 'text-[5.5px] md:text-[8px] tracking-tight' 
+                          : skill.name.length > 5 
+                          ? 'text-[6.5px] md:text-[9px] tracking-normal' 
+                          : 'text-[7px] md:text-[10px] tracking-wider'
+                      }`}>
+                        {skill.name}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Row 2: Java, React, Tailwind, Node JS, Git */}
+              <div className="flex flex-wrap items-center gap-x-6 md:gap-x-9 gap-y-3 md:gap-y-4">
+                {row2.map((skill, index) => (
+                  <div 
+                    key={index}
+                    className="w-[45px] h-[45px] md:w-[60px] md:h-[60px] bg-black rounded-[8px] flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 relative group border border-white/5 overflow-hidden flex-shrink-0"
+                  >
+                    <img 
+                      src={skill.icon} 
+                      alt={skill.name} 
+                      className={`w-full h-full z-10 transition-transform duration-500 group-hover:scale-110 ${
+                        skill.name === 'TypeScript'
+                          ? 'object-contain p-2.5 md:p-3'
+                          : skill.name === 'Node JS'
+                          ? 'object-contain p-0.5 md:p-1'
+                          : skill.icon.endsWith('.png') || skill.icon.endsWith('.webp')
+                          ? 'object-contain p-1.5 md:p-2'
+                          : 'object-cover'
+                      }`}
+                    />
+                    
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 px-0.5">
+                      <span className={`text-white font-bold uppercase text-center leading-none whitespace-nowrap ${
+                        skill.name.length > 8 
+                          ? 'text-[5.5px] md:text-[8px] tracking-tight' 
+                          : skill.name.length > 5 
+                          ? 'text-[6.5px] md:text-[9px] tracking-normal' 
+                          : 'text-[7px] md:text-[10px] tracking-wider'
+                      }`}>
+                        {skill.name}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Row 3: Vibe icon + Text */}
+              <div className="flex items-center gap-x-6 md:gap-x-9">
+                <div className="w-[45px] h-[45px] md:w-[60px] md:h-[60px] bg-black rounded-[8px] flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 relative group border border-white/5 overflow-hidden flex-shrink-0">
                   <img 
-                    src={skill.icon} 
-                    alt={skill.name} 
+                    src={vibeSkill.icon} 
+                    alt={vibeSkill.name} 
                     className="w-full h-full object-cover z-10 transition-transform duration-500 group-hover:scale-110"
                   />
                   
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 px-0.5">
                     <span className="text-[7px] md:text-[10px] text-white font-bold tracking-wider uppercase text-center">
-                      {skill.name}
+                      {vibeSkill.name}
                     </span>
                   </div>
                 </div>
-              ))}
+
+                <p className="text-[#D8D3CC] text-[13px] md:text-[15px] font-light italic opacity-50">
+                  "Some skills are under active development lol."
+                </p>
+              </div>
             </div>
-            
-            <p className="text-[#D8D3CC] text-[13px] md:text-[15px] font-light italic opacity-50 mt-2">
-              "Some skills are under active development."
-            </p>
           </div>
 
         </div>
