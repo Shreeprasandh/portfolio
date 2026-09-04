@@ -1,7 +1,17 @@
 import React, { useRef, useState } from 'react';
 import { motion as Motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
-const TiltImage = ({ src, alt, width, height, scaleMax = 1.035, maxTilt = 5 }) => {
+const TiltImage = ({ 
+  src, 
+  alt, 
+  width, 
+  height, 
+  scaleMax = 1.035, 
+  maxTilt = 5,
+  objectFit = "object-cover",
+  objectPosition = "object-center",
+  framed = false
+}) => {
   const cardRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -70,8 +80,14 @@ const TiltImage = ({ src, alt, width, height, scaleMax = 1.035, maxTilt = 5 }) =
           transformStyle: 'preserve-3d',
         }}
         className={`w-full h-full relative rounded-[8px] transition-shadow duration-500 ${
+          framed 
+            ? 'bg-gradient-to-br from-[#1C1C20] via-[#121214] to-[#0A0A0A] p-[5px] flex items-center justify-center border border-white/10' 
+            : 'bg-[#0F0F0F] border border-white/5'
+        } ${
           isHovered 
-            ? 'shadow-[0_20px_45px_rgba(0,0,0,0.8)] ring-1 ring-white/20' 
+            ? (framed 
+                ? 'shadow-[0_14px_30px_rgba(0,0,0,0.52)] ring-1 ring-white/10' 
+                : 'shadow-[0_20px_45px_rgba(0,0,0,0.8)] ring-1 ring-white/10')
             : 'shadow-none ring-0'
         }`}
       >
@@ -81,15 +97,15 @@ const TiltImage = ({ src, alt, width, height, scaleMax = 1.035, maxTilt = 5 }) =
           loading="lazy"
           width={width}
           height={height}
-          className="w-full h-full object-cover rounded-[8px] pointer-events-none select-none block"
+          className={`w-full ${framed ? `aspect-video ${objectFit} ${objectPosition} rounded-[5px] shadow-md border border-white/5` : `h-full ${objectFit} ${objectPosition} rounded-[8px]`} pointer-events-none select-none block`}
         />
 
-        {/* Specular Glare Sheen Overlay */}
+        {/* Specular Glare Sheen Overlay (Softened by 50%) */}
         <div 
           className="absolute inset-0 rounded-[8px] pointer-events-none transition-opacity duration-300"
           style={{
-            opacity: isHovered ? 0.15 : 0,
-            background: `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 60%)`,
+            opacity: isHovered ? 0.075 : 0,
+            background: `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 60%)`,
           }}
         />
       </Motion.div>
@@ -113,7 +129,7 @@ const Projects = () => {
           
           {/* --- LEFT COLUMN: LynDesk --- */}
           <div className="lg:col-span-7 flex flex-col gap-[20px] md:gap-[30px] group">
-            <div className="w-full aspect-[738/405] bg-[#0F0F0F] rounded-[8px] border border-white/5 relative">
+            <div className="w-full aspect-[738/405] rounded-[8px] relative">
               <TiltImage 
                 src="/projects/lyndesk.png" 
                 alt="LynDesk" 
@@ -181,7 +197,7 @@ const Projects = () => {
                    - Mobile: 'aspect-[462/273]' applied to ALL cards for perfect 2x2 alignment.
                    - Laptop: 'lg:${proj.aspect}' restores the specific height for each project.
                 */}
-                <div className={`w-full aspect-[462/273] lg:${proj.aspect} bg-[#0F0F0F] rounded-[8px] border border-white/5 relative`}>
+                <div className={`w-full aspect-[462/273] lg:${proj.aspect} rounded-[8px] relative`}>
                   <TiltImage 
                     src={proj.img} 
                     alt={proj.mobileTitle} 
@@ -219,21 +235,39 @@ const Projects = () => {
         {/* =========================================
             BOTTOM ROW (Desktop Only) - SMALLER
            ========================================= */}
-        <div className="hidden lg:grid grid-cols-3 gap-[30px] max-w-[900px] mx-auto pt-10 border-t border-white/5">
+        <div className="hidden lg:grid grid-cols-3 gap-[30px] max-w-[960px] mx-auto pt-10 border-t border-white/5">
           {[
-            { id: 'edgeai', title: 'Federated Edge AI — Aircraft health & tamper-proof records.', img: '/projects/2.png' },
-            { id: 'evguard', title: 'EvGuard (UI) — Plan your drive, book your charge, power your ride.', img: '/projects/evguard.png' },
-            { id: 'vanguardz', title: 'VanguarDZ — a co-op cyberpunk typing shooter.', img: '/projects/NEWIMAGE.png' }
+            { 
+              id: 'edgeai', 
+              title: 'Federated Edge AI — Aircraft health & tamper-proof records.', 
+              img: '/projects/2.png',
+              objectPosition: 'object-top'
+            },
+            { 
+              id: 'evguard', 
+              title: 'EvGuard (UI) — Plan your drive, book your charge, power your ride.', 
+              img: '/projects/evguard.png',
+              objectPosition: 'object-center'
+            },
+            { 
+              id: 'vanguardz', 
+              title: 'VanguarDZ — a co-op cyberpunk typing shooter.', 
+              img: '/projects/NEWIMAGE.png',
+              objectPosition: 'object-center'
+            }
           ].map((proj) => (
             <div key={proj.id} className="flex flex-col gap-[12px] group">
-              <div className="w-full aspect-[305/150] bg-[#0F0F0F] rounded-[8px] border border-white/5 relative">
+              <div className="w-full aspect-[16/9.2] rounded-[8px] relative">
                 <TiltImage 
                   src={proj.img} 
                   alt={proj.title} 
                   width="305"
-                  height="150"
+                  height="175"
                   scaleMax={1.05}
                   maxTilt={5}
+                  framed={true}
+                  objectFit="object-cover"
+                  objectPosition={proj.objectPosition}
                 />
               </div>
               <h3 className="text-[#D8D3CC] text-[15px] font-medium leading-[22px] group-hover:text-white transition-colors">
