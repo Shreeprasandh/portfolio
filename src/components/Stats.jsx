@@ -7,19 +7,23 @@ const useCountUp = (end, duration = 2000, startAnimation = false) => {
     if (!startAnimation) return;
 
     let startTime = null;
+    let animationFrameId;
+
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       
-      const easeOutQuad = 1 - (1 - progress) * (1 - progress);
-      setCount(Math.floor(easeOutQuad * end));
+      // Smooth cubic deceleration
+      const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(easeOutCubic * end));
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        animationFrameId = requestAnimationFrame(animate);
       }
     };
 
-    requestAnimationFrame(animate);
+    animationFrameId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrameId);
   }, [end, duration, startAnimation]);
 
   return count;
@@ -50,7 +54,7 @@ const StatCard = ({ number, label }) => {
   return (
     <div 
       ref={ref}
-      className={`flex flex-col items-start justify-center p-[20px_24px] md:p-[24px_30px] gap-[4px] md:gap-[6px] w-full h-[110px] md:h-[130px] bg-[#0F0F0F] border border-[#1C1C21] rounded-[12px] transition-all duration-700 ${hasAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      className={`flex flex-col items-start justify-center p-[20px_24px] md:p-[24px_30px] gap-[4px] md:gap-[6px] w-full h-[110px] md:h-[130px] bg-[#0F0F0F] border border-[#1C1C21] rounded-[12px] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-[#D8D3CC]/20 hover:translate-y-[-2px] ${hasAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
     >
       <h2 className="text-[#D8D3CC] font-bold text-[32px] md:text-[40px] leading-tight">
         {displayCount}{suffix}
@@ -65,8 +69,8 @@ const StatCard = ({ number, label }) => {
 const Stats = () => {
   const statsData = [
     { number: "2+", label: "Years of Expertise/Study" },
-    { number: "8+", label: "Real-world project" },
-    { number: "150+", label: "Problem Solved" },
+    { number: "8+", label: "Real-world projects" },
+    { number: "150+", label: "Problems Solved" },
     { number: "100%", label: "Passion & Dedication" }
   ];
 

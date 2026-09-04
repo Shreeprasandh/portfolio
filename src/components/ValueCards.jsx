@@ -5,7 +5,7 @@ const ValueCards = () => {
     {
       icon: '/icons/learning.svg',
       title: 'Obsessed With Learning',
-      text: 'Reliable Communication. Keeping you updated at every step to ensure transparency and clarity.'
+      text: 'Constantly exploring new architectures, dissecting modern tech stacks, and deepening core engineering skills.'
     },
     {
       icon: '/icons/ai.svg',

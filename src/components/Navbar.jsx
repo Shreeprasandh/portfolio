@@ -60,7 +60,9 @@ const Navbar = () => {
         {/* Mobile Hamburger Button */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden flex flex-col justify-center items-end gap-[6px] z-[60] w-8 h-8"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
+          className="md:hidden flex flex-col justify-center items-end gap-[6px] z-[60] w-8 h-8 cursor-pointer"
         >
           {/* Animated Hamburger Bars */}
           <span className={`h-[2px] bg-[#D8D3CC] transition-all duration-300 ${isOpen ? 'w-6 rotate-45 translate-y-[8px]' : 'w-6'}`}></span>

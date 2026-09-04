@@ -5,8 +5,7 @@ import Preloader from './components/Preloader';
 import Stats from './components/Stats'
 import About from './components/About'
 import Projects from './components/Projects';
-import LogoMarquee from './components/LogoMarquee';
-import ValueCards from './components/ValueCards';
+import CreativeEndeavors from './components/CreativeEndeavors';
 import Journey from './components/Journey';
 import Reviews from './components/Reviews';
 import Footer from './components/Footer';
@@ -62,8 +61,7 @@ function App() {
       <Stats />
       <About />
       <Projects />
-      <LogoMarquee />
-      <ValueCards />
+      <CreativeEndeavors />
       <Journey />
       <Reviews />
       

@@ -2,6 +2,7 @@ import React, { Suspense, useRef, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, useGLTF } from '@react-three/drei';
 import emailjs from '@emailjs/browser';
+import { CheckCircle2, AlertCircle, ArrowRight } from 'lucide-react';
 
 // Component to load and display your 3D desk model
 const Model = () => {
@@ -10,9 +11,10 @@ const Model = () => {
 };
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef(null);
   const [isSending, setIsSending] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [feedback, setFeedback] = useState({ type: '', message: '' });
 
   // Check for mobile screen size to adjust 3D settings
   useEffect(() => {
@@ -27,19 +29,32 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSending(true);
+    setFeedback({ type: '', message: '' });
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_e6a0yeb';
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_qdn52p8';
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'PoaQ_eCrZFqUFIAod';
 
     emailjs.sendForm(
-      'service_e6a0yeb', 
-      'template_qdn52p8', 
+      serviceId, 
+      templateId, 
       form.current, 
-      'PoaQ_eCrZFqUFIAod'
+      publicKey
     )
     .then(() => {
-        alert("Message sent successfully! I'll get back to you soon.");
-        e.target.reset();
+        setFeedback({
+          type: 'success',
+          message: "Message sent successfully! I'll get back to you soon."
+        });
+        if (form.current) {
+          form.current.reset();
+        }
     }, (error) => {
-        alert("Oops! Something went wrong. Please try again.");
-        console.log("EmailJS Error:", error.text);
+        setFeedback({
+          type: 'error',
+          message: "Something went wrong while sending. Please try again."
+        });
+        console.error("EmailJS Error:", error?.text || error);
     })
     .finally(() => {
         setIsSending(false);
@@ -67,11 +82,29 @@ const Contact = () => {
             onSubmit={sendEmail}
             className="w-full lg:w-[545px] relative z-10 bg-[#0F0F0F]/80 backdrop-blur-sm lg:bg-[#0F0F0F] lg:backdrop-blur-none border border-[#0F0F0F] rounded-[12px] p-[30px] md:p-[40px_30px] flex flex-col gap-[20px] md:gap-[30px]"
           >
+            {feedback.message && (
+              <div 
+                role="status"
+                className={`flex items-center gap-3 p-3.5 rounded-[8px] text-[14px] leading-snug transition-all ${
+                  feedback.type === 'success' 
+                    ? 'bg-emerald-950/50 border border-emerald-500/30 text-emerald-300' 
+                    : 'bg-rose-950/50 border border-rose-500/30 text-rose-300'
+                }`}
+              >
+                {feedback.type === 'success' ? (
+                  <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-400" />
+                ) : (
+                  <AlertCircle className="w-5 h-5 shrink-0 text-rose-400" />
+                )}
+                <span>{feedback.message}</span>
+              </div>
+            )}
             
             {/* Name Input */}
             <div className="flex flex-col gap-2">
-              <label className="text-[#D8D3CC] text-[16px] font-normal">Your name</label>
+              <label htmlFor="contact-name" className="text-[#D8D3CC] text-[16px] font-normal">Your name</label>
               <input 
+                id="contact-name"
                 name="name" 
                 required
                 type="text" 
@@ -82,8 +115,9 @@ const Contact = () => {
 
             {/* Email Input */}
             <div className="flex flex-col gap-2">
-              <label className="text-[#D8D3CC] text-[16px] font-normal">Your email</label>
+              <label htmlFor="contact-email" className="text-[#D8D3CC] text-[16px] font-normal">Your email</label>
               <input 
+                id="contact-email"
                 name="email" 
                 required
                 type="email" 
@@ -94,8 +128,9 @@ const Contact = () => {
 
             {/* Message Input */}
             <div className="flex flex-col gap-2">
-              <label className="text-[#D8D3CC] text-[16px] font-normal">Your message</label>
+              <label htmlFor="contact-message" className="text-[#D8D3CC] text-[16px] font-normal">Your message</label>
               <textarea 
+                id="contact-message"
                 name="message" 
                 required
                 placeholder="How can I help you?" 
@@ -111,7 +146,7 @@ const Contact = () => {
               className="w-full h-[52px] bg-[#D8D3CC] rounded-[8px] flex items-center justify-center gap-2 text-[#0F0F0F] font-semibold text-[16px] hover:bg-white transition-all shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSending ? 'Sending...' : 'Send message'} 
-              {!isSending && <span>→</span>}
+              {!isSending && <ArrowRight className="w-4 h-4" />}
             </button>
           </form>
 

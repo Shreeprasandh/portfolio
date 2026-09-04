@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ReviewCard = ({ stars, text, name, role, image }) => (
-  <div className="flex flex-col items-start p-[30px] gap-[18px] bg-[#0F0F0F] border border-[#1C1C21] rounded-[12px] w-full transition-all hover:border-[#D8D3CC]/15 hover:translate-y-[-4px]">
+  <div className="flex flex-col items-start p-[30px] gap-[18px] bg-[#0F0F0F] border border-[#1C1C21] rounded-[12px] w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-[#D8D3CC]/20 hover:translate-y-[-4px] hover:shadow-2xl">
     {/* Stars */}
     <div className="flex gap-[5px]">
       {[...Array(stars)].map((_, i) => (
@@ -21,6 +21,9 @@ const ReviewCard = ({ stars, text, name, role, image }) => (
       <img 
         src={image} 
         alt={name} 
+        width="46"
+        height="46"
+        loading="lazy"
         className="w-[46px] h-[46px] rounded-full object-cover border border-white/10" 
       />
       <div className="flex flex-col">
