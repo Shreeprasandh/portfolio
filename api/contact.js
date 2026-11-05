@@ -20,11 +20,13 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Please provide name, email, and message.' });
     }
 
-    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || 'shreeprasandh@gmail.com';
+    const recipientEmails = process.env.CONTACT_RECIPIENT_EMAIL
+      ? [process.env.CONTACT_RECIPIENT_EMAIL]
+      : ['shreeprasandh@gmail.com', 'kaizzcer@gmail.com'];
 
     const { data, error } = await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: [recipientEmail],
+      to: recipientEmails,
       replyTo: email,
       subject: `New Portfolio Message from ${name}`,
       html: `
