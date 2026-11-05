@@ -1518,6 +1518,11 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   border-bottom: 1px solid var(--_colors---border--10) !important;
   padding: 0 !important;
   margin: 0 !important;
+  position: relative !important;
+}
+.d-awards-master-item:hover,
+.d-awards-master-item:has([data-award="item"]:hover) {
+  z-index: 100 !important;
 }
 .d-awards-master-list {
   border-top: 1px solid var(--_colors---border--10) !important;
@@ -1559,6 +1564,7 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   text-decoration: none !important;
   cursor: pointer !important;
   color: inherit !important;
+  position: relative !important;
   transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease !important;
 }
 .d-awards-master-item .d-award-item:not(:last-child) {
@@ -1566,6 +1572,7 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
 }
 .d-awards-master-item .d-award-item:hover {
   background-color: rgba(216, 211, 204, 0.05) !important;
+  z-index: 110 !important;
 }
 .d-award-item .award-item-cell.is-proj-title {
   position: relative !important;
@@ -1574,6 +1581,10 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   font-weight: 500 !important;
   font-size: 15px !important;
   white-space: nowrap !important;
+  z-index: 2 !important;
+}
+.d-award-item:hover .award-item-cell.is-proj-title {
+  z-index: 120 !important;
 }
 .d-award-item .award-item-cell.is-proj-desc {
   text-align: right !important;
@@ -1582,12 +1593,80 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   opacity: 0.72 !important;
   line-height: 1.4 !important;
   font-size: 14px !important;
+  position: relative !important;
+  z-index: 1 !important;
   transition: opacity 0.2s ease !important;
 }
 .d-award-item:hover .award-item-cell.is-proj-desc {
   opacity: 1 !important;
 }
+
+/* Luna Protocol: Content-Adaptive Freedom Standard (Zero Black Bars & Zero Cuts) */
+.award-item-certificate {
+  position: absolute !important;
+  top: 50% !important;
+  bottom: auto !important;
+  left: 100% !important;
+  margin-left: 20px !important;
+  right: auto !important;
+  transform: translateY(-50%) !important;
+  width: max-content !important;
+  height: max-content !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  max-width: none !important;
+  max-height: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  pointer-events: none !important;
+  display: none;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  z-index: 9999 !important;
+  overflow: visible !important;
+}
+
+/* Widescreen Desktop Systems (AirSync, InduPulse, L&T, IGNIS, IdleBin, Lumen, Leetie, EGO, VanguarDZ) */
+.award-item-certificate:not(.is-mobile-preview) .img,
+.award-item-certificate:not(.is-mobile-preview) img {
+  width: 380px !important;
+  height: auto !important;
+  max-width: min(380px, 45vw) !important;
+  max-height: 250px !important;
+  object-fit: contain !important;
+  display: block !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  flex: none !important;
+}
+
+/* Mobile Smartphone Systems (Zekos, Sentia, Antilink, CH3OH, Home) */
+.award-item-certificate.is-mobile-preview .img,
+.award-item-certificate.is-mobile-preview img {
+  height: 290px !important;
+  width: auto !important;
+  max-height: min(290px, 40vh) !important;
+  max-width: 170px !important;
+  object-fit: contain !important;
+  display: block !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), 0 6px 18px rgba(0, 0, 0, 0.4) !important;
+  flex: none !important;
+}
 @media screen and (max-width: 991px) {
+  .award-item-certificate {
+    display: none !important;
+  }
   .d-awards-master-item .d-awards-item {
     grid-template-columns: 1fr !important;
     gap: 0 !important;
@@ -3252,14 +3331,15 @@ body.theme-mode-light .playlist-item.is-active,
 
   .personal-tilt-media.aspect-hero,
   .personal-tilt-media.aspect-sub {
-    aspect-ratio: 16 / 9.2;
+    aspect-ratio: 16 / 9.5;
+    background-color: var(--_colors---background--bg-2);
   }
 
   .personal-card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center center;
     display: block;
     user-select: none;
     pointer-events: none;
@@ -3387,7 +3467,7 @@ body.theme-mode-light .playlist-item.is-active,
     <img src="images/cat_moon_dark.png" alt="Shreeprasandh Logo" class="cat-moon-logo-img is-dark" />
     <img src="images/cat_moon_light.png" alt="Shreeprasandh Logo" class="cat-moon-logo-img is-light" />
   </div><div data-preloader="text-1" class="p1 events-auto">Designer<br>&amp; Developer</div></div><div id="w-node-_1b6f1581-6773-0695-794b-998a67dcf734-ef9a5cf3" class="hero-heading-wrap"><div class="hero-meta"><div data-preloader="text-2" class="p1">Based in Chennai, India<br></div><div class="hero-meta-inner"><div data-preloader="text-2" class="p1">Focus /<br></div><a data-preloader="text-2" data-link-trigger="" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link-inner events-auto pointer w-inline-block"><div data-link="label" class="p1">AI Systems</div><div data-link="shadow" class="p1 is-2">AI Systems</div></a></div></div><div class="heading-group-wrap"><h1 data-reveal="text" class="h1">Shreeprasandh</h1><h1 data-reveal="text" class="h1">K</h1></div></div><div id="w-node-_5ab48863-5061-473e-95d0-d0f92d1f9d5f-ef9a5cf3" class="heading-group-wrap mt-8"><h1 data-reveal="text" class="h1">Create</h1><h1 data-reveal="text" class="h1">What</h1><h1 data-reveal="text" class="h1">i Like.</h1></div><div id="w-node-ce00d9c2-292e-44fb-6f7b-d9a01f73fd22-ef9a5cf3" class="heading-group-wrap mt-8 events-auto"><h1 data-reveal="text" class="h1">Taming</h1><h1 data-reveal="text" class="h1">codes,</h1><h1 data-reveal="text" class="h1">crafting</h1><h1 data-reveal="text" class="h1 left-offset-120 mb-104">experiences.</h1></div><div data-reveal="clip-down" id="w-node-_1f514f62-4633-54c7-6939-4da391c4f490-ef9a5cf3" class="spacer mt-8"></div><div id="w-node-_3a198df4-4726-4d30-f0e5-4ae25dd6cf5b-ef9a5cf3" class="w-layout-grid theme-grid events-auto"><div data-reveal="div" data-haptic="medium" data-theme-mode="dark" class="theme-switch is-active" title="Dark Theme (#1B1B1B)" role="button" tabindex="0"><div class="theme-switch-inner" style="background-color:#1B1B1B; border:1.5px solid #D8D3CC;"></div></div><div data-reveal="div" data-haptic="medium" data-theme-mode="light" class="theme-switch" title="Light Theme (#D8D3CC)" role="button" tabindex="0"><div class="theme-switch-inner" style="background-color:#D8D3CC; border:1.5px solid #1B1B1B;"></div></div></div><div data-reveal="text" id="w-node-b3ffe939-77a9-9ffd-556a-a54954be4b55-ef9a5cf3" class="p1 mb-104 events-auto">Obsessed with the ghost in the machine.<br>Breathing intent into cold silicon and neural models —<br>shipping tools that look like art, think like minds, and run like clockwork.</div><h1 data-reveal="text" id="w-node-_795aae42-750b-b740-f810-4b4a40ef7352-ef9a5cf3" class="h1 events-auto">clean</h1><h1 data-reveal="text" id="w-node-_9eb95de1-11ff-94e8-fae3-7237a73fd2cf-ef9a5cf3" class="h1 events-auto">code</h1><div id="w-node-_795aae42-750b-b740-f810-4b4a40ef7351-ef9a5cf3" class="heading-group-wrap offset-16 events-auto"><h1 data-reveal="text" class="h1">demands true</h1><h1 data-reveal="text" class="h1">taste.</h1></div><div data-reveal="clip-down" id="w-node-_63bb6d4f-5751-e85f-33f0-e0419eee53d2-ef9a5cf3" class="spacer mt-8"></div><div data-reveal="text" id="w-node-dcd49ee0-e90c-2ffe-cf7c-21f57ae4ce38-ef9a5cf3" class="p1 mt-240 events-auto">© '26</div></div></div><div class="reveal-block-wrap"><div data-fluid-reveal="" class="reveal-block"><canvas data-fluid-canvas="" class="fluid-canvas"></canvas><div data-orbit-tiles-init="" class="orbit-tiles"><div data-orbit-tiles-collection="" class="orbit-tiles__collection w-dyn-list"><div data-orbit-tiles-list="" role="list" class="orbit-tiles__list w-dyn-items"><div data-orbit-tiles-item="" role="listitem" class="orbit-tiles__item w-dyn-item"><div class="demo-card"><img src="images/shree1.jpg" loading="lazy" alt="Shreeprasandh K" class="cover-image"></div></div><div data-orbit-tiles-item="" role="listitem" class="orbit-tiles__item w-dyn-item"><div class="demo-card"><img src="images/shree2.jpg" loading="lazy" alt="Shreeprasandh K" class="cover-image"></div></div><div data-orbit-tiles-item="" role="listitem" class="orbit-tiles__item w-dyn-item"><div class="demo-card"><img src="images/shree3.jpg" loading="lazy" alt="Shreeprasandh K" class="cover-image"></div></div><div data-orbit-tiles-item="" role="listitem" class="orbit-tiles__item w-dyn-item"><div class="demo-card"><img src="images/shree4.jpg" loading="lazy" alt="Shreeprasandh K" class="cover-image"></div></div></div></div></div></div></div></section>
-<section id="work" class="featured"><div class="featured-inner"><div data-featured="heading" class="featured-heading-wrap"><div data-featured="text" data-reveal="text" class="h1">Work</div><div data-featured="text" data-reveal="text" class="h1">24-26</div><div data-featured="link" class="featured-link-wrap"><a data-haptic="medium" data-underline="wrap" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link w-inline-block"><div data-underline="text" class="h1">All Works</div></a></div></div><div data-globe="wrap" data-featured="globe" class="featured-globe"><div class="globe-database-wrap w-dyn-list"><div data-globe="database" role="list" class="globe-database w-dyn-items"><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/bloom.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/bloom.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/heallink.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/heallink.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/evguard.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/book-cover.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/leetie-screenshot.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/evguard.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/bloom.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lyndesk.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/rakthro.png" loading="eager" alt="" class="img"></div></div></div></div></div></section><section m-data-featured="wrap" class="m-featured is-mobile"><div class="m-featured-inner"><div m-data-featured="heading" class="m-featured-heading-wrap"><div m-data-featured="text" data-reveal="text" class="h1">Work</div><div m-data-featured="text" data-reveal="text" class="h1">24-26</div><div m-data-featured="link" class="m-featured-link-wrap"><a data-haptic="medium" data-underline="wrap" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link w-inline-block"><div data-underline="text" class="h1">All Works</div></a></div></div><div class="div-block-9"><div m-data-featured="list" class="collection-list-wrapper-2 w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items"><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lumen.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/bloom.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/heallink.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/evguard.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/book-cover.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/leetie-screenshot.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lyndesk.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/rakthro.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lumen.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/bloom.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/heallink.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/evguard.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/book-cover.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/leetie-screenshot.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lyndesk.png" loading="lazy" alt="" class="img width-auto"></div></div></div></div></div></section>
+<section id="work" class="featured"><div class="featured-inner"><div data-featured="heading" class="featured-heading-wrap"><div data-featured="text" data-reveal="text" class="h1">Work</div><div data-featured="text" data-reveal="text" class="h1">24-26</div><div data-featured="link" class="featured-link-wrap"><a data-haptic="medium" data-underline="wrap" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link w-inline-block"><div data-underline="text" class="h1">All Works</div></a></div></div><div data-globe="wrap" data-featured="globe" class="featured-globe"><div class="globe-database-wrap w-dyn-list"><div data-globe="database" role="list" class="globe-database w-dyn-items"><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/sentinelmro.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/sentinelmro.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/exp_airsync.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/exp_airsync.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/exp_ego.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/book-cover.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/leetie-screenshot.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/exp_ego.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/sentinelmro.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lyndesk.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/rakthro.png" loading="eager" alt="" class="img"></div></div></div></div></div></section><section m-data-featured="wrap" class="m-featured is-mobile"><div class="m-featured-inner"><div m-data-featured="heading" class="m-featured-heading-wrap"><div m-data-featured="text" data-reveal="text" class="h1">Work</div><div m-data-featured="text" data-reveal="text" class="h1">24-26</div><div m-data-featured="link" class="m-featured-link-wrap"><a data-haptic="medium" data-underline="wrap" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link w-inline-block"><div data-underline="text" class="h1">All Works</div></a></div></div><div class="div-block-9"><div m-data-featured="list" class="collection-list-wrapper-2 w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items"><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lumen.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/sentinelmro.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/exp_airsync.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/exp_ego.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/book-cover.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/leetie-screenshot.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lyndesk.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/rakthro.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lumen.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/sentinelmro.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/exp_airsync.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/exp_ego.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/book-cover.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/leetie-screenshot.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lyndesk.png" loading="lazy" alt="" class="img width-auto"></div></div></div></div></div></section>
 
 <!-- ==============================================
      PERSONAL PROJECTS SECTION (LynDesk, Rakthro, SentinelMRO)
@@ -3528,7 +3608,7 @@ body.theme-mode-light .playlist-item.is-active,
                   <div class="award-item-cell is-proj-title">
                     <div class="p1">L&amp;T Spatial Lighting</div>
                     <div data-award="certificate" class="award-item-certificate">
-                      <img src="images/exp_lt.svg" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="L&T Spatial Lighting" class="img">
+                      <img src="images/exp_lt.png" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="L&T Spatial Lighting" class="img">
                     </div>
                   </div>
                   <div class="award-item-cell is-proj-desc">
@@ -3567,7 +3647,7 @@ body.theme-mode-light .playlist-item.is-active,
                   <div class="award-item-cell is-proj-title">
                     <div class="p1">IdleBin</div>
                     <div data-award="certificate" class="award-item-certificate">
-                      <img src="images/exp_idlebin.jpg" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="IdleBin" class="img">
+                      <img src="images/exp_idlebin.png" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="IdleBin" class="img">
                     </div>
                   </div>
                   <div class="award-item-cell is-proj-desc">
@@ -3577,12 +3657,23 @@ body.theme-mode-light .playlist-item.is-active,
                 <div data-haptic="medium" data-award="item" role="listitem" class="d-award-item w-dyn-item d-award-row-link" data-href="https://github.com/Shreeprasandh">
                   <div class="award-item-cell is-proj-title">
                     <div class="p1">Zekos</div>
-                    <div data-award="certificate" class="award-item-certificate">
+                    <div data-award="certificate" class="award-item-certificate is-mobile-preview">
                       <img src="images/exp_zekos.png" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="Zekos" class="img">
                     </div>
                   </div>
                   <div class="award-item-cell is-proj-desc">
                     <div class="p1">RasoiOS autonomous kitchen operating system, appliance telemetry &amp; voice intelligence</div>
+                  </div>
+                </div>
+                <div data-haptic="medium" data-award="item" role="listitem" class="d-award-item w-dyn-item d-award-row-link" data-href="https://github.com/Shreeprasandh/sentia">
+                  <div class="award-item-cell is-proj-title">
+                    <div class="p1">Sentia</div>
+                    <div data-award="certificate" class="award-item-certificate is-mobile-preview">
+                      <img src="images/exp_sentia.png" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="Sentia" class="img">
+                    </div>
+                  </div>
+                  <div class="award-item-cell is-proj-desc">
+                    <div class="p1">IoT companion app &amp; hardware telemetry for intelligent lifestyle bags</div>
                   </div>
                 </div>
               </div>
@@ -3616,7 +3707,7 @@ body.theme-mode-light .playlist-item.is-active,
                 <div data-haptic="medium" data-award="item" role="listitem" class="d-award-item w-dyn-item d-award-row-link" data-href="https://github.com/Shreeprasandh/antilink">
                   <div class="award-item-cell is-proj-title">
                     <div class="p1">Antilink</div>
-                    <div data-award="certificate" class="award-item-certificate">
+                    <div data-award="certificate" class="award-item-certificate is-mobile-preview">
                       <img src="images/exp_antilink.png" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="Antilink" class="img">
                     </div>
                   </div>
@@ -3655,7 +3746,7 @@ body.theme-mode-light .playlist-item.is-active,
                 <div data-haptic="medium" data-award="item" role="listitem" class="d-award-item w-dyn-item d-award-row-link" data-href="https://github.com/Shreeprasandh/CH3OH">
                   <div class="award-item-cell is-proj-title">
                     <div class="p1">CH3OH</div>
-                    <div data-award="certificate" class="award-item-certificate">
+                    <div data-award="certificate" class="award-item-certificate is-mobile-preview">
                       <img src="images/exp_ch3oh.png" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="CH3OH" class="img">
                     </div>
                   </div>
@@ -3666,8 +3757,8 @@ body.theme-mode-light .playlist-item.is-active,
                 <div data-haptic="medium" data-award="item" role="listitem" class="d-award-item w-dyn-item d-award-row-link" data-href="https://github.com/Shreeprasandh">
                   <div class="award-item-cell is-proj-title">
                     <div class="p1">Home</div>
-                    <div data-award="certificate" class="award-item-certificate">
-                      <img src="images/exp_home.svg" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="Home" class="img">
+                    <div data-award="certificate" class="award-item-certificate is-mobile-preview">
+                      <img src="images/exp_home.png" onerror="this.src='images/placeholder.60f9b1840c.svg'" loading="lazy" alt="Home" class="img">
                     </div>
                   </div>
                   <div class="award-item-cell is-proj-desc">
