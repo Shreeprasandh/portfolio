@@ -101,10 +101,30 @@ D.clear(D.COLOR_BUFFER_BIT),{tex:n,fbo:o,w:e,h:t,attach(e){return D.activeTextur
       });
     }
 
-    // 5. Sonics Audio Player
+    // 4b. Symmetrical Interactive 3D Vinyl Disc Hover Tilt
+    const vinylWrap = document.getElementById("vinyl-disc-wrap");
+    const vinylEl = document.getElementById("vinyl-3d-element");
+    if (vinylWrap && vinylEl) {
+      vinylWrap.addEventListener("mousemove", (e) => {
+        const rect = vinylWrap.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        const rotY = -20 + x * 40;
+        const rotX = 10 - y * 20;
+        vinylEl.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg) scale(1.03)`;
+      });
+      vinylWrap.addEventListener("mouseleave", () => {
+        vinylEl.style.transform = "rotateY(-20deg) rotateX(10deg) scale(1)";
+      });
+    }
+
+    // 5. Sonics Audio Player & Vinyl Disc Controller
     const audio = document.getElementById("sonics-audio-element");
     const playBtn = document.getElementById("sonics-btn-play");
     const playIcon = document.getElementById("sonics-play-icon");
+    const vinylDisc = document.getElementById("vinyl-disc-element");
+    const vinylPlayInd = document.getElementById("vinyl-play-indicator");
+    const statusBadge = document.getElementById("sonics-status-badge");
     const statusText = document.getElementById("sonics-status-text");
     const visualizer = document.getElementById("sonics-bars");
     const prevBtn = document.getElementById("sonics-btn-prev");
@@ -166,8 +186,8 @@ D.clear(D.COLOR_BUFFER_BIT),{tex:n,fbo:o,w:e,h:t,attach(e){return D.activeTextur
         for (let i = 0; i < bars.length; i++) {
           const binIndex = Math.min(Math.floor((i / bars.length) * 30) + 1, freqData.length - 1);
           const rawVal = freqData[binIndex] || 0;
-          const boost = i > 14 ? 1.25 : 1.0;
-          const scaledH = Math.max(4, Math.min(36, Math.round((rawVal / 255) * 36 * boost)));
+          const boost = i > 14 ? 1.15 : 1.0;
+          const scaledH = Math.max(4, Math.min(38, Math.round((rawVal / 255) * 38 * boost)));
           bars[i].style.height = `${scaledH}px`;
         }
 
@@ -221,15 +241,36 @@ D.clear(D.COLOR_BUFFER_BIT),{tex:n,fbo:o,w:e,h:t,attach(e){return D.activeTextur
 
       playBtn.addEventListener("click", togglePlay);
 
+      if (vinylDisc) {
+        vinylDisc.addEventListener("click", togglePlay);
+        vinylDisc.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            togglePlay();
+          }
+        });
+      }
+
       audio.addEventListener("play", () => {
         if (playIcon) playIcon.textContent = "⏸";
+        if (vinylPlayInd) vinylPlayInd.textContent = "⏸";
         if (statusText) statusText.textContent = "PLAYING";
+        if (statusBadge) statusBadge.textContent = "Playing Now";
+        if (vinylDisc) {
+          vinylDisc.classList.remove("is-paused");
+          vinylDisc.classList.add("is-spinning");
+        }
         startVisualizer();
       });
 
       audio.addEventListener("pause", () => {
         if (playIcon) playIcon.textContent = "▶";
+        if (vinylPlayInd) vinylPlayInd.textContent = "▶";
         if (statusText) statusText.textContent = "PAUSED";
+        if (statusBadge) statusBadge.textContent = "Acoustic Studio";
+        if (vinylDisc && vinylDisc.classList.contains("is-spinning")) {
+          vinylDisc.classList.add("is-paused");
+        }
         stopVisualizer();
       });
 
