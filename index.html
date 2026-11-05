@@ -1631,98 +1631,120 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   }
 }
 
-/* 5. CRT RETRO INDUSTRIAL TV CHASSIS & LIVING BRAIN */
+/* 5. MINIMALIST INDUSTRIAL CONSOLE & LIVING NEURAL BRAIN */
 .tv-brain-section {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-top: var(--_units---u-80);
-  padding-bottom: var(--_units---u-104);
+  padding-top: var(--_units---u-48);
+  padding-bottom: var(--_units---u-64);
   background-color: var(--_colors---background--bg);
-  border-top: 1px solid var(--_colors---border--10);
+  border-top: none;
 }
 .tv-brain-inner {
   width: 100%;
-  padding: 0 var(--_special-units---global--padding);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--_units---u-16);
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
 }
 .tv-chassis-wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 980px;
+  margin: 0 auto;
   perspective: 1200px;
 }
 .tv-chassis {
-  background: #141418;
-  border-radius: 12px;
-  border: 2px solid #282832;
-  box-shadow: 0 30px 80px -15px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  padding: 16px 20px 24px 20px;
+  background: var(--_colors---background--bg-2);
+  border-radius: var(--_units---u-8);
+  border: 1px solid var(--_colors---border--10);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  padding: 12px 16px 16px 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   position: relative;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+body.theme-mode-light .tv-chassis,
+:root[data-theme="light"] .tv-chassis {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 .tv-bezel-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 16px 14px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4px 8px 10px 8px;
+  border-bottom: 1px solid var(--_colors---border--10);
 }
 .tv-brand-label {
   display: flex;
   align-items: center;
   gap: 8px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  color: #D8D3CC;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  color: var(--_colors---content--primary);
   font-weight: 600;
 }
 .tv-brand-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background-color: #10b981;
-  box-shadow: 0 0 8px #10b981;
+  background-color: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
 }
 .tv-vent-slits {
   display: flex;
-  gap: 8px;
+  gap: 5px;
+  align-items: center;
 }
 .tv-vent-slits span {
-  width: 28px;
-  height: 3px;
-  background: #090a0f;
-  border-radius: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--_colors---border--10);
 }
 .tv-status-badge {
   display: flex;
   align-items: center;
   gap: 8px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 10px;
-  color: #8c8882;
-  letter-spacing: 0.06em;
+  font-size: 9.5px;
+  color: var(--_colors---content--secondary);
+  letter-spacing: 0.08em;
 }
 .tv-main-body {
   display: flex;
-  gap: 16px;
-  background: #0d0d11;
-  border-radius: 8px;
-  padding: 14px;
-  border: 1px solid #1e1e26;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid var(--_colors---border--10);
+  box-sizing: border-box;
+}
+body.theme-mode-light .tv-main-body,
+:root[data-theme="light"] .tv-main-body {
+  background: rgba(0, 0, 0, 0.03);
 }
 .tv-screen-frame {
   flex: 1;
   background: #090a0f;
-  border-radius: 6px;
-  border: 2px solid #000;
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.95);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.85);
   position: relative;
-  height: 520px;
+  height: 370px;
   overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .tv-screen-frame { height: 300px; }
+}
+@media screen and (max-width: 479px) {
+  .tv-screen-frame { height: 260px; }
 }
 .tv-screen-glass {
   position: relative;
@@ -1733,63 +1755,64 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(circle at center, transparent 70%, rgba(0, 0, 0, 0.45) 100%),
-              repeating-linear-gradient(0deg, rgba(0,0,0,0.12) 0px, rgba(0,0,0,0.12) 1px, transparent 1px, transparent 2px);
+  background: radial-gradient(circle at center, transparent 75%, rgba(0, 0, 0, 0.35) 100%);
   z-index: 10;
 }
 .tv-control-strip {
-  width: 78px;
+  width: 66px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-  padding: 12px 6px;
-  background: #14141a;
-  border-radius: 6px;
-  border: 1px solid #202028;
+  gap: 12px;
+  padding: 10px 4px;
+  background: var(--_colors---fill--tertiary);
+  border-radius: 4px;
+  border: 1px solid var(--_colors---border--10);
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 .tv-dial-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 .tv-dial-label {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 9px;
-  color: #8c8882;
+  font-size: 8.5px;
+  color: var(--_colors---content--secondary);
   letter-spacing: 0.1em;
 }
 .tv-rotary-dial {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #2a2a35, #14141a);
-  border: 1px solid #383848;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 2px 3px rgba(255, 255, 255, 0.1);
+  background: radial-gradient(circle at 35% 35%, rgba(216, 211, 204, 0.12), rgba(0, 0, 0, 0.4));
+  border: 1px solid var(--_colors---border--10);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.1);
   position: relative;
   cursor: grab;
   transition: transform 0.05s linear;
 }
 .tv-rotary-dial:active { cursor: grabbing; }
 .tv-dial-notch {
-  width: 3px;
-  height: 10px;
-  background: #D8D3CC;
+  width: 2px;
+  height: 8px;
+  background: var(--_colors---fill--primary);
   position: absolute;
   top: 3px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 2px;
+  border-radius: 1px;
 }
 .tv-reset-btn {
-  background: #1B1B1B;
-  color: #D8D3CC;
-  border: 1px solid rgba(216, 211, 204, 0.2);
-  border-radius: 4px;
-  padding: 8px 10px;
+  background: var(--_colors---fill--tertiary);
+  color: var(--_colors---content--primary);
+  border: 1px solid var(--_colors---border--10);
+  border-radius: 3px;
+  padding: 5px 4px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 10px;
+  font-size: 8.5px;
   font-weight: 600;
   letter-spacing: 0.08em;
   cursor: pointer;
@@ -1798,36 +1821,38 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   text-align: center;
 }
 .tv-reset-btn:hover {
-  background: #D8D3CC;
-  color: #1B1B1B;
-  border-color: #D8D3CC;
-  box-shadow: 0 4px 14px rgba(216, 211, 204, 0.35);
+  background: var(--_colors---fill--primary);
+  color: var(--_colors---background--bg);
+  border-color: var(--_colors---fill--primary);
 }
 .tv-speaker-louvers {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 3px;
-  width: 36px;
+  justify-content: center;
+  width: 32px;
   margin-top: auto;
+  padding: 4px 0;
 }
 .tv-speaker-louvers span {
-  height: 2px;
-  background: #202129;
-  border-radius: 1px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--_colors---border--10);
 }
 .tv-bezel-bottom {
-  margin-top: 14px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--_colors---border--10);
   display: flex;
   justify-content: flex-start;
   position: relative;
-  min-height: 24px;
+  min-height: 20px;
 }
 .tv-sticky-note-attachment {
   position: absolute;
-  bottom: -24px;
-  left: 40px;
+  bottom: -20px;
+  left: 32px;
   right: auto;
   cursor: pointer;
   z-index: 15;
@@ -1835,32 +1860,36 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
 }
 .tv-sticky-tape {
   position: absolute;
-  top: -8px;
+  top: -6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 44px;
-  height: 14px;
+  width: 38px;
+  height: 12px;
   background: rgba(216, 211, 204, 0.4);
   backdrop-filter: blur(2px);
   border: 1px solid rgba(216, 211, 204, 0.25);
   z-index: 2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .tv-sticky-paper {
   background: #D8D3CC;
   color: #1B1B1B;
-  padding: 12px 14px;
+  padding: 10px 12px;
   border-radius: 2px;
-  width: 172px;
+  width: 160px;
   transform-origin: top left;
   animation: windFlutter 5s infinite ease-in-out;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 3px 12px 24px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(27, 27, 27, 0.08);
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(27, 27, 27, 0.08);
 }
 .tv-sticky-note-attachment:hover .tv-sticky-paper {
   animation-play-state: paused;
-  transform: rotate(-1deg) scale(1.05);
-  box-shadow: 4px 16px 32px rgba(0, 0, 0, 0.65);
+  transform: rotate(-1deg) scale(1.04);
+  box-shadow: 3px 14px 28px rgba(0, 0, 0, 0.55);
+}
+body.theme-mode-light .tv-sticky-paper,
+:root[data-theme="light"] .tv-sticky-paper {
+  box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
 }
 @keyframes windFlutter {
   0%, 100% { transform: rotate(-2deg); }
@@ -1993,65 +2022,37 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
 }
 .tv-stat-pill .lbl { font-size: 10px; opacity: 0.7; }
 
-/* 6. STORIES & SONICS EDITORIAL SECTION */
+/* 6. STORIES & SONICS EDITORIAL SECTION (COMPACT RECTANGLE) */
 .creative-section {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-top: var(--_units---u-80);
-  padding-bottom: var(--_units---u-128);
-  border-top: 1px solid var(--_colors---border--10);
+  padding-top: var(--_units---u-48);
+  padding-bottom: var(--_units---u-72);
+  border-top: none;
   background-color: var(--_colors---background--bg);
 }
 .creative-inner {
   width: 100%;
-  padding: 0 var(--_special-units---global--padding);
-}
-.creative-sub-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--_colors---border--10);
-  margin-bottom: var(--_units---u-40);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
-}
-.vault-cat-tag {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  opacity: 0.8;
-}
-.badge-status {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: var(--_colors---fill--tertiary);
-  border: 1px solid var(--_colors---border--10);
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 var(--_units---u-16);
 }
 .creative-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--_special-units---grid-gap);
-  border-top: 1px solid var(--_colors---border--10);
+  gap: var(--_units---u-32);
+  border-top: none;
   padding-top: var(--_units---u-32);
+  align-items: start;
 }
 @media screen and (max-width: 991px) {
-  .creative-grid { grid-template-columns: 1fr; gap: 48px; }
+  .creative-grid { grid-template-columns: 1fr; gap: 32px; padding-top: var(--_units---u-24); }
 }
 .creative-col {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-.creative-col-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--_colors---border--10);
 }
 
 /* Staggered Bleibtgleich Typography Grid for Stories & Sonics */
@@ -2071,30 +2072,44 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
 /* 3D HARDCOVER BOOK (Pristine CSS 3D Transforms) */
 .book-showcase-wrap {
   width: 100%;
-  height: 320px;
-  background: rgba(216, 211, 204, 0.02);
+  height: 240px;
+  background: var(--_colors---background--bg-2);
   border: 1px solid var(--_colors---border--10);
-  border-radius: 4px;
+  border-radius: var(--_units---u-8);
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 1200px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  transition: border-color 0.25s ease, box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.book-showcase-wrap:hover {
+  border-color: var(--_colors---border--100);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.55);
+}
+body.theme-mode-light .book-showcase-wrap,
+:root[data-theme="light"] .book-showcase-wrap {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+body.theme-mode-light .book-showcase-wrap:hover,
+:root[data-theme="light"] .book-showcase-wrap:hover {
+  box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.1);
 }
 .book-3d {
   position: relative;
-  width: 160px;
-  height: 240px;
+  width: 125px;
+  height: 185px;
   transform-style: preserve-3d;
   transform: rotateY(-22deg) rotateX(8deg);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
-  box-shadow: -18px 24px 36px rgba(0, 0, 0, 0.55);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+  box-shadow: -14px 20px 30px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 .book-showcase-wrap:hover .book-3d {
-  transform: rotateY(-8deg) rotateX(2deg) scale(1.05);
-  box-shadow: -8px 16px 28px rgba(0, 0, 0, 0.65);
+  transform: rotateY(-8deg) rotateX(2deg) scale(1.04);
+  box-shadow: -8px 14px 24px rgba(0, 0, 0, 0.6);
 }
 .book-front {
   position: absolute;
@@ -2122,7 +2137,7 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
+  width: 18px;
   height: 100%;
   background: #18181b;
   transform-origin: left;
@@ -2134,111 +2149,133 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   position: absolute;
   top: 2px;
   right: 0;
-  width: 18px;
+  width: 16px;
   height: calc(100% - 4px);
   background: repeating-linear-gradient(to right, #D8D3CC, #D8D3CC 1px, #A8A39C 2px);
   transform-origin: right;
   transform: rotateY(90deg) translateZ(-10px);
   border-radius: 0 2px 2px 0;
 }
-.book-title-main {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-bottom: 8px;
-}
-.book-desc {
-  font-size: 14px;
-  opacity: 0.75;
-  line-height: 1.5;
-  margin-bottom: 16px;
-}
-.book-meta-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
-  margin-bottom: 20px;
-  padding: 12px 0;
-  border-top: 1px dashed var(--_colors---border--10);
-  border-bottom: 1px dashed var(--_colors---border--10);
-}
-.book-meta-grid .meta-item {
-  display: flex;
-  justify-content: space-between;
-}
-.book-meta-grid .lbl { opacity: 0.6; }
 
-/* Sonics Audio Player (100% Monochromatic Bleibtgleich Aesthetic - NO BLUE) */
+/* Sonics Audio Player (100% Monochromatic Bleibtgleich Aesthetic) */
 .sonics-player-box {
-  background: rgba(216, 211, 204, 0.02);
+  background: var(--_colors---background--bg-2);
   border: 1px solid var(--_colors---border--10);
-  border-radius: 4px;
+  border-radius: var(--_units---u-8);
   padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  transition: border-color 0.25s ease, box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sonics-now-playing-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--_colors---fill--primary);
-  background: rgba(216, 211, 204, 0.06);
-  padding: 4px 10px;
-  border-radius: 12px;
-  width: fit-content;
-  border: 1px solid var(--_colors---border--10);
+.sonics-player-box:hover {
+  border-color: var(--_colors---border--100);
 }
-.pulse-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--_colors---fill--primary);
-  box-shadow: 0 0 6px rgba(216, 211, 204, 0.6);
+body.theme-mode-light .sonics-player-box,
+:root[data-theme="light"] .sonics-player-box {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-.sonics-visualizer-bars {
+
+/* Header Row with Track Info + Hero Circular Play Button */
+.sonics-header-row {
   display: flex;
-  align-items: flex-end;
-  gap: 3px;
-  height: 36px;
-  padding: 4px 0;
-}
-.sonics-visualizer-bars span {
-  flex: 1;
-  background: rgba(216, 211, 204, 0.25);
-  border-radius: 1px;
-  height: 4px;
-  transition: height 0.15s ease, background-color 0.2s ease;
-}
-.sonics-visualizer-bars.is-playing span {
-  background: var(--_colors---fill--primary);
-  animation: soundwaveBars 0.9s infinite ease-in-out alternate;
-}
-.sonics-visualizer-bars.is-playing span:nth-child(2n) { animation-delay: 0.15s; }
-.sonics-visualizer-bars.is-playing span:nth-child(3n) { animation-delay: 0.3s; }
-.sonics-visualizer-bars.is-playing span:nth-child(4n) { animation-delay: 0.45s; }
-@keyframes soundwaveBars {
-  0% { height: 4px; }
-  100% { height: 28px; }
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
 }
 .sonics-track-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex: 1;
 }
 .track-title-lead {
   font-size: 19px;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+  color: var(--_colors---content--primary);
 }
 .track-artist-sub {
   font-size: 12px;
-  opacity: 0.7;
+  color: var(--_colors---content--secondary);
+}
+
+.sonics-play-hero {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--_colors---fill--tertiary);
+  border: 1px solid var(--_colors---border--10);
+  color: var(--_colors---content--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sonics-play-hero:hover {
+  background: var(--_colors---fill--primary);
+  color: var(--_colors---background--bg);
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* High-Fidelity 28-Bar Waveform EQ Visualizer */
+.sonics-visualizer-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 38px;
+  padding: 4px 0;
+  width: 100%;
+  overflow: hidden;
+}
+.sonics-visualizer-bars span {
+  flex: 1;
+  min-width: 2px;
+  background: rgba(216, 211, 204, 0.2);
+  border-radius: 999px;
+  height: 4px;
+  transition: height 0.08s ease-out, background 0.2s ease;
+}
+.sonics-visualizer-bars span:nth-child(4n) { height: 4px; }
+.sonics-visualizer-bars span:nth-child(4n+1) { height: 4px; }
+.sonics-visualizer-bars span:nth-child(4n+2) { height: 4px; }
+.sonics-visualizer-bars span:nth-child(4n+3) { height: 4px; }
+
+.sonics-visualizer-bars.is-playing span {
+  background: var(--_colors---fill--primary);
+  box-shadow: 0 0 6px rgba(216, 211, 204, 0.2);
+}
+
+/* Fallback CSS Keyframe Animation (only active if Web Audio API is unavailable) */
+.sonics-visualizer-bars.is-fallback-animated.is-playing span:nth-child(4n+1) {
+  animation: eqWave1 0.75s infinite ease-in-out alternate;
+}
+.sonics-visualizer-bars.is-fallback-animated.is-playing span:nth-child(4n+2) {
+  animation: eqWave2 0.6s infinite ease-in-out alternate 0.1s;
+}
+.sonics-visualizer-bars.is-fallback-animated.is-playing span:nth-child(4n+3) {
+  animation: eqWave3 0.85s infinite ease-in-out alternate 0.2s;
+}
+.sonics-visualizer-bars.is-fallback-animated.is-playing span:nth-child(4n) {
+  animation: eqWave4 0.7s infinite ease-in-out alternate 0.15s;
+}
+
+@keyframes eqWave1 { 0% { height: 4px; } 50% { height: 28px; } 100% { height: 10px; } }
+@keyframes eqWave2 { 0% { height: 6px; } 50% { height: 36px; } 100% { height: 8px; } }
+@keyframes eqWave3 { 0% { height: 5px; } 50% { height: 22px; } 100% { height: 14px; } }
+@keyframes eqWave4 { 0% { height: 4px; } 50% { height: 32px; } 100% { height: 6px; } }
+
+/* Eliminate horizontal line above footer statement */
+.is-footer {
+  border-top: none !important;
 }
 
 /* Scrubber */
@@ -2271,56 +2308,18 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   opacity: 0.6;
 }
 
-/* Controls Row */
-.sonics-controls-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 8px 0;
+/* Light theme overrides for Hero Play and Visualizer */
+body.theme-mode-light .sonics-play-hero,
+:root[data-theme="light"] .sonics-play-hero {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
-.sonics-btn {
-  background: transparent !important;
-  border: 1px solid var(--_colors---border--10) !important;
-  color: var(--_colors---fill--primary) !important;
-  border-radius: 4px !important;
-  padding: 8px 16px !important;
-  cursor: pointer !important;
-  font-size: 14px !important;
-  outline: none !important;
-  box-shadow: none !important;
-  transition: all 0.2s ease !important;
+body.theme-mode-light .sonics-visualizer-bars span,
+:root[data-theme="light"] .sonics-visualizer-bars span {
+  background: rgba(0, 0, 0, 0.15);
 }
-.sonics-btn:hover {
-  background: rgba(216, 211, 204, 0.08) !important;
-  border-color: rgba(216, 211, 204, 0.3) !important;
-}
-.sonics-btn:focus, .sonics-btn:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
-.sonics-play-main {
-  width: 48px !important;
-  height: 48px !important;
-  border-radius: 50% !important;
-  background: var(--_colors---fill--primary) !important;
-  color: var(--_colors---background--bg) !important;
-  border: none !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer !important;
-  font-size: 16px !important;
-  outline: none !important;
-  box-shadow: none !important;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease !important;
-}
-.sonics-play-main:hover {
-  transform: scale(1.08) !important;
-}
-.sonics-play-main:focus, .sonics-play-main:active {
-  outline: none !important;
-  box-shadow: none !important;
+body.theme-mode-light .sonics-visualizer-bars.is-playing span,
+:root[data-theme="light"] .sonics-visualizer-bars.is-playing span {
+  background: var(--_colors---fill--primary);
 }
 
 /* Playlist */
@@ -2863,11 +2862,338 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   :root[data-theme="light"] .totem-cat-img.is-light {
     display: block !important;
   }
+
+  /* -------------------------------------------------
+   * PERSONAL PROJECTS SECTION STYLES (COMPACT RECTANGLE)
+   * ------------------------------------------------- */
+  .personal-projects-section {
+    position: relative;
+    width: 100%;
+    background-color: var(--_colors---background--bg);
+    color: var(--_colors---content--primary);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    z-index: 10;
+  }
+
+  .personal-projects-inner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: var(--_units---u-48) var(--_units---u-16) var(--_units---u-72);
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 991px) {
+    .personal-projects-inner {
+      padding: var(--_units---u-32) var(--_units---u-16) var(--_units---u-48);
+    }
+  }
+
+  /* Main Grid: 7fr / 5fr Asymmetric Proportions */
+  .personal-projects-grid {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-column-gap: var(--_units---u-32);
+    grid-row-gap: var(--_units---u-32);
+    align-items: start;
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .personal-projects-grid {
+      grid-template-columns: 1fr;
+      gap: var(--_units---u-32);
+    }
+  }
+
+  /* Tilt Wrapping & Cards */
+  .personal-tilt-wrap {
+    width: 100%;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+  .personal-tilt-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: var(--_units---u-8);
+    overflow: hidden;
+    border: 1px solid var(--_colors---border--10);
+    background-color: var(--_colors---background--bg-2);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+    transition: border-color 0.25s ease, box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  .personal-tilt-wrap:hover .personal-tilt-card {
+    border-color: var(--_colors---border--100);
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.55);
+  }
+
+  body.theme-mode-light .personal-tilt-card,
+  :root[data-theme="light"] .personal-tilt-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  body.theme-mode-light .personal-tilt-wrap:hover .personal-tilt-card,
+  :root[data-theme="light"] .personal-tilt-wrap:hover .personal-tilt-card {
+    box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  .personal-tilt-media {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .personal-tilt-media.aspect-hero,
+  .personal-tilt-media.aspect-sub {
+    aspect-ratio: 16 / 9.2;
+  }
+
+  .personal-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* Specular Glare Sheen */
+  .personal-tilt-glare {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--_units---u-8);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 60%);
+    mix-blend-mode: overlay;
+    will-change: opacity;
+  }
+
+  .personal-tilt-wrap:hover .personal-tilt-glare {
+    opacity: 1;
+  }
+
+  body.theme-mode-light .personal-tilt-glare,
+  :root[data-theme="light"] .personal-tilt-glare {
+    background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0) 60%);
+    mix-blend-mode: multiply;
+  }
+
+  /* Project Meta & Content */
+  .personal-card-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--_units---u-16);
+  }
+
+  .personal-card-content.is-sub {
+    padding-top: var(--_units---u-12);
+  }
+
+  .personal-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--_units---u-8);
+    gap: var(--_units---u-8);
+  }
+
+  .personal-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: var(--_colors---fill--tertiary);
+    border: 1px solid var(--_colors---border--10);
+    color: var(--_colors---content--secondary);
+    font-size: 11px;
+    letter-spacing: -0.01em;
+  }
+
+  .personal-year {
+    color: var(--_colors---content--secondary);
+    font-size: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .personal-card-title {
+    color: var(--_colors---content--primary);
+    font-size: clamp(18px, 1.7vw, 22px);
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    margin: 0 0 var(--_units---u-8) 0;
+    transition: color 0.25s ease;
+  }
+
+  .personal-card-desc {
+    color: var(--_colors---content--secondary);
+    font-size: 13.5px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    margin: 0 0 var(--_units---u-16) 0;
+    max-width: 95%;
+  }
+
+  @media (max-width: 991px) {
+    .personal-card-desc {
+      font-size: 13px;
+      line-height: 1.45;
+      max-width: 100%;
+    }
+  }
+
+  .personal-card-cta {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Sub-card stack */
+  .personal-projects-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--_units---u-24);
+  }
+
+  .personal-project-sub {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personal-card-title-sub {
+    color: var(--_colors---content--secondary);
+    font-size: 13px;
+    line-height: 1.45;
+    letter-spacing: -0.015em;
+    margin: 0;
+  }
+
+  .personal-project-name {
+    color: var(--_colors---content--primary);
+    font-weight: 600;
+  }
 </style></div></div><nav class="nav"><div class="nav-inner"><div data-prevent-flicker="" data-nav="grid" class="nav-grid"></div><div data-haptic="medium" data-nav="button" data-prevent-flicker="" class="nav-button"><div class="link-inner"><div data-link="label" data-nav="label" class="p1">Menu</div><div data-link="shadow" data-nav="label" class="p1 is-2">Menu</div></div></div><div data-nav="link-group" class="nav-menu"><a data-haptic="medium" data-nav="link" data-link-trigger="" data-barba-prevent="self" data-wf--menu-link--type="home" href="/" aria-current="page" class="menu-link w-inline-block w--current"><div data-nav="indicator" class="menu-indicator"><div class="p1">1</div></div><div class="menu-link-inner"><div class="link-inner"><div data-link="label" class="h2">Home</div><div data-link="shadow" class="h2 is-2">Home</div></div></div></a><a data-haptic="medium" data-nav="link" data-link-trigger="" data-barba-prevent="self" data-wf--menu-link--type="works" href="#work" class="menu-link w-variant-a7ffef1a-0b74-cc26-caf1-6c6d6e427a48 w-inline-block"><div data-nav="indicator" class="menu-indicator"><div class="p1">2</div></div><div class="menu-link-inner"><div class="link-inner"><div data-link="label" class="h2">Work</div><div data-link="shadow" class="h2 is-2">Work</div></div></div></a><a data-haptic="medium" data-nav="link" data-link-trigger="" data-barba-prevent="self" data-wf--menu-link--type="contact" href="#contact" class="menu-link w-variant-33192d68-7f2e-6ac8-f5b1-cf3a9c652efc w-inline-block"><div data-nav="indicator" class="menu-indicator"><div class="p1">3</div></div><div class="menu-link-inner"><div class="link-inner"><div data-link="label" class="h2">Contact</div><div data-link="shadow" class="h2 is-2">Contact</div></div></div></a><a data-haptic="medium" data-nav="link" data-link-trigger="" data-barba-prevent="self" data-nav-link="archive" href="#awards" class="menu-link is-archive w-inline-block"><div class="menu-link-inner"><div class="link-inner"><div data-link="label" class="p1">Experiments</div><div data-link="shadow" class="p1 is-2">Experiments</div></div></div></a></div></div></nav><main data-barba-namespace="home" data-barba="container" class="transition-container"><section class="intro"><div class="intro-inner"><div class="w-layout-grid grid"><div data-preloader="progress" id="w-node-abaa122c-64c0-5bbc-efd8-fe75eb629930-ef9a5cf3" class="progress-wrap"><div class="icon-wrap is-logo">
     <img src="images/cat_moon_dark.png" alt="Shreeprasandh Logo" class="cat-moon-logo-img is-dark" />
     <img src="images/cat_moon_light.png" alt="Shreeprasandh Logo" class="cat-moon-logo-img is-light" />
   </div><div data-preloader="text-1" class="p1 events-auto">Designer<br>&amp; Developer</div></div><div id="w-node-_1b6f1581-6773-0695-794b-998a67dcf734-ef9a5cf3" class="hero-heading-wrap"><div class="hero-meta"><div data-preloader="text-2" class="p1">Based in Chennai, India<br></div><div class="hero-meta-inner"><div data-preloader="text-2" class="p1">Focus /<br></div><a data-preloader="text-2" data-link-trigger="" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link-inner events-auto pointer w-inline-block"><div data-link="label" class="p1">AI Systems</div><div data-link="shadow" class="p1 is-2">AI Systems</div></a></div></div><div class="heading-group-wrap"><h1 data-reveal="text" class="h1">Shreeprasandh</h1><h1 data-reveal="text" class="h1">K</h1></div></div><div id="w-node-_5ab48863-5061-473e-95d0-d0f92d1f9d5f-ef9a5cf3" class="heading-group-wrap mt-8"><h1 data-reveal="text" class="h1">Create</h1><h1 data-reveal="text" class="h1">What</h1><h1 data-reveal="text" class="h1">i Like.</h1></div><div id="w-node-ce00d9c2-292e-44fb-6f7b-d9a01f73fd22-ef9a5cf3" class="heading-group-wrap mt-8 events-auto"><h1 data-reveal="text" class="h1">Taming</h1><h1 data-reveal="text" class="h1">codes,</h1><h1 data-reveal="text" class="h1">crafting</h1><h1 data-reveal="text" class="h1 left-offset-120 mb-104">experiences.</h1></div><div data-reveal="clip-down" id="w-node-_1f514f62-4633-54c7-6939-4da391c4f490-ef9a5cf3" class="spacer mt-8"></div><div id="w-node-_3a198df4-4726-4d30-f0e5-4ae25dd6cf5b-ef9a5cf3" class="w-layout-grid theme-grid events-auto"><div data-reveal="div" data-haptic="medium" data-theme-mode="dark" class="theme-switch is-active" title="Dark Theme (#1B1B1B)" role="button" tabindex="0"><div class="theme-switch-inner" style="background-color:#1B1B1B; border:1.5px solid #D8D3CC;"></div></div><div data-reveal="div" data-haptic="medium" data-theme-mode="light" class="theme-switch" title="Light Theme (#D8D3CC)" role="button" tabindex="0"><div class="theme-switch-inner" style="background-color:#D8D3CC; border:1.5px solid #1B1B1B;"></div></div></div><div data-reveal="text" id="w-node-b3ffe939-77a9-9ffd-556a-a54954be4b55-ef9a5cf3" class="p1 mb-104 events-auto">Obsessed with the ghost in the machine.<br>Breathing intent into cold silicon and neural models —<br>shipping tools that look like art, think like minds, and run like clockwork.</div><h1 data-reveal="text" id="w-node-_795aae42-750b-b740-f810-4b4a40ef7352-ef9a5cf3" class="h1 events-auto">clean</h1><h1 data-reveal="text" id="w-node-_9eb95de1-11ff-94e8-fae3-7237a73fd2cf-ef9a5cf3" class="h1 events-auto">code</h1><div id="w-node-_795aae42-750b-b740-f810-4b4a40ef7351-ef9a5cf3" class="heading-group-wrap offset-16 events-auto"><h1 data-reveal="text" class="h1">demands true</h1><h1 data-reveal="text" class="h1">taste.</h1></div><div data-reveal="clip-down" id="w-node-_63bb6d4f-5751-e85f-33f0-e0419eee53d2-ef9a5cf3" class="spacer mt-8"></div><div data-reveal="text" id="w-node-dcd49ee0-e90c-2ffe-cf7c-21f57ae4ce38-ef9a5cf3" class="p1 mt-240 events-auto">© '26</div></div></div><div class="reveal-block-wrap"><div data-fluid-reveal="" class="reveal-block"><canvas data-fluid-canvas="" class="fluid-canvas"></canvas><div data-orbit-tiles-init="" class="orbit-tiles"><div data-orbit-tiles-collection="" class="orbit-tiles__collection w-dyn-list"><div data-orbit-tiles-list="" role="list" class="orbit-tiles__list w-dyn-items"><div data-orbit-tiles-item="" role="listitem" class="orbit-tiles__item w-dyn-item"><div class="demo-card"><img src="images/shree1.jpg" loading="lazy" alt="Shreeprasandh K" class="cover-image"></div></div><div data-orbit-tiles-item="" role="listitem" class="orbit-tiles__item w-dyn-item"><div class="demo-card"><img src="images/shree2.jpg" loading="lazy" alt="Shreeprasandh K" class="cover-image"></div></div><div data-orbit-tiles-item="" role="listitem" class="orbit-tiles__item w-dyn-item"><div class="demo-card"><img src="images/shree3.jpg" loading="lazy" alt="Shreeprasandh K" class="cover-image"></div></div><div data-orbit-tiles-item="" role="listitem" class="orbit-tiles__item w-dyn-item"><div class="demo-card"><img src="images/shree4.jpg" loading="lazy" alt="Shreeprasandh K" class="cover-image"></div></div></div></div></div></div></div></section>
-<section id="work" class="featured"><div class="featured-inner"><div data-featured="heading" class="featured-heading-wrap"><div data-featured="text" data-reveal="text" class="h1">Work</div><div data-featured="text" data-reveal="text" class="h1">24-26</div><div data-featured="link" class="featured-link-wrap"><a data-haptic="medium" data-underline="wrap" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link w-inline-block"><div data-underline="text" class="h1">All Works</div></a></div></div><div data-globe="wrap" data-featured="globe" class="featured-globe"><div class="globe-database-wrap w-dyn-list"><div data-globe="database" role="list" class="globe-database w-dyn-items"><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/bloom.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/bloom.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/heallink.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/heallink.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/evguard.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/book-cover.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/leetie-screenshot.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/evguard.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/bloom.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lyndesk.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/rakthro.png" loading="eager" alt="" class="img"></div></div></div></div></div></section><section m-data-featured="wrap" class="m-featured is-mobile"><div class="m-featured-inner"><div m-data-featured="heading" class="m-featured-heading-wrap"><div m-data-featured="text" data-reveal="text" class="h1">Work</div><div m-data-featured="text" data-reveal="text" class="h1">24-26</div><div m-data-featured="link" class="m-featured-link-wrap"><a data-haptic="medium" data-underline="wrap" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link w-inline-block"><div data-underline="text" class="h1">All Works</div></a></div></div><div class="div-block-9"><div m-data-featured="list" class="collection-list-wrapper-2 w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items"><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lumen.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/bloom.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/heallink.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/evguard.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/book-cover.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/leetie-screenshot.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lyndesk.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/rakthro.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lumen.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/bloom.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/heallink.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/evguard.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/book-cover.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/leetie-screenshot.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lyndesk.png" loading="lazy" alt="" class="img width-auto"></div></div></div></div></div></section><section id="awards" class="awards"><div class="awards-inner"><div class="w-layout-grid grid row-0"><div id="w-node-_05cf82f1-6b6e-8f7c-c770-f133695cf5da-ef9a5cf3" class="awards--heading-wrap"><h1 data-reveal="text" class="h1">Hobby</h1></div><h1 data-reveal="text" id="w-node-_9448f436-9bf9-2563-275c-334e098a3850-ef9a5cf3" class="h1">&amp;</h1><h1 data-reveal="text" id="w-node-_7997afcf-e344-c1f7-2ee7-9e212865c18c-ef9a5cf3" class="h1">Ex-</h1><h1 data-reveal="text" id="w-node-af7749f1-fef4-37e3-3122-b9dba9216442-ef9a5cf3" class="h1">periments</h1></div><div class="w-layout-grid grid"><div id="w-node-_809a9322-2ff7-ab7f-4189-7923554e02db-ef9a5cf3" class="d-awards-master-list-wrap w-dyn-list"><div role="list" class="d-awards-master-list w-dyn-items">
+<section id="work" class="featured"><div class="featured-inner"><div data-featured="heading" class="featured-heading-wrap"><div data-featured="text" data-reveal="text" class="h1">Work</div><div data-featured="text" data-reveal="text" class="h1">24-26</div><div data-featured="link" class="featured-link-wrap"><a data-haptic="medium" data-underline="wrap" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link w-inline-block"><div data-underline="text" class="h1">All Works</div></a></div></div><div data-globe="wrap" data-featured="globe" class="featured-globe"><div class="globe-database-wrap w-dyn-list"><div data-globe="database" role="list" class="globe-database w-dyn-items"><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/bloom.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/bloom.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/heallink.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lumen.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/heallink.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/evguard.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/book-cover.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/leetie-screenshot.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/evguard.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/bloom.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/lyndesk.png" loading="eager" alt="" class="img"></div><div data-globe="img" role="listitem" class="globe-database-item w-dyn-item"><img src="images/rakthro.png" loading="eager" alt="" class="img"></div></div></div></div></div></section><section m-data-featured="wrap" class="m-featured is-mobile"><div class="m-featured-inner"><div m-data-featured="heading" class="m-featured-heading-wrap"><div m-data-featured="text" data-reveal="text" class="h1">Work</div><div m-data-featured="text" data-reveal="text" class="h1">24-26</div><div m-data-featured="link" class="m-featured-link-wrap"><a data-haptic="medium" data-underline="wrap" href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link w-inline-block"><div data-underline="text" class="h1">All Works</div></a></div></div><div class="div-block-9"><div m-data-featured="list" class="collection-list-wrapper-2 w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items"><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lumen.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/bloom.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/heallink.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/evguard.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/book-cover.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/leetie-screenshot.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lyndesk.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/rakthro.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lumen.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/bloom.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/heallink.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/evguard.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/book-cover.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/leetie-screenshot.png" loading="lazy" alt="" class="img width-auto"></div><div role="listitem" class="collection-item-2 w-dyn-item"><img src="images/lyndesk.png" loading="lazy" alt="" class="img width-auto"></div></div></div></div></div></section>
+
+<!-- ==============================================
+     PERSONAL PROJECTS SECTION (LynDesk, Rakthro, Lumen Point)
+     ============================================== -->
+<section id="personal-projects" class="personal-projects-section">
+  <div class="personal-projects-inner">
+
+    <!-- Main Grid: 7fr Hero + 5fr Stack -->
+    <div class="personal-projects-grid">
+      
+      <!-- LEFT: LynDesk (Hero Card - 7 Columns) -->
+      <div class="personal-project-hero">
+        <div class="personal-tilt-wrap" data-tilt="wrap" data-tilt-max-x="4" data-tilt-max-y="5" data-tilt-scale="1.015">
+          <div class="personal-tilt-card" data-tilt="card">
+            <div class="personal-tilt-media aspect-hero">
+              <img src="images/lyndesk.png" alt="LynDesk — Engineering Workstation &amp; Portfolio Hub" loading="lazy" class="personal-card-img" />
+              <div class="personal-tilt-glare"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="personal-card-content">
+          <div class="personal-card-meta">
+            <span class="personal-tag p1">Autonomous Workstation &amp; Portfolio Hub</span>
+            <span class="personal-year p1">2025</span>
+          </div>
+          
+          <h3 class="personal-card-title h2">
+            LynDesk — All-in-One Engineering Workstation for Hackathons, AI Study &amp; Portfolios
+          </h3>
+          
+          <p class="personal-card-desc p1">
+            Built with Next.js 16, Supabase Realtime, and Gemini AI — bridging hackathon collaboration, competitive coding streaks, and AI study paths into verified developer portfolios for students, faculty, and recruiters.
+          </p>
+          
+          <div class="personal-card-cta">
+            <a data-haptic="medium" data-reveal="div" data-link-trigger="" href="https://lyndesk.tech" target="_blank" rel="noopener noreferrer" class="link-button w-inline-block">
+              <div class="link-inner">
+                <div data-link="shadow" class="p1 is-2">visit lyndesk.tech ↗</div>
+                <div data-link="label" class="p1">visit lyndesk.tech ↗</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Stacked Side Projects (Rakthro & Lumen Point - 5 Columns) -->
+      <div class="personal-projects-stack">
+        
+        <!-- CARD 1: Rakthro -->
+        <div class="personal-project-sub">
+          <div class="personal-tilt-wrap" data-tilt="wrap" data-tilt-max-x="4" data-tilt-max-y="5" data-tilt-scale="1.015">
+            <div class="personal-tilt-card" data-tilt="card">
+              <div class="personal-tilt-media aspect-sub">
+                <img src="images/rakthro.png" alt="Rakthro Medical Platform" loading="lazy" class="personal-card-img" />
+                <div class="personal-tilt-glare"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="personal-card-content is-sub">
+            <div class="personal-card-meta">
+              <span class="personal-tag p1">Healthcare Logistics</span>
+              <span class="personal-year p1">2025</span>
+            </div>
+            
+            <h4 class="personal-card-title-sub p1">
+              <span class="personal-project-name">Rakthro</span> — Medical coordination platform for donors, chronic care &amp; logistics.
+            </h4>
+          </div>
+        </div>
+
+        <!-- CARD 2: Lumen Point -->
+        <div class="personal-project-sub">
+          <div class="personal-tilt-wrap" data-tilt="wrap" data-tilt-max-x="4" data-tilt-max-y="5" data-tilt-scale="1.015">
+            <div class="personal-tilt-card" data-tilt="card">
+              <div class="personal-tilt-media aspect-sub">
+                <img src="images/lumen.png" alt="Lumen Point Knowledge Visualization" loading="lazy" class="personal-card-img" />
+                <div class="personal-tilt-glare"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="personal-card-content is-sub">
+            <div class="personal-card-meta">
+              <span class="personal-tag p1">Knowledge Architecture</span>
+              <span class="personal-year p1">2024</span>
+            </div>
+            
+            <h4 class="personal-card-title-sub p1">
+              <span class="personal-project-name">Lumen Point</span> — Decoding complex topics through intuitive visualization.
+            </h4>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="awards" class="awards"><div class="awards-inner"><div class="w-layout-grid grid row-0"><div id="w-node-_05cf82f1-6b6e-8f7c-c770-f133695cf5da-ef9a5cf3" class="awards--heading-wrap"><h1 data-reveal="text" class="h1">Hobby</h1></div><h1 data-reveal="text" id="w-node-_9448f436-9bf9-2563-275c-334e098a3850-ef9a5cf3" class="h1">&amp;</h1><h1 data-reveal="text" id="w-node-_7997afcf-e344-c1f7-2ee7-9e212865c18c-ef9a5cf3" class="h1">Ex-</h1><h1 data-reveal="text" id="w-node-af7749f1-fef4-37e3-3122-b9dba9216442-ef9a5cf3" class="h1">periments</h1></div><div class="w-layout-grid grid"><div id="w-node-_809a9322-2ff7-ab7f-4189-7923554e02db-ef9a5cf3" class="d-awards-master-list-wrap w-dyn-list"><div role="list" class="d-awards-master-list w-dyn-items">
 
     <!-- CATEGORY 1: APPS -->
     <div role="listitem" class="d-awards-master-item w-dyn-item">
@@ -3024,14 +3350,14 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
         <div class="tv-bezel-top">
           <div class="tv-brand-label">
             <span class="tv-brand-dot"></span>
-            <span>LUNA . Secondary Brain for AI</span>
+            <span>LUNA // SYSTEM ARCHITECTURE &amp; NEURAL GRAPH</span>
           </div>
           <div class="tv-vent-slits">
             <span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
           <div class="tv-status-badge">
             <span class="tv-led-indicator" id="tv-power-led"></span>
-            <span class="tv-status-text">NEURAL SYNAPSE</span>
+            <span class="tv-status-text">280 NODES · 692 SYNAPSES · ONLINE</span>
           </div>
         </div>
 
@@ -3063,11 +3389,11 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
               </div>
             </div>
             <div class="tv-speaker-louvers">
-              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
           </div>
         </div>
-        <!-- TV Bezel Bottom<!-- TV Bezel Bottom: Sticky Note Affixed (Linen Cream Palette) -->
+        <!-- TV Bezel Bottom: Sticky Note Affixed -->
         <div class="tv-bezel-bottom">
           <div class="tv-sticky-note-attachment" id="tv-sticky-note-trigger" role="button" tabindex="0" title="Click to inspect Shreeprasandh's living second brain">
             <div class="tv-sticky-tape"></div>
@@ -3124,19 +3450,10 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
       <h1 data-reveal="text" class="h1 stories-heading-nics">nics</h1>
     </div>
 
-    <div class="creative-sub-bar">
-      <div class="vault-cat-tag">PUBLISHED FICTION &amp; ORIGINAL COMPOSITIONS</div>
-      <div class="p1 opacity-0-7">Handcrafted narrative architecture and sonic compositions.</div>
-    </div>
-
-    <!-- Two-Column Editorial Hairline Grid -->
+    <!-- Two-Column Editorial Grid (Compact Rectangular Pair) -->
     <div class="creative-grid">
-      <!-- Left Column: The Novel -->
+      <!-- Left Column: The 3D Book Showcase & Narrative Meta -->
       <div class="creative-col is-story">
-        <div class="creative-col-header">
-          <span class="vault-cat-tag">01 // LITERARY FICTION</span>
-          <span class="badge-status">NOVEL · 100K+ WORDS</span>
-        </div>
         <div class="book-showcase-wrap" id="book-3d-wrap">
           <div class="book-3d" id="book-3d-element">
             <div class="book-front">
@@ -3147,47 +3464,53 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
             <div class="book-pages"></div>
           </div>
         </div>
-        <div class="creative-col-body">
-          <h3 class="h2 book-title-main">The Cursed Devil who was Blessed</h3>
-          <p class="p1 book-desc">
-            A published dark fantasy epic chronicling redemption, forbidden covenants, and the psychological cost of divine transfiguration.
-          </p>
-          <div class="book-meta-grid">
-            <div class="meta-item"><span class="lbl">Author:</span> <span class="val">Shreeprasandh K</span></div>
-            <div class="meta-item"><span class="lbl">Format:</span> <span class="val">Hardcover · Digital</span></div>
-            <div class="meta-item"><span class="lbl">Status:</span> <span class="val">Published</span></div>
+
+        <div class="personal-card-content">
+          <div class="personal-card-meta">
+            <span class="personal-tag p1">A Diary Turned into a Book</span>
+            <span class="personal-year p1">Published</span>
           </div>
-          <a href="https://github.com/Shreeprasandh" target="_blank" rel="noopener noreferrer" class="link-button w-inline-block">
-            <div class="link-inner">
-              <div class="p1">Explore Lore &amp; Chapters ↗</div>
-            </div>
-          </a>
+
+          <h3 class="personal-card-title h2">
+            The Cursed Devil who was Blessed
+          </h3>
+
+          <p class="personal-card-desc p1">
+            A personal story and reflective journey exploring destiny, emotional depth, and the quiet blessings forged through life&#39;s trials. Published by Kaizzcer<br>(Shreeprasandh K).
+          </p>
+
+          <div class="personal-card-cta">
+            <a data-haptic="medium" data-reveal="div" data-link-trigger="" href="https://www.amazon.in/Cursed-Devil-who-was-Blessed/dp/B0GVSDDLTD" target="_blank" rel="noopener noreferrer" class="link-button w-inline-block">
+              <div class="link-inner">
+                <div data-link="shadow" class="p1 is-2">View on Amazon ↗</div>
+                <div data-link="label" class="p1">View on Amazon ↗</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Right Column: Original Sonics -->
+      <!-- Right Column: Original Sonics Player -->
       <div class="creative-col is-sonics">
-        <div class="creative-col-header">
-          <span class="vault-cat-tag">02 // ORIGINAL SOUNDTRACK</span>
-          <span class="badge-status">LYRICIST &amp; PRODUCER</span>
-        </div>
-
         <div class="sonics-player-box">
-          <div class="sonics-now-playing-pill" id="sonics-status-pill">
-            <span class="pulse-dot"></span>
-            <span id="sonics-status-text">READY TO PLAY</span>
+          
+          <!-- Unified Header Row: Title & Artist + Hero Play/Pause Toggle -->
+          <div class="sonics-header-row">
+            <div class="sonics-track-info">
+              <div class="track-title-lead" id="current-track-title">Vizhiyin Eeram</div>
+              <div class="track-artist-sub" id="current-track-artist">Acoustic Indie Melody · Lyricist: Shreeprasandh K</div>
+            </div>
+            <button type="button" class="sonics-play-hero" id="sonics-btn-play" title="Play / Pause Track">
+              <span id="sonics-play-icon">▶</span>
+            </button>
           </div>
 
+          <!-- Studio-Grade 28-Bar Harmonic Waveform EQ Visualizer -->
           <div class="sonics-visualizer-bars" id="sonics-bars">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-
-          <div class="sonics-track-info">
-            <div class="track-title-lead" id="current-track-title">Vizhiyin Eeram</div>
-            <div class="track-artist-sub" id="current-track-artist">Acoustic Indie Melody · Lyricist: Shreeprasandh K</div>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
 
           <audio id="sonics-audio-element" preload="metadata">
@@ -3203,19 +3526,6 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
               <span id="sonics-time-current">0:00</span>
               <span id="sonics-time-duration">3:42</span>
             </div>
-          </div>
-
-          <!-- Transport Controls -->
-          <div class="sonics-controls-row">
-            <button type="button" class="sonics-btn" id="sonics-btn-prev" title="Previous Track">
-              <span>⏮</span>
-            </button>
-            <button type="button" class="sonics-play-main" id="sonics-btn-play" title="Play Track">
-              <span id="sonics-play-icon">▶</span>
-            </button>
-            <button type="button" class="sonics-btn" id="sonics-btn-next" title="Next Track">
-              <span>⏭</span>
-            </button>
           </div>
 
           <!-- Track Selection List -->
