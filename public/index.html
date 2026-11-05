@@ -1690,13 +1690,6 @@ body.theme-mode-light .tv-chassis,
   color: var(--_colors---content--primary);
   font-weight: 600;
 }
-.tv-brand-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #f59e0b;
-  box-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
-}
 .tv-vent-slits {
   display: flex;
   gap: 5px;
@@ -1895,7 +1888,21 @@ body.theme-mode-light .tv-sticky-paper,
   0%, 100% { transform: rotate(-2deg); }
   50% { transform: rotate(-3.8deg) translateY(-2px); }
 }
-.tv-sticky-pin { font-size: 13px; margin-bottom: 4px; }
+.tv-sticky-pin {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.tv-modal-pin {
+  display: flex;
+  align-items: center;
+}
+.tv-pin-icon {
+  display: inline-block;
+  vertical-align: middle;
+  color: #B91C1C;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+}
 .tv-sticky-title {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 10px;
@@ -2087,7 +2094,7 @@ body.theme-mode-light .tv-sticky-paper,
 }
 .book-showcase-wrap:hover {
   border-color: var(--_colors---border--100);
-  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.35);
 }
 body.theme-mode-light .book-showcase-wrap,
 :root[data-theme="light"] .book-showcase-wrap {
@@ -2095,66 +2102,146 @@ body.theme-mode-light .book-showcase-wrap,
 }
 body.theme-mode-light .book-showcase-wrap:hover,
 :root[data-theme="light"] .book-showcase-wrap:hover {
-  box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.08);
+}
+.book-floor-shadow {
+  position: absolute;
+  width: 140px;
+  height: 26px;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 50%, transparent 75%);
+  filter: blur(8px);
+  pointer-events: none;
+  z-index: 1;
+}
+body.theme-mode-light .book-floor-shadow,
+:root[data-theme="light"] .book-floor-shadow {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.05) 50%, transparent 75%);
 }
 .book-3d {
   position: relative;
-  width: 125px;
-  height: 185px;
+  width: 140px;
+  height: 216px;
   transform-style: preserve-3d;
-  transform: rotateY(-22deg) rotateX(8deg);
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
-  box-shadow: -14px 20px 30px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+  transform: rotateY(-24deg) rotateX(8deg);
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: grab;
+  z-index: 2;
 }
-.book-showcase-wrap:hover .book-3d {
-  transform: rotateY(-8deg) rotateX(2deg) scale(1.04);
-  box-shadow: -8px 14px 24px rgba(0, 0, 0, 0.6);
+.book-3d:active {
+  cursor: grabbing;
 }
-.book-front {
+.book-cover-front,
+.book-cover-back {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 216px;
   border-radius: 2px 4px 4px 2px;
   overflow: hidden;
-  background: #111114;
-  transform: translateZ(10px);
+  background: #0e0e12;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.book-cover-front {
+  transform: translateZ(11px);
+}
+.book-cover-back {
+  border-radius: 4px 2px 2px 4px;
+  transform: rotateY(180deg) translateZ(11px);
 }
 .book-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.book-crease {
+  position: absolute;
+  top: 0;
+  left: 9px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.55) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.35) 100%);
+  pointer-events: none;
+  z-index: 4;
+}
+.book-crease.is-back {
+  left: auto;
+  right: 9px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.55) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.35) 100%);
 }
 .book-sheen {
   position: absolute;
   inset: 0;
-  background: linear-gradient(115deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 45%, rgba(0, 0, 0, 0.35) 100%);
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 45%, rgba(0, 0, 0, 0.35) 100%);
   pointer-events: none;
+  z-index: 5;
 }
 .book-spine {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 18px;
-  height: 100%;
-  background: #18181b;
-  transform-origin: left;
-  transform: rotateY(-90deg) translateZ(0px);
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.5);
+  left: -11px;
+  width: 22px;
+  height: 216px;
+  background: linear-gradient(90deg, #060608 0%, #15151c 25%, #262633 50%, #15151c 75%, #060608 100%);
+  background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 38px, rgba(255, 255, 255, 0.15) 39px, rgba(0, 0, 0, 0.55) 41px, transparent 42px);
+  transform: rotateY(-90deg);
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  overflow: hidden;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
 }
-.book-pages {
+.book-spine-text {
   position: absolute;
-  top: 2px;
-  right: 0;
-  width: 16px;
-  height: calc(100% - 4px);
-  background: repeating-linear-gradient(to right, #D8D3CC, #D8D3CC 1px, #A8A39C 2px);
-  transform-origin: right;
-  transform: rotateY(90deg) translateZ(-10px);
-  border-radius: 0 2px 2px 0;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #D8D3CC;
+  opacity: 0.82;
+  white-space: nowrap;
+}
+.book-pages-right {
+  position: absolute;
+  top: 3px;
+  left: 129px;
+  width: 18px;
+  height: 210px;
+  transform: rotateY(90deg);
+  background: repeating-linear-gradient(to bottom, #F5F1E8 0px, #EBE6DA 1px, #DDD7CB 2px);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25);
+  border-radius: 0 1px 1px 0;
+}
+.book-pages-top {
+  position: absolute;
+  top: -6px;
+  left: 2px;
+  width: 136px;
+  height: 18px;
+  transform: rotateX(90deg);
+  background: repeating-linear-gradient(to right, #F5F1E8 0px, #EBE6DA 1px, #DDD7CB 2px);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.book-pages-bottom {
+  position: absolute;
+  top: 204px;
+  left: 2px;
+  width: 136px;
+  height: 18px;
+  transform: rotateX(-90deg);
+  background: repeating-linear-gradient(to right, #EDE8DC 0px, #DDD7CB 1px, #CFC8BA 2px);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
 }
 
 /* Sonics Audio Player (100% Monochromatic Bleibtgleich Aesthetic) */
@@ -3349,14 +3436,12 @@ body.theme-mode-light .sonics-visualizer-bars.is-playing span,
         <!-- Top Bezel: Status Bar -->
         <div class="tv-bezel-top">
           <div class="tv-brand-label">
-            <span class="tv-brand-dot"></span>
-            <span>LUNA // SYSTEM ARCHITECTURE &amp; NEURAL GRAPH</span>
+            <span>LUNA . SYSTEM ARCHITECTURE &amp; NEURAL GRAPH</span>
           </div>
           <div class="tv-vent-slits">
             <span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
           <div class="tv-status-badge">
-            <span class="tv-led-indicator" id="tv-power-led"></span>
             <span class="tv-status-text">280 NODES · 692 SYNAPSES · ONLINE</span>
           </div>
         </div>
@@ -3398,8 +3483,10 @@ body.theme-mode-light .sonics-visualizer-bars.is-playing span,
           <div class="tv-sticky-note-attachment" id="tv-sticky-note-trigger" role="button" tabindex="0" title="Click to inspect Shreeprasandh's living second brain">
             <div class="tv-sticky-tape"></div>
             <div class="tv-sticky-paper">
-              <div class="tv-sticky-pin">📌</div>
-              <div class="tv-sticky-title">shree_second_brain.md</div>
+              <div class="tv-sticky-pin">
+                <svg class="tv-pin-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+              </div>
+              <div class="tv-sticky-title">luna_second_brain.md</div>
               <div class="tv-sticky-preview">280 nodes · 692 synapses</div>
               <div class="tv-sticky-cta">Tap to inspect ↗</div>
             </div>
@@ -3419,18 +3506,20 @@ body.theme-mode-light .sonics-visualizer-bars.is-playing span,
     <div class="tv-modal-tape"></div>
     <button type="button" class="tv-modal-close" id="tv-sticky-close" aria-label="Close Note">✕</button>
     <div class="tv-modal-header">
-      <span class="tv-modal-pin">📌</span>
-      <h3 class="tv-modal-title">Shreeprasandh's Living Second Brain</h3>
+      <span class="tv-modal-pin">
+        <svg class="tv-pin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+      </span>
+      <h3 class="tv-modal-title">Shreeprasandh&#39;s Luna</h3>
     </div>
     <div class="tv-modal-body">
       <p class="tv-modal-lead">
-        Every glowing point of light in this visual is an interconnected node living in my personal Obsidian vault.
+        Every glowing point of light in this visual is an interconnected node living in my personal vault.
       </p>
       <p class="tv-modal-text">
-        Spanning systems architecture, full-stack codebases, autonomous multi-agent AI swarms, IoT hardware schematics, and unfiltered creative fiction—this is not a static graphic. It is a live neural graph of how my brain organizes ideas, synthetically linking thought to execution.
+        Spanning systems architecture, full-stack codebases, autonomous multi-agent AI swarms, IoT hardware schematics, and unfiltered creative fiction—this is not a static graphic. It is a live neural graph of how my brain organizes ideas, synthetically linking thought to execution. Several autonomous agents continually maintain this brain, learning from every interaction and expanding its intelligence in real time.
       </p>
       <div class="tv-modal-stats">
-        <div class="tv-stat-pill"><span class="val">280</span><span class="lbl">Active Notes</span></div>
+        <div class="tv-stat-pill"><span class="val">280</span><span class="lbl">Active Nodes</span></div>
         <div class="tv-stat-pill"><span class="val">692</span><span class="lbl">Synaptic Links</span></div>
         <div class="tv-stat-pill"><span class="val">6</span><span class="lbl">Core Clusters</span></div>
       </div>
@@ -3455,13 +3544,28 @@ body.theme-mode-light .sonics-visualizer-bars.is-playing span,
       <!-- Left Column: The 3D Book Showcase & Narrative Meta -->
       <div class="creative-col is-story">
         <div class="book-showcase-wrap" id="book-3d-wrap">
+          <div class="book-floor-shadow"></div>
           <div class="book-3d" id="book-3d-element">
-            <div class="book-front">
-              <img src="images/book-cover.png" alt="The Cursed Devil who was Blessed novel cover by Shreeprasandh K" class="book-img" />
+            <!-- Front Cover (Hardcover) -->
+            <div class="book-cover-front">
+              <img src="images/book-cover-front.png" alt="The Cursed Devil who was Blessed novel cover by Shreeprasandh K" class="book-img" />
+              <div class="book-crease"></div>
               <div class="book-sheen"></div>
             </div>
-            <div class="book-spine"></div>
-            <div class="book-pages"></div>
+            <!-- Spine -->
+            <div class="book-spine">
+              <div class="book-spine-text">THE CURSED DEVIL WHO WAS BLESSED · KAIZZCER</div>
+            </div>
+            <!-- Back Cover (Hardcover) -->
+            <div class="book-cover-back">
+              <img src="images/book-cover-back.png" alt="The Cursed Devil who was Blessed novel back cover by Shreeprasandh K" class="book-img" />
+              <div class="book-crease is-back"></div>
+              <div class="book-sheen"></div>
+            </div>
+            <!-- Recessed Page Text Block -->
+            <div class="book-pages-right"></div>
+            <div class="book-pages-top"></div>
+            <div class="book-pages-bottom"></div>
           </div>
         </div>
 
@@ -3660,12 +3764,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const rect = bookWrap.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
-      const rotY = -18 + x * 26;
-      const rotX = 6 - y * 18;
-      bookEl.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+      const rotY = -24 + x * 46;
+      const rotX = 8 - y * 20;
+      bookEl.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg) scale(1.03)`;
     });
     bookWrap.addEventListener('mouseleave', () => {
-      bookEl.style.transform = 'rotateY(-18deg) rotateX(6deg)';
+      bookEl.style.transform = 'rotateY(-24deg) rotateX(8deg) scale(1)';
     });
   }
 })();

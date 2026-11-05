@@ -92,7 +92,9 @@ D.clear(D.COLOR_BUFFER_BIT),{tex:n,fbo:o,w:e,h:t,attach(e){return D.activeTextur
         const rect = bookWrap.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
-        bookEl.style.transform = `rotateY(${x * 35 - 15}deg) rotateX(${-y * 25 + 5}deg) scale(1.04)`;
+        const rotY = -24 + x * 46;
+        const rotX = 8 - y * 20;
+        bookEl.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg) scale(1.03)`;
       });
       bookWrap.addEventListener("mouseleave", () => {
         bookEl.style.transform = "rotateY(-24deg) rotateX(8deg) scale(1)";
