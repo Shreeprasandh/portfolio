@@ -824,9 +824,9 @@
 .tv-screen-container {
   width: 100%;
   height: 380px;
-  background-color: #090a0f;
+  background-color: #141416;
   border-radius: 10px;
-  border: 1px solid #1a1a1e;
+  border: 1px solid #242424;
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.95);
@@ -1638,8 +1638,8 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   width: 380px !important;
   height: auto !important;
   max-width: min(380px, 45vw) !important;
-  max-height: 250px !important;
-  object-fit: contain !important;
+  max-height: 280px !important;
+  object-fit: cover !important;
   display: block !important;
   border: none !important;
   outline: none !important;
@@ -1705,14 +1705,132 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
   margin: 0 auto;
   padding: 0 var(--_units---u-16);
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  position: relative;
 }
+.standalone-vault-wrapper,
 .tv-chassis-wrapper {
+  grid-column: 1;
+  grid-row: 1;
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
+}
+.standalone-vault-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px 16px;
+  z-index: 2;
+  transform-origin: center center;
+}
+.standalone-vault-mount {
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 5 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: grab;
+}
+.standalone-vault-mount:active {
+  cursor: grabbing;
+}
+.standalone-vault-mount,
+.standalone-vault-mount svg,
+.standalone-vault-mount [data-hairline="vault"] {
+  width: 100%;
+  height: 100%;
+}
+.standalone-vault-reading {
+  margin-top: 20px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--_colors---content--secondary);
+  text-transform: uppercase;
+  transition: color 0.25s ease, opacity 0.25s ease;
+  user-select: none;
+}
+.standalone-vault-reading.is-open {
+  color: #D8D3CC;
+}
+body.theme-mode-light .standalone-vault-reading.is-open,
+:root[data-theme="light"] .standalone-vault-reading.is-open {
+  color: #1B1B1B;
+}
+
+/* Custom Hairline Palette Calibrated to Portfolio Aesthetic (#1B1B1B & #D8D3CC) */
+.standalone-vault-wrapper,
+.standalone-vault-mount,
+.standalone-vault-mount[data-hairline],
+.standalone-vault-mount svg,
+[data-hairline="vault"],
+:where([data-hairline="vault"]),
+:where([data-hairline="vault"]>svg) {
+  --hairline-plate: #1B1B1B !important;
+  --hairline-hi: #D8D3CC !important;
+  --hairline-edge: #8C8780 !important;
+  --hairline-mid: #4A4845 !important;
+  --hairline-lo: #2C2B29 !important;
+  --hl-plate: #1B1B1B !important;
+  --hl-hi: #D8D3CC !important;
+  --hl-edge: #8C8780 !important;
+  --hl-mid: #4A4845 !important;
+  --hl-lo: #2C2B29 !important;
+  --hl-sw: 1px !important;
+}
+:where([data-hairline="vault"]>svg) :where(path,polygon,ellipse,line) {
+  fill: var(--hl-plate) !important;
+  stroke: var(--hl-mid) !important;
+}
+:where([data-hairline="vault"]>svg) :where(.nf) { fill: none !important; }
+:where([data-hairline="vault"]>svg) :where(.fo) { stroke: none !important; }
+:where([data-hairline="vault"]>svg) :where(.sil) { stroke: var(--hl-edge) !important; }
+:where([data-hairline="vault"]>svg) :where(.hi) { stroke: var(--hl-hi) !important; }
+:where([data-hairline="vault"]>svg) :where(.lo) { stroke: var(--hl-lo) !important; }
+:where([data-hairline="vault"]>svg) :where(.dot) { fill: var(--hl-hi) !important; }
+:where([data-hairline="vault"]>svg) :where(.dot.m) { fill: var(--hl-edge) !important; }
+:where([data-hairline="vault"]>svg) :where(.dot.off) { fill: var(--hl-lo) !important; }
+
+body.theme-mode-light .standalone-vault-wrapper,
+body.theme-mode-light .standalone-vault-mount,
+body.theme-mode-light .standalone-vault-mount[data-hairline],
+body.theme-mode-light .standalone-vault-mount svg,
+body.theme-mode-light [data-hairline="vault"],
+:root[data-theme="light"] .standalone-vault-wrapper,
+:root[data-theme="light"] .standalone-vault-mount,
+:root[data-theme="light"] .standalone-vault-mount[data-hairline],
+:root[data-theme="light"] .standalone-vault-mount svg,
+:root[data-theme="light"] [data-hairline="vault"] {
+  --hairline-plate: #D8D3CC !important;
+  --hairline-hi: #1B1B1B !important;
+  --hairline-edge: #2E2D2B !important;
+  --hairline-mid: #7A7670 !important;
+  --hairline-lo: #ABA7A0 !important;
+  --hl-plate: #D8D3CC !important;
+  --hl-hi: #1B1B1B !important;
+  --hl-edge: #2E2D2B !important;
+  --hl-mid: #7A7670 !important;
+  --hl-lo: #ABA7A0 !important;
+  --hl-sw: 1px !important;
+}
+
+.tv-chassis-wrapper {
   perspective: 1200px;
+  z-index: 1;
+  transform-origin: center center;
 }
 .tv-chassis {
   background: var(--_colors---background--bg-2);
@@ -1730,6 +1848,17 @@ body.theme-mode-1 .cat-moon-logo-img.is-light,
 body.theme-mode-light .tv-chassis,
 :root[data-theme="light"] .tv-chassis {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+.tv-lock-vault-btn {
+  background: rgba(239, 68, 68, 0.12) !important;
+  color: #ef4444 !important;
+  border-color: rgba(239, 68, 68, 0.25) !important;
+  margin-top: 4px;
+}
+.tv-lock-vault-btn:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  border-color: #ef4444 !important;
 }
 .tv-bezel-top {
   display: flex;
@@ -1783,7 +1912,7 @@ body.theme-mode-light .tv-main-body,
 }
 .tv-screen-frame {
   flex: 1;
-  background: #090a0f;
+  background: #1a1a1a;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.6);
   box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.85);
@@ -3331,15 +3460,14 @@ body.theme-mode-light .playlist-item.is-active,
 
   .personal-tilt-media.aspect-hero,
   .personal-tilt-media.aspect-sub {
-    aspect-ratio: 16 / 9.5;
-    background-color: var(--_colors---background--bg-2);
+    aspect-ratio: 16 / 9.2;
   }
 
   .personal-card-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
+    object-position: center top;
     display: block;
     user-select: none;
     pointer-events: none;
@@ -3815,7 +3943,14 @@ body.theme-mode-light .playlist-item.is-active,
 
 <section id="tv-brain" class="tv-brain-section">
   <div class="tv-brain-inner">
-    <div class="tv-chassis-wrapper">
+    <!-- 1. The Vault Gate (Standalone Vault guarding Luna's Brain) -->
+    <div class="standalone-vault-wrapper" id="tv-vault-wrapper">
+      <div id="tv-vault-mount" class="standalone-vault-mount"></div>
+      <div class="standalone-vault-reading" id="tv-vault-readout-text">DIAL 30</div>
+    </div>
+
+    <!-- 2. TV Living Brain Chassis (Revealed upon Vault Unlock) -->
+    <div class="tv-chassis-wrapper" id="tv-chassis-wrapper" style="visibility: hidden; opacity: 0; pointer-events: none;">
       <div class="tv-chassis">
         <!-- Top Bezel: Status Bar -->
         <div class="tv-bezel-top">
@@ -3826,7 +3961,7 @@ body.theme-mode-light .playlist-item.is-active,
             <span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
           <div class="tv-status-badge">
-            <span class="tv-status-text">280 NODES · 692 SYNAPSES · ONLINE</span>
+            <span class="tv-status-text">298 NODES · 756 SYNAPSES · ONLINE</span>
           </div>
         </div>
 
@@ -3835,7 +3970,7 @@ body.theme-mode-light .playlist-item.is-active,
           <!-- Screen Frame -->
           <div class="tv-screen-frame">
             <div class="tv-screen-glass">
-              <iframe id="tv-aether-iframe" src="vault-embed.html" style="width: 100%; height: 100%; border: none; display: block; background: #090A0F;" title="Luna Living Brain"></iframe>
+              <iframe id="tv-aether-iframe" src="vault-embed.html" style="width: 100%; height: 100%; border: none; display: block; background: #1a1a1a;" title="Luna Living Brain"></iframe>
               <div class="tv-crt-overlay"></div>
             </div>
           </div>
@@ -3857,6 +3992,9 @@ body.theme-mode-light .playlist-item.is-active,
                 <div class="tv-dial-notch"></div>
               </div>
             </div>
+            <button type="button" class="tv-reset-btn tv-lock-vault-btn" id="tv-lock-vault" title="Re-lock Vault Door">
+              <span>LOCK</span>
+            </button>
             <div class="tv-speaker-louvers">
               <span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
@@ -3871,7 +4009,7 @@ body.theme-mode-light .playlist-item.is-active,
                 <svg class="tv-pin-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
               </div>
               <div class="tv-sticky-title">luna_second_brain.md</div>
-              <div class="tv-sticky-preview">280 nodes · 692 synapses</div>
+              <div class="tv-sticky-preview">298 nodes · 756 synapses</div>
               <div class="tv-sticky-cta">Tap to inspect ↗</div>
             </div>
           </div>
@@ -3903,9 +4041,9 @@ body.theme-mode-light .playlist-item.is-active,
         Spanning systems architecture, full-stack codebases, autonomous multi-agent AI swarms, IoT hardware schematics, and unfiltered creative fiction—this is not a static graphic. It is a live neural graph of how my brain organizes ideas, synthetically linking thought to execution. Several autonomous agents continually maintain this brain, learning from every interaction and expanding its intelligence in real time.
       </p>
       <div class="tv-modal-stats">
-        <div class="tv-stat-pill"><span class="val">280</span><span class="lbl">Active Nodes</span></div>
-        <div class="tv-stat-pill"><span class="val">692</span><span class="lbl">Synaptic Links</span></div>
-        <div class="tv-stat-pill"><span class="val">6</span><span class="lbl">Core Clusters</span></div>
+        <div class="tv-stat-pill"><span class="val">298</span><span class="lbl">Active Nodes</span></div>
+        <div class="tv-stat-pill"><span class="val">756</span><span class="lbl">Synaptic Links</span></div>
+        <div class="tv-stat-pill"><span class="val">5</span><span class="lbl">Core Clusters</span></div>
       </div>
     </div>
   </div>
@@ -4156,18 +4294,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================================================
 
 // ============================================================
-// 3. 1:1 AETHER 3D NEURAL VAULT BRAIN ENGINE
+// 3. 1:1 AETHER 3D NEURAL VAULT BRAIN ENGINE & RELAY BRIDGE
 // ============================================================
-(function initAetherTvBrain() {
-  const canvas = document.getElementById('tv-brain-canvas');
-  const tvSection = document.getElementById('tv-brain');
-  const aetherHud = document.getElementById('tv-aether-hud');
-  const hudTitle = document.getElementById('tv-hud-title');
-  const hudCat = document.getElementById('tv-hud-cat');
-  const hudExcerpt = document.getElementById('tv-hud-excerpt');
-  const hudLinks = document.getElementById('tv-hud-links');
-  const hudBacklinks = document.getElementById('tv-hud-backlinks');
-
+(function initAetherTvBridge() {
+  const iframe = document.getElementById('tv-aether-iframe');
   const dialRot = document.getElementById('tv-dial-rot');
   const dialZoom = document.getElementById('tv-dial-zoom');
   const resetBtn = document.getElementById('tv-reset-view');
@@ -4177,312 +4307,355 @@ document.addEventListener('DOMContentLoaded', () => {
   const stickyClose = document.getElementById('tv-sticky-close');
   const stickyBackdrop = document.getElementById('tv-sticky-backdrop');
 
-  if (!canvas || !tvSection) return;
-
-  // Sticky Note Modal Listeners
+  // 1. STICKY NOTE MODAL LISTENERS (LUNA LIVING BRAIN TELEMETRY)
   if (stickyTrigger && stickyModal) {
     const openModal = () => {
       stickyModal.classList.add('is-open');
       stickyModal.setAttribute('aria-hidden', 'false');
+      if (window._haptics && typeof window._haptics.trigger === 'function') {
+        window._haptics.trigger('light');
+      }
     };
     const closeModal = () => {
       stickyModal.classList.remove('is-open');
       stickyModal.setAttribute('aria-hidden', 'true');
     };
+
     stickyTrigger.addEventListener('click', openModal);
+    stickyTrigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal();
+      }
+    });
+
     if (stickyClose) stickyClose.addEventListener('click', closeModal);
     if (stickyBackdrop) stickyBackdrop.addEventListener('click', closeModal);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && stickyModal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
   }
 
-  // Exact Aether Cluster Colors
-  const CLUSTER_COLORS = {
-    hub: 0xf59e0b,          // Electric Amber / Gold
-    architecture: 0x22d3ee, // Phosphor Cyan
-    skills: 0x10b981,       // Emerald Green
-    projects: 0x6366f1,     // Indigo
-    ideas: 0xa855f7,        // Deep Amethyst
-    general: 0x94a3b8       // Slate
-  };
-
-  const CLUSTER_CSS_COLORS = {
-    hub: '#f59e0b',
-    architecture: '#22d3ee',
-    skills: '#10b981',
-    projects: '#6366f1',
-    ideas: '#a855f7',
-    general: '#94a3b8'
-  };
-
-  let renderer, scene, camera;
-  let graphGroup;
-  let nodeMeshes = [];
-  let animId = null;
-  let isVisible = false;
-
-  let isDragging = false;
-  let prevMouse = { x: 0, y: 0 };
-  let rotX = 0.15;
-  let rotY = -0.3;
-  let targetRotX = 0.15;
-  let targetRotY = -0.3;
-  let zoom = 220;
-  let targetZoom = 220;
-
-  async function setupThreeBrain() {
-    if (typeof THREE === 'undefined') {
-      setTimeout(setupThreeBrain, 80);
-      return;
-    }
-
-    let graphData = null;
-    try {
-      const res = await fetch('vault-graph.json');
-      if (res.ok) {
-        graphData = await res.json();
+  // 2. HARDWARE RELAY BRIDGE HELPER
+  function postToBrain(msg) {
+    if (iframe && iframe.contentWindow) {
+      try {
+        iframe.contentWindow.postMessage(msg, '*');
+      } catch (err) {
+        console.warn('TV relay postMessage error:', err);
       }
-    } catch (e) {
-      console.warn('Could not load vault-graph.json directly:', e);
     }
+  }
 
-    const rect = canvas.getBoundingClientRect();
-    const width = rect.width || canvas.clientWidth || 740;
-    const height = rect.height || canvas.clientHeight || 390;
+  // 3. ROTARY DIAL: ROTATION (ROT)
+  let rotDeg = 0;
+  if (dialRot) {
+    let isDraggingRot = false;
+    let startX = 0;
+    let lastRotPost = 0;
 
-    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(width, height);
-
-    scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x060709, 0.0022);
-
-    camera = new THREE.PerspectiveCamera(52, width / height, 0.1, 2000);
-    camera.position.set(0, 20, zoom);
-
-    graphGroup = new THREE.Group();
-    scene.add(graphGroup);
-
-    const nodes = graphData && graphData.nodes ? graphData.nodes : [];
-    const links = graphData && graphData.links ? graphData.links : [];
-
-    const nodeMap = {};
-    const clusterCenters = {
-      hub: new THREE.Vector3(0, 0, 0),
-      architecture: new THREE.Vector3(55, 22, 28),
-      skills: new THREE.Vector3(-52, 28, -35),
-      projects: new THREE.Vector3(38, -36, 42),
-      ideas: new THREE.Vector3(-36, -30, 32),
-      general: new THREE.Vector3(0, 15, -45)
+    const onPointerDownRot = (e) => {
+      isDraggingRot = true;
+      startX = e.clientX;
+      dialRot.setPointerCapture(e.pointerId);
+      if (window._haptics && typeof window._haptics.trigger === 'function') {
+        window._haptics.trigger('light');
+      }
     };
 
-    nodes.forEach((node, i) => {
-      const cat = node.category || 'general';
-      const center = clusterCenters[cat] || clusterCenters.general;
-      const radius = (cat === 'hub' ? 24 : 45) * (0.4 + 0.6 * Math.random());
-      const u = Math.random();
-      const v = Math.random();
-      const theta = u * 2.0 * Math.PI;
-      const phi = Math.acos(2.0 * v - 1.0);
-      const r = Math.cbrt(Math.random()) * radius;
-      const sinPhi = Math.sin(phi);
+    const onPointerMoveRot = (e) => {
+      if (!isDraggingRot) return;
+      const dx = e.clientX - startX;
+      startX = e.clientX;
+      rotDeg += dx * 1.5;
+      dialRot.style.transform = `rotate(${rotDeg}deg)`;
 
-      const x = center.x + r * sinPhi * Math.cos(theta);
-      const y = center.y + r * sinPhi * Math.sin(theta);
-      const z = center.z + r * Math.cos(phi);
-
-      const color = CLUSTER_COLORS[cat] || 0x94a3b8;
-      const sphereSize = Math.max(1.4, Math.min(4.2, (node.val || 4) * 0.32));
-
-      const sphereGeo = new THREE.SphereGeometry(sphereSize, 14, 14);
-      const sphereMat = new THREE.MeshBasicMaterial({ color });
-      const mesh = new THREE.Mesh(sphereGeo, sphereMat);
-      mesh.position.set(x, y, z);
-      mesh.userData = { ...node, baseScale: 1 };
-
-      graphGroup.add(mesh);
-      nodeMeshes.push(mesh);
-      nodeMap[node.id] = mesh;
-    });
-
-    // Connecting Synaptic Filaments
-    const linePositions = [];
-    links.forEach(l => {
-      const srcId = typeof l.source === 'object' ? l.source.id : l.source;
-      const tgtId = typeof l.target === 'object' ? l.target.id : l.target;
-      const srcNode = nodeMap[srcId];
-      const tgtNode = nodeMap[tgtId];
-      if (srcNode && tgtNode) {
-        linePositions.push(
-          srcNode.position.x, srcNode.position.y, srcNode.position.z,
-          tgtNode.position.x, tgtNode.position.y, tgtNode.position.z
-        );
+      const now = performance.now();
+      if (now - lastRotPost > 16) {
+        lastRotPost = now;
+        postToBrain({ type: 'ROTATE', delta: dx * 0.015 });
       }
-    });
+    };
 
-    if (linePositions.length) {
-      const lineGeo = new THREE.BufferGeometry();
-      lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
-      const lineMat = new THREE.LineBasicMaterial({
-        color: 0x8c8882,
-        transparent: true,
-        opacity: 0.22,
-        blending: THREE.AdditiveBlending
-      });
-      const lines = new THREE.LineSegments(lineGeo, lineMat);
-      graphGroup.add(lines);
-    }
+    const onPointerUpRot = (e) => {
+      if (!isDraggingRot) return;
+      isDraggingRot = false;
+      try { dialRot.releasePointerCapture(e.pointerId); } catch (_) {}
+    };
 
-    // Pointer Drag Listeners
-    canvas.addEventListener('pointerdown', (e) => {
-      isDragging = true;
-      prevMouse = { x: e.clientX, y: e.clientY };
-    });
-    window.addEventListener('pointerup', () => { isDragging = false; });
-    window.addEventListener('pointermove', (e) => {
-      if (!isDragging) return;
-      const dx = e.clientX - prevMouse.x;
-      const dy = e.clientY - prevMouse.y;
-      targetRotY += dx * 0.005;
-      targetRotX += dy * 0.005;
-      prevMouse = { x: e.clientX, y: e.clientY };
-      if (dialRot) {
-        dialRot.style.transform = `rotate(${targetRotY * 50}deg)`;
-      }
-    });
+    dialRot.addEventListener('pointerdown', onPointerDownRot);
+    dialRot.addEventListener('pointermove', onPointerMoveRot);
+    dialRot.addEventListener('pointerup', onPointerUpRot);
+    dialRot.addEventListener('pointercancel', onPointerUpRot);
 
-    canvas.addEventListener('wheel', (e) => {
+    dialRot.addEventListener('wheel', (e) => {
       e.preventDefault();
-      targetZoom += e.deltaY * 0.2;
-      targetZoom = Math.max(100, Math.min(380, targetZoom));
-      if (dialZoom) {
-        dialZoom.style.transform = `rotate(${targetZoom}deg)`;
-      }
+      const delta = Math.sign(e.deltaY) * 12;
+      rotDeg += delta;
+      dialRot.style.transform = `rotate(${rotDeg}deg)`;
+      postToBrain({ type: 'ROTATE', delta: delta * 0.003 });
     }, { passive: false });
+  }
 
-    // Raycaster for Aether Hover HUD & Click to Focus
-    const raycaster = new THREE.Raycaster();
-    const mouse = new THREE.Vector2(-999, -999);
-    let activeHoverNode = null;
+  // 4. ROTARY DIAL: ZOOM (ZOOM)
+  let zoomDeg = 0;
+  if (dialZoom) {
+    let isDraggingZoom = false;
+    let startY = 0;
+    let lastZoomPost = 0;
 
-    canvas.addEventListener('mousemove', (e) => {
-      const r = canvas.getBoundingClientRect();
-      mouse.x = ((e.clientX - r.left) / r.width) * 2 - 1;
-      mouse.y = -((e.clientY - r.top) / r.height) * 2 + 1;
+    const onPointerDownZoom = (e) => {
+      isDraggingZoom = true;
+      startY = e.clientY;
+      dialZoom.setPointerCapture(e.pointerId);
+      if (window._haptics && typeof window._haptics.trigger === 'function') {
+        window._haptics.trigger('light');
+      }
+    };
 
-      raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObjects(nodeMeshes);
+    const onPointerMoveZoom = (e) => {
+      if (!isDraggingZoom) return;
+      const dy = e.clientY - startY;
+      startY = e.clientY;
+      zoomDeg += dy * 1.5;
+      dialZoom.style.transform = `rotate(${zoomDeg}deg)`;
 
-      if (intersects.length > 0) {
-        const hit = intersects[0].object;
-        if (activeHoverNode && activeHoverNode !== hit) {
-          activeHoverNode.scale.set(1, 1, 1);
-        }
-        activeHoverNode = hit;
-        hit.scale.set(1.5, 1.5, 1.5);
+      const now = performance.now();
+      if (now - lastZoomPost > 30) {
+        lastZoomPost = now;
+        postToBrain({ type: 'ZOOM', delta: dy > 0 ? 1 : -1 });
+      }
+    };
 
-        const data = hit.userData;
-        if (aetherHud) {
-          if (hudTitle) hudTitle.textContent = data.name || data.id;
-          const cat = data.category || 'node';
-          if (hudCat) {
-            hudCat.textContent = cat.toUpperCase();
-            hudCat.style.color = CLUSTER_CSS_COLORS[cat] || '#22d3ee';
-            hudCat.style.borderColor = `${CLUSTER_CSS_COLORS[cat] || '#22d3ee'}60`;
-          }
-          if (hudExcerpt) {
-            hudExcerpt.textContent = data.excerpt || 'Connected knowledge node in neural Obsidian vault.';
-          }
-          if (hudLinks) hudLinks.textContent = `Links: ${data.linksCount || 0}`;
-          if (hudBacklinks) hudBacklinks.textContent = `Backlinks: ${data.backlinksCount || 0}`;
-          aetherHud.classList.add('is-visible');
-        }
+    const onPointerUpZoom = (e) => {
+      if (!isDraggingZoom) return;
+      isDraggingZoom = false;
+      try { dialZoom.releasePointerCapture(e.pointerId); } catch (_) {}
+    };
+
+    dialZoom.addEventListener('pointerdown', onPointerDownZoom);
+    dialZoom.addEventListener('pointermove', onPointerMoveZoom);
+    dialZoom.addEventListener('pointerup', onPointerUpZoom);
+    dialZoom.addEventListener('pointercancel', onPointerUpZoom);
+
+    dialZoom.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const delta = Math.sign(e.deltaY) * 12;
+      zoomDeg += delta;
+      dialZoom.style.transform = `rotate(${zoomDeg}deg)`;
+      postToBrain({ type: 'ZOOM', delta: delta > 0 ? 1 : -1 });
+    }, { passive: false });
+  }
+
+  // 5. TACTILE HARDWARE RESET BUTTON
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (window._haptics && typeof window._haptics.trigger === 'function') {
+        window._haptics.trigger('medium');
+      }
+      rotDeg = 0;
+      zoomDeg = 0;
+      if (window.gsap) {
+        if (dialRot) gsap.to(dialRot, { rotation: 0, duration: 0.35, ease: 'power2.out' });
+        if (dialZoom) gsap.to(dialZoom, { rotation: 0, duration: 0.35, ease: 'power2.out' });
       } else {
-        if (activeHoverNode) {
-          activeHoverNode.scale.set(1, 1, 1);
-          activeHoverNode = null;
-        }
-        if (aetherHud) aetherHud.classList.remove('is-visible');
+        if (dialRot) dialRot.style.transform = 'rotate(0deg)';
+        if (dialZoom) dialZoom.style.transform = 'rotate(0deg)';
       }
+      postToBrain({ type: 'RESET_VIEW' });
     });
-
-    canvas.addEventListener('mouseleave', () => {
-      if (activeHoverNode) {
-        activeHoverNode.scale.set(1, 1, 1);
-        activeHoverNode = null;
-      }
-      if (aetherHud) aetherHud.classList.remove('is-visible');
-    });
-
-    // Click Node to Focus Camera
-    canvas.addEventListener('click', (e) => {
-      raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObjects(nodeMeshes);
-      if (intersects.length > 0) {
-        const hit = intersects[0].object;
-        targetRotX = -hit.position.y * 0.005;
-        targetRotY = hit.position.x * 0.005;
-        targetZoom = 140;
-      }
-    });
-
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        targetRotX = 0.15;
-        targetRotY = -0.3;
-        targetZoom = 220;
-      });
-    }
-
-    window.addEventListener('resize', () => {
-      if (!renderer || !camera) return;
-      const nr = canvas.getBoundingClientRect();
-      const w = nr.width || canvas.clientWidth;
-      const h = nr.height || canvas.clientHeight;
-      camera.aspect = w / h;
-      camera.updateProjectionMatrix();
-      renderer.setSize(w, h);
-    });
-
-    function animate() {
-      if (!isVisible) return;
-      animId = requestAnimationFrame(animate);
-
-      rotX += (targetRotX - rotX) * 0.08;
-      rotY += (targetRotY - rotY) * 0.08;
-      zoom += (targetZoom - zoom) * 0.08;
-
-      if (!isDragging) {
-        targetRotY += 0.0018;
-      }
-
-      graphGroup.rotation.x = rotX;
-      graphGroup.rotation.y = rotY;
-      camera.position.z = zoom;
-
-      renderer.render(scene, camera);
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        isVisible = entry.isIntersecting;
-        if (isVisible && !animId) {
-          animate();
-        } else if (!isVisible && animId) {
-          cancelAnimationFrame(animId);
-          animId = null;
-        }
-      });
-    }, { threshold: 0.1 });
-
-    observer.observe(tvSection);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupThreeBrain);
-  } else {
-    setupThreeBrain();
-  }
+  // Expose bridge on window for programmatic access (e.g. from vault unlock)
+  window.postAetherTvBrain = postToBrain;
 })();
 </script>
 
+<!-- LUNA PROTOCOL: STANDALONE VAULT GATE & LIQUID WAVE SHOCKWAVE RUNTIME -->
+<script type="module">
+  import { vault } from './js/hairline.js';
+
+  (function initVaultBrainGate() {
+    let vaultUnlocked = false;
+    let vaultInstance = null;
+
+    function mountVault() {
+      const mountEl = document.getElementById('tv-vault-mount');
+      const readoutEl = document.getElementById('tv-vault-readout-text');
+      const vaultWrap = document.getElementById('tv-vault-wrapper');
+      const tvWrap = document.getElementById('tv-chassis-wrapper');
+
+      if (!mountEl || !vaultWrap || !tvWrap) return;
+
+      try {
+        mountEl.removeAttribute('title');
+        vaultInstance = vault(mountEl, {
+          theme: 'auto',
+          intensity: 0.9,
+          play: false,
+          label: '',
+          onRead: (text) => {
+            if (vaultUnlocked) return;
+
+            if (readoutEl) {
+              if (text.includes('open')) {
+                readoutEl.textContent = 'DIAL 40 · OPEN';
+                readoutEl.classList.add('is-open');
+              } else if (text.startsWith('dial')) {
+                readoutEl.textContent = text.toUpperCase();
+                readoutEl.classList.remove('is-open');
+              } else {
+                readoutEl.textContent = 'DIAL 30';
+                readoutEl.classList.remove('is-open');
+              }
+            }
+
+            if (text.includes('open')) {
+              vaultUnlocked = true;
+              onVaultUnlocked();
+            }
+          }
+        });
+      } catch (err) {
+        console.error('Error mounting Vault figure:', err);
+      }
+    }
+
+    function onVaultUnlocked() {
+      const vaultWrap = document.getElementById('tv-vault-wrapper');
+      const tvWrap = document.getElementById('tv-chassis-wrapper');
+      const mountEl = document.getElementById('tv-vault-mount');
+
+      // 1. Give ample time for the user to watch the entire vault opening animation
+      // (the 3 steel bolts draw back over 800ms) and admire the retracted mechanism (~1500ms total)
+      setTimeout(() => {
+        // Tactile haptic confirmation
+        if (window._haptics && typeof window._haptics.trigger === 'function') {
+          window._haptics.trigger('heavy');
+        }
+
+        // 2. Put the fluid wave transition effect from vault center point
+        if (window.__themeLiquid && typeof window.__themeLiquid.run === 'function') {
+          let centerEvt = null;
+          if (mountEl) {
+            const rect = mountEl.getBoundingClientRect();
+            centerEvt = {
+              clientX: rect.left + rect.width / 2,
+              clientY: rect.top + rect.height / 2
+            };
+          }
+          const isLight = document.documentElement.getAttribute('data-theme') === 'light' || document.body.classList.contains('theme-mode-light');
+          const waveColor = isLight ? '#1B1B1B' : '#D8D3CC';
+          window.__themeLiquid.run(centerEvt, waveColor, true);
+        }
+
+        // 3. Vault door fades out smoothly from dead center (no movement, zero layout reflow)
+        if (window.gsap) {
+          gsap.to(vaultWrap, {
+            opacity: 0,
+            duration: 0.7,
+            ease: 'power2.inOut',
+            onComplete: () => {
+              vaultWrap.style.visibility = 'hidden';
+              vaultWrap.style.pointerEvents = 'none';
+            }
+          });
+
+          // 4. TV Chassis blooms in-place from dead center without moving a single pixel
+          tvWrap.style.visibility = 'visible';
+          tvWrap.style.pointerEvents = 'auto';
+          gsap.fromTo(tvWrap,
+            { opacity: 0 },
+            { opacity: 1, duration: 1.0, ease: 'power2.out' }
+          );
+
+          // 5. Fire synaptic electrical pulse across the 3D Obsidian Graph as screen illuminates
+          setTimeout(() => {
+            if (window.postAetherTvBrain) {
+              window.postAetherTvBrain({ type: 'PULSE' });
+            }
+          }, 800);
+        } else {
+          vaultWrap.style.visibility = 'hidden';
+          vaultWrap.style.pointerEvents = 'none';
+          tvWrap.style.visibility = 'visible';
+          tvWrap.style.pointerEvents = 'auto';
+          tvWrap.style.opacity = '1';
+
+          setTimeout(() => {
+            if (window.postAetherTvBrain) {
+              window.postAetherTvBrain({ type: 'PULSE' });
+            }
+          }, 400);
+        }
+      }, 1500);
+    }
+
+    function relockVault() {
+      const vaultWrap = document.getElementById('tv-vault-wrapper');
+      const tvWrap = document.getElementById('tv-chassis-wrapper');
+      const readoutEl = document.getElementById('tv-vault-readout-text');
+
+      if (window.gsap) {
+        gsap.to(tvWrap, {
+          opacity: 0,
+          duration: 0.5,
+          ease: 'power2.inOut',
+          onComplete: () => {
+            tvWrap.style.visibility = 'hidden';
+            tvWrap.style.pointerEvents = 'none';
+            vaultWrap.style.visibility = 'visible';
+            vaultWrap.style.pointerEvents = 'auto';
+            vaultUnlocked = false;
+            if (readoutEl) {
+              readoutEl.textContent = 'DIAL 30';
+              readoutEl.classList.remove('is-open');
+            }
+            gsap.fromTo(vaultWrap,
+              { opacity: 0 },
+              { opacity: 1, duration: 0.8, ease: 'power2.out' }
+            );
+          }
+        });
+      } else {
+        tvWrap.style.visibility = 'hidden';
+        tvWrap.style.pointerEvents = 'none';
+        vaultWrap.style.visibility = 'visible';
+        vaultWrap.style.pointerEvents = 'auto';
+        vaultWrap.style.opacity = '1';
+        vaultUnlocked = false;
+        if (readoutEl) {
+          readoutEl.textContent = 'DIAL 30';
+          readoutEl.classList.remove('is-open');
+        }
+      }
+    }
+
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('#tv-lock-vault')) {
+        relockVault();
+      }
+    });
+
+    // Allow programmatic unlock (e.g. for inspection / automated testing)
+    window.unlockVaultDoor = onVaultUnlocked;
+    if (typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('unlock')) {
+      setTimeout(() => {
+        const el = document.getElementById('tv-brain');
+        if (el) el.scrollIntoView({ behavior: 'instant', block: 'center' });
+        onVaultUnlocked();
+      }, 600);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', mountVault);
+    } else {
+      mountVault();
+    }
+  })();
+</script>
 
 </body></html>
