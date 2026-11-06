@@ -1919,6 +1919,8 @@ body.theme-mode-light .tv-main-body,
   position: relative;
   height: 370px;
   overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0);
 }
 @media screen and (max-width: 991px) {
   .tv-screen-frame { height: 300px; }
@@ -4467,6 +4469,22 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       postToBrain({ type: 'RESET_VIEW' });
     });
+  }
+
+  // 6. VIEWPORT INTERSECTION OBSERVER FOR 3D CRT IFRAME
+  // Freezes the 3D WebGL loop when the TV section is off-screen to guarantee 0% background overhead
+  const tvSection = document.getElementById('tv-brain');
+  if (tvSection && window.IntersectionObserver) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          postToBrain({ type: 'RESUME' });
+        } else {
+          postToBrain({ type: 'PAUSE' });
+        }
+      });
+    }, { threshold: 0.05 });
+    sectionObserver.observe(tvSection);
   }
 
   // Expose bridge on window for programmatic access (e.g. from vault unlock)
