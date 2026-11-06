@@ -14,16 +14,15 @@
   "nodes": [
     {
       "id": "00_Inbox/Heartbeat",
-      "name": "Heartbeat",
-      "path": "00_Inbox/Heartbeat",
+      "name": "Telemetry Watcher",
+      "path": "inbox/heartbeat",
       "category": "hub",
       "tags": [
         "telemetry",
         "heartbeat",
-        "watcher",
-        "godfather"
+        "architecture"
       ],
-      "excerpt": "Heartbeat Autonomous real-time diagnostic status maintained silently by The Watcher and The GodFather. --- 1. Executive Status Matrix | ...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 3,
       "val": 8.82,
@@ -33,14 +32,14 @@
     {
       "id": "00_Inbox/Luna",
       "name": "Luna",
-      "path": "00_Inbox/Luna",
+      "path": "inbox/luna",
       "category": "hub",
       "tags": [
         "index",
         "core",
         "galaxy_center"
       ],
-      "excerpt": "Luna The definitive, human-readable master brain and operational matrix maintained by Sir and Luna. --- Executive Control & Diagnostics -...",
+      "excerpt": "",
       "linksCount": 28,
       "backlinksCount": 24,
       "val": 18,
@@ -49,16 +48,14 @@
     },
     {
       "id": "01_Directives_&_Persona/Directives",
-      "name": "Directives",
-      "path": "01_Directives_&_Persona/Directives",
+      "name": "Autonomous Protocols",
+      "path": "directives-&-persona/directives",
       "category": "hub",
       "tags": [
-        "persona",
-        "directives",
-        "preferences",
+        "architecture",
         "core"
       ],
-      "excerpt": "Directives The authoritative profile of developer preferences, architectural mandates, communication protocols, and non-negotiable boundari...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 11,
       "val": 11.52,
@@ -67,8 +64,8 @@
     },
     {
       "id": "01_Directives_&_Persona/Episodic_Memory_Ledger",
-      "name": "Episodic Memory & Verified Observations Ledger",
-      "path": "01_Directives_&_Persona/Episodic_Memory_Ledger",
+      "name": "Episodic Memory",
+      "path": "directives-&-persona/episodic-memory-ledger",
       "category": "hub",
       "tags": [
         "memory",
@@ -76,7 +73,7 @@
         "telemetry",
         "history"
       ],
-      "excerpt": "Episodic Memory & Verified Observations Ledger Timestamped historical record of verified patterns, architectural evolutions, and engineerin...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 1,
       "val": 7.4,
@@ -85,15 +82,15 @@
     },
     {
       "id": "01_Directives_&_Persona/Heuristics",
-      "name": "Heuristics",
-      "path": "01_Directives_&_Persona/Heuristics",
+      "name": "Decision Heuristics",
+      "path": "directives-&-persona/heuristics",
       "category": "hub",
       "tags": [
         "heuristics",
         "decision_making",
         "architecture"
       ],
-      "excerpt": "Heuristics The foundational trade-off principles governing how Sir and Luna resolve architectural dilemmas and evaluate technical paths. -...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 2,
       "val": 7.92,
@@ -102,8 +99,8 @@
     },
     {
       "id": "01_Directives_&_Persona/Memories",
-      "name": "Memories",
-      "path": "01_Directives_&_Persona/Memories",
+      "name": "Neural Cache",
+      "path": "directives-&-persona/memories",
       "category": "hub",
       "tags": [
         "memory",
@@ -111,7 +108,7 @@
         "telemetry",
         "history"
       ],
-      "excerpt": "Memories Timestamped historical record of verified patterns, architectural evolutions, and engineering milestones collected across all pair...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -120,16 +117,15 @@
     },
     {
       "id": "01_Directives_&_Persona/Persona",
-      "name": "Persona",
-      "path": "01_Directives_&_Persona/Persona",
+      "name": "Agent Persona",
+      "path": "directives-&-persona/persona",
       "category": "hub",
       "tags": [
-        "persona",
+        "architecture",
         "luna",
-        "capabilities",
-        "architecture"
+        "capabilities"
       ],
-      "excerpt": "Persona Authoritative specification of Luna's identity, operational dynamic, cognitive specialization matrix, and orchestration protocols. ...",
+      "excerpt": "",
       "linksCount": 7,
       "backlinksCount": 4,
       "val": 10.3,
@@ -138,16 +134,14 @@
     },
     {
       "id": "01_Directives_&_Persona/Preferences",
-      "name": "Preferences",
-      "path": "01_Directives_&_Persona/Preferences",
+      "name": "Operational Directives",
+      "path": "directives-&-persona/preferences",
       "category": "hub",
       "tags": [
-        "preferences",
-        "directives",
-        "persona",
+        "architecture",
         "memory"
       ],
-      "excerpt": "Preferences The exhaustive, empirical catalog of Sir's developer preferences, stack choices, UI tastes, security standards, and operational...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 1,
       "val": 7.4,
@@ -156,16 +150,14 @@
     },
     {
       "id": "01_Directives_&_Persona/Sir_Preferences_Catalog_106",
-      "name": "Sir Engineering Preferences Catalog (106 Records)",
-      "path": "01_Directives_&_Persona/Sir_Preferences_Catalog_106",
+      "name": "Cognitive Architecture",
+      "path": "directives-&-persona/sir-preferences-catalog-106",
       "category": "hub",
       "tags": [
-        "preferences",
-        "directives",
-        "persona",
+        "architecture",
         "memory"
       ],
-      "excerpt": "Sir Engineering Preferences Catalog: 106 Codified Directives The exhaustive, empirical catalog of Sir's developer preferences, stack choice...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 0,
       "val": 6.81,
@@ -174,15 +166,15 @@
     },
     {
       "id": "01_Directives_&_Persona/Strategic_Heuristics_Matrix",
-      "name": "Strategic Decision Heuristics Matrix",
-      "path": "01_Directives_&_Persona/Strategic_Heuristics_Matrix",
+      "name": "Strategic Matrix",
+      "path": "directives-&-persona/strategic-heuristics-matrix",
       "category": "hub",
       "tags": [
         "heuristics",
         "decision_making",
         "architecture"
       ],
-      "excerpt": "Strategic Decision Heuristics Matrix The foundational trade-off principles governing how Sir and Luna resolve architectural dilemmas and ev...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 1,
       "val": 7.4,
@@ -191,8 +183,8 @@
     },
     {
       "id": "01_Directives_&_Persona/Workstation",
-      "name": "Workstation",
-      "path": "01_Directives_&_Persona/Workstation",
+      "name": "System Topology",
+      "path": "directives-&-persona/workstation",
       "category": "hub",
       "tags": [
         "workstation",
@@ -202,7 +194,7 @@
         "macos",
         "topology"
       ],
-      "excerpt": "Workstation The digital twin and operational environment specification of Sir's primary Apple Silicon development machine, local service po...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 2,
       "val": 7.92,
@@ -212,14 +204,14 @@
     {
       "id": "10_Projects/ANAR",
       "name": "ANAR",
-      "path": "10_Projects/ANAR",
+      "path": "projects/anar",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "ai"
       ],
-      "excerpt": "ANAR: Advanced Neural Architecture & Reasoning Authoritative engineering dossier and architectural map for  maintained by Sir and Luna. --...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -229,7 +221,7 @@
     {
       "id": "10_Projects/Apps",
       "name": "Apps",
-      "path": "10_Projects/Apps",
+      "path": "projects/apps",
       "category": "projects",
       "tags": [
         "hub",
@@ -238,7 +230,7 @@
         "utilities",
         "projects"
       ],
-      "excerpt": "Apps The native utilities, micro-SaaS applications, algorithmic engines, creative media pipelines, and interactive web tools across Luna's ...",
+      "excerpt": "",
       "linksCount": 12,
       "backlinksCount": 12,
       "val": 13.78,
@@ -248,14 +240,14 @@
     {
       "id": "10_Projects/CH3OH",
       "name": "CH3OH",
-      "path": "10_Projects/CH3OH",
+      "path": "projects/ch3oh",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "scientific_computing"
       ],
-      "excerpt": "CH3OH: Computational Chemistry & Methanol Catalysis Authoritative engineering dossier and architectural map for  maintained by Sir and Luna...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -265,14 +257,14 @@
     {
       "id": "10_Projects/Home",
       "name": "Home",
-      "path": "10_Projects/Home",
+      "path": "projects/home",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "mobile"
       ],
-      "excerpt": "Home: Mobile Automation & Personal Hub Authoritative engineering dossier and architectural map for  maintained by Sir and Luna. --- 1. Pr...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -282,7 +274,7 @@
     {
       "id": "10_Projects/IoT",
       "name": "IoT",
-      "path": "10_Projects/IoT",
+      "path": "projects/iot",
       "category": "projects",
       "tags": [
         "hub",
@@ -291,7 +283,7 @@
         "hardware",
         "projects"
       ],
-      "excerpt": "IoT The hardware engineering, spatial lighting, embedded firmware, industrial telemetry, and 3D modeling cluster across Luna's engineering ...",
+      "excerpt": "",
       "linksCount": 7,
       "backlinksCount": 7,
       "val": 11.23,
@@ -301,14 +293,14 @@
     {
       "id": "10_Projects/L&T",
       "name": "L&T",
-      "path": "10_Projects/L&T",
+      "path": "projects/l&t",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "hardware"
       ],
-      "excerpt": "L&T: Spatial Lighting & Industrial BOM Engine Authoritative engineering dossier and architectural map for  maintained by Sir and Luna. ---...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -318,14 +310,14 @@
     {
       "id": "10_Projects/Luna",
       "name": "Luna",
-      "path": "10_Projects/Luna",
+      "path": "projects/luna",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "ai_systems"
       ],
-      "excerpt": "Luna: Autonomous Cockpit & Local Assistant Substrate Authoritative engineering dossier and architectural map for  maintained by Sir and Lun...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -334,11 +326,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/ANAR MSN",
-      "name": "ANAR MSN",
-      "path": "10_Projects/Master_Notebooks/ANAR MSN",
+      "name": "ANAR Architecture",
+      "path": "projects/master-notebooks/anar msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "ANAR: Master Study Notebook & Architecture Textbook > **Project Code**: `ANAR`   > **Classification**: Living Architecture Record & Oral De...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -347,11 +339,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/CH3OH MSN",
-      "name": "CH3OH MSN",
-      "path": "10_Projects/Master_Notebooks/CH3OH MSN",
+      "name": "CH3OH Architecture",
+      "path": "projects/master-notebooks/ch3oh msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "CH3OH — Master Engineering & Architecture Study Notebook **Project**: CH3OH (Next-Generation Shared Expense, Asset & Mobility Ledger)   **L...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -360,11 +352,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/L&T MSN",
-      "name": "L&T MSN",
-      "path": "10_Projects/Master_Notebooks/L&T MSN",
+      "name": "Spatial Systems Architecture",
+      "path": "projects/master-notebooks/l&t msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "L&T SPATIAL ANALYSIS TO BOM GENERATOR FOR LIGHTING DESIGN Master Engineering Study Notebook & Oral Defense Manual **Target Entity**: Larsen ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -373,11 +365,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/Luna MSN",
-      "name": "Luna MSN",
-      "path": "10_Projects/Master_Notebooks/Luna MSN",
+      "name": "Luna Autonomous Architecture",
+      "path": "projects/master-notebooks/luna msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "LUNA: MASTER ENGINEERING STUDY NOTEBOOK & ORAL DEFENSE GUIDE **Repository Anchor**: `/Users/shreeprasandhk/shree_projects/Luna`   **Classifi...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -386,11 +378,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/airsync MSN",
-      "name": "airsync MSN",
-      "path": "10_Projects/Master_Notebooks/airsync MSN",
+      "name": "AirSync Protocol Architecture",
+      "path": "projects/master-notebooks/airsync msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "AIRSYNC — MASTER ENGINEERING STUDY NOTEBOOK & ORAL DEFENSE GUIDE > **Living Engineering Textbook, Oral Defense Guide & System Architecture R...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -399,11 +391,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/amazon_ml MSN",
-      "name": "amazon_ml MSN",
-      "path": "10_Projects/Master_Notebooks/amazon_ml MSN",
+      "name": "Amazon ML Compendium",
+      "path": "projects/master-notebooks/amazon-ml msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "Amazon ML Challenge 2026: Master Study Notebook & Engineering Compendium Problem: Business Entity Resolution at Hyper-Scale **Document Refer...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -412,11 +404,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/antilink MSN",
-      "name": "antilink MSN",
-      "path": "10_Projects/Master_Notebooks/antilink MSN",
+      "name": "Antilink Architecture",
+      "path": "projects/master-notebooks/antilink msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "Antilink: Master Study Notebook Document: ANTILINK_MASTER_STUDY_NOTEBOOK.md System Role: The Dumb (Living Architecture Record & Viva Defens...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -425,11 +417,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/dhanu MSN",
-      "name": "dhanu MSN",
-      "path": "10_Projects/Master_Notebooks/dhanu MSN",
+      "name": "Enterprise Mesh Architecture",
+      "path": "projects/master-notebooks/dhanu msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "ACR COTTONS — MASTER ARCHITECTURE & ENGINEERING STUDY NOTEBOOK **Brand & Enterprise**: ACR COTTONS (Erode, Tamil Nadu, India)   **Lead Scrib...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -438,11 +430,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/ego MSN",
-      "name": "ego MSN",
-      "path": "10_Projects/Master_Notebooks/ego MSN",
+      "name": "EGO Autonomous Architecture",
+      "path": "projects/master-notebooks/ego msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "EGO: Master Living Study Notebook & Architecture Compendium *The Dumb Protocol — Authoritative Engineering Codex* *Project Anchor: /Users/sh...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -451,11 +443,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/ignis MSN",
-      "name": "ignis MSN",
-      "path": "10_Projects/Master_Notebooks/ignis MSN",
+      "name": "IGNIS Architecture",
+      "path": "projects/master-notebooks/ignis msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "IGNIS: Master Engineering Study Notebook & Oral Defense Guide **Living Textbook & Architectural Record**   **Project**: IGNIS — Autonomous D...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -464,11 +456,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/indupulse MSN",
-      "name": "indupulse MSN",
-      "path": "10_Projects/Master_Notebooks/indupulse MSN",
+      "name": "InduPulse Architecture",
+      "path": "projects/master-notebooks/indupulse msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "INDUPULSE: Master Living Study Notebook & Architecture Textbook **Authoritative Architectural Record, First-Principles Formulations, and Eng...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -477,11 +469,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/kitchen MSN",
-      "name": "kitchen MSN",
-      "path": "10_Projects/Master_Notebooks/kitchen MSN",
+      "name": "Embedded Systems Architecture",
+      "path": "projects/master-notebooks/kitchen msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "RasoiOS: The Master Engineering Textbook, Architectural Blueprint & Defense Guide **Project**: RasoiOS (The Autonomous Kitchen Operating Sy...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -490,11 +482,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/leetie MSN",
-      "name": "leetie MSN",
-      "path": "10_Projects/Master_Notebooks/leetie MSN",
+      "name": "Leetie Platform Architecture",
+      "path": "projects/master-notebooks/leetie msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "LEETIE — MASTER ARCHITECTURE & STUDY DEFENSE NOTEBOOK > **System Designation**: `leetie` (v1.0.2)   > **Author & Lead Architect**: Shreepras...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -503,11 +495,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/sentia MSN",
-      "name": "sentia MSN",
-      "path": "10_Projects/Master_Notebooks/sentia MSN",
+      "name": "Sentia Architecture",
+      "path": "projects/master-notebooks/sentia msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "SENTIA SMART LIVING ECOSYSTEM — MASTER ENGINEERING STUDY NOTEBOOK > **Document Status**: Living Architecture Record & Technical Defense Guid...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -516,11 +508,11 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/wordgame MSN",
-      "name": "wordgame MSN",
-      "path": "10_Projects/Master_Notebooks/wordgame MSN",
+      "name": "Algorithmic Linguistics",
+      "path": "projects/master-notebooks/wordgame msn",
       "category": "projects",
       "tags": [],
-      "excerpt": "VanguarDZ: Master Engineering Study Notebook & Living Architectural Textbook > **Author & Architect**: Shreeprasandh / Luna Protocol   > **S...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -530,7 +522,7 @@
     {
       "id": "10_Projects/Medical",
       "name": "Medical",
-      "path": "10_Projects/Medical",
+      "path": "projects/medical",
       "category": "projects",
       "tags": [
         "hub",
@@ -539,7 +531,7 @@
         "science",
         "projects"
       ],
-      "excerpt": "Medical The medical diagnostics, clinical artificial intelligence, molecular chemistry, and mathematical research cluster across Luna's eng...",
+      "excerpt": "",
       "linksCount": 6,
       "backlinksCount": 6,
       "val": 10.62,
@@ -549,7 +541,7 @@
     {
       "id": "10_Projects/Platforms",
       "name": "Platforms",
-      "path": "10_Projects/Platforms",
+      "path": "projects/platforms",
       "category": "projects",
       "tags": [
         "hub",
@@ -557,7 +549,7 @@
         "platforms",
         "projects"
       ],
-      "excerpt": "Platforms The high-throughput distributed platforms, full-stack web architectures, enterprise ERP systems, and core agent orchestration hub...",
+      "excerpt": "",
       "linksCount": 10,
       "backlinksCount": 10,
       "val": 12.84,
@@ -567,14 +559,14 @@
     {
       "id": "10_Projects/Projects",
       "name": "Projects",
-      "path": "10_Projects/Projects",
+      "path": "projects/projects",
       "category": "projects",
       "tags": [
         "index",
         "projects",
         "portfolio"
       ],
-      "excerpt": "Projects The master registry and executive index of all 31 active engineering repositories across `~/shree_projects`, organized hierarchica...",
+      "excerpt": "",
       "linksCount": 5,
       "backlinksCount": 7,
       "val": 10.62,
@@ -584,14 +576,14 @@
     {
       "id": "10_Projects/Rakthro",
       "name": "Rakthro",
-      "path": "10_Projects/Rakthro",
+      "path": "projects/rakthro",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "healthcare"
       ],
-      "excerpt": "Rakthro: Clinical Appointment & Workflow Hub Authoritative engineering dossier and architectural map for  maintained by Sir and Luna. --- ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -601,14 +593,14 @@
     {
       "id": "10_Projects/TheRiemannHypothesis",
       "name": "TheRiemannHypothesis",
-      "path": "10_Projects/TheRiemannHypothesis",
+      "path": "projects/theriemannhypothesis",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "pure_mathematics"
       ],
-      "excerpt": "The Riemann Hypothesis: Pure Mathematics & Zeta Telemetry Authoritative engineering dossier and architectural map for  maintained by Sir an...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -618,14 +610,14 @@
     {
       "id": "10_Projects/airsync",
       "name": "airsync",
-      "path": "10_Projects/airsync",
+      "path": "projects/airsync",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "hardware"
       ],
-      "excerpt": "AirSync: Multi-Device Wireless Audio & Telemetry Bridge Authoritative engineering dossier and architectural map for  maintained by Sir and ...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -635,14 +627,14 @@
     {
       "id": "10_Projects/amazon_ml",
       "name": "amazon_ml",
-      "path": "10_Projects/amazon_ml",
+      "path": "projects/amazon-ml",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "machine_learning"
       ],
-      "excerpt": "Amazon ML: Computer Vision & SOTA Multi-Modal Engine Authoritative engineering dossier and architectural map for  maintained by Sir and Lun...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -652,14 +644,14 @@
     {
       "id": "10_Projects/antidash",
       "name": "antidash",
-      "path": "10_Projects/antidash",
+      "path": "projects/antidash",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "frontend_architecture"
       ],
-      "excerpt": "AntiDash: Next.js 16 High-Density Analytics Dashboard Authoritative engineering dossier and architectural map for  maintained by Sir and Lu...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -669,14 +661,14 @@
     {
       "id": "10_Projects/antilink",
       "name": "antilink",
-      "path": "10_Projects/antilink",
+      "path": "projects/antilink",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "electron"
       ],
-      "excerpt": "AntiLink: Unified Engineering Workspace & Tab Cockpit Authoritative engineering dossier and architectural map for  maintained by Sir and Lu...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -686,14 +678,14 @@
     {
       "id": "10_Projects/blender",
       "name": "blender",
-      "path": "10_Projects/blender",
+      "path": "projects/blender",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "3d_graphics"
       ],
-      "excerpt": "Blender Studio: Procedural 3D World Generation Authoritative engineering dossier and architectural map for  maintained by Sir and Luna. --...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -703,14 +695,14 @@
     {
       "id": "10_Projects/calenderbannerimage",
       "name": "calenderbannerimage",
-      "path": "10_Projects/calenderbannerimage",
+      "path": "projects/calenderbannerimage",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "media_processing"
       ],
-      "excerpt": "CalenderBannerImage: Programmatic Graphic Composition Engine Authoritative engineering dossier and architectural map for  maintained by Sir...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -720,14 +712,14 @@
     {
       "id": "10_Projects/company",
       "name": "company",
-      "path": "10_Projects/company",
+      "path": "projects/company",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "portfolio"
       ],
-      "excerpt": "Company: Professional Corporate Dossier & Career Architecture Authoritative engineering dossier and architectural map for  maintained by Si...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -737,14 +729,14 @@
     {
       "id": "10_Projects/countdown",
       "name": "countdown",
-      "path": "10_Projects/countdown",
+      "path": "projects/countdown",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "web_applications"
       ],
-      "excerpt": "Countdown: Micro-SaaS Temporal Tracking & Game Engine Authoritative engineering dossier and architectural map for  maintained by Sir and Lu...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -753,15 +745,15 @@
     },
     {
       "id": "10_Projects/dhanu",
-      "name": "dhanu",
-      "path": "10_Projects/dhanu",
+      "name": "Enterprise Mesh",
+      "path": "projects/dhanu",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "enterprise_web"
       ],
-      "excerpt": "Dhanu ACR Cottons: Enterprise Textile Supply Chain Authoritative engineering dossier and architectural map for  maintained by Sir and Luna....",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -771,14 +763,14 @@
     {
       "id": "10_Projects/ego",
       "name": "ego",
-      "path": "10_Projects/ego",
+      "path": "projects/ego",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "ai"
       ],
-      "excerpt": "Ego: Cognitive Semantic Memory Graph & Personal Engine Authoritative engineering dossier and architectural map for  maintained by Sir and L...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -788,7 +780,7 @@
     {
       "id": "10_Projects/eventtracker",
       "name": "eventtracker",
-      "path": "10_Projects/eventtracker",
+      "path": "projects/eventtracker",
       "category": "projects",
       "tags": [
         "project",
@@ -796,7 +788,7 @@
         "analytics",
         "production"
       ],
-      "excerpt": "eventtracker High-performance real-time analytics, event tracking, and telemetry ingestion pipeline. --- Architectural Context - **Locat...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -806,14 +798,14 @@
     {
       "id": "10_Projects/fifa",
       "name": "fifa",
-      "path": "10_Projects/fifa",
+      "path": "projects/fifa",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "gaming"
       ],
-      "excerpt": "FIFA: Tournament Multiplayer Simulation & Sports Telemetry Authoritative engineering dossier and architectural map for  maintained by Sir a...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -823,14 +815,14 @@
     {
       "id": "10_Projects/ghost-hid",
       "name": "ghost-hid",
-      "path": "10_Projects/ghost-hid",
+      "path": "projects/ghost-hid",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "hardware_security"
       ],
-      "excerpt": "ghost-hid Authoritative engineering dossier and architectural map for  maintained by Sir and Luna. --- 1. Project Overview & Scope - **Re...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -840,7 +832,7 @@
     {
       "id": "10_Projects/idlebin",
       "name": "idlebin",
-      "path": "10_Projects/idlebin",
+      "path": "projects/idlebin",
       "category": "projects",
       "tags": [
         "project",
@@ -848,7 +840,7 @@
         "circular-economy",
         "iot"
       ],
-      "excerpt": "idlebin IdleBin transforms enterprise electronic waste and idle hardware assets into verified circular economy credits through automated in...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -858,14 +850,14 @@
     {
       "id": "10_Projects/ignis",
       "name": "ignis",
-      "path": "10_Projects/ignis",
+      "path": "projects/ignis",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "robotics"
       ],
-      "excerpt": "Ignis: Autonomous Robotics & High-Performance Embedded Engine Authoritative engineering dossier and architectural map for  maintained by Si...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -875,14 +867,14 @@
     {
       "id": "10_Projects/indupulse",
       "name": "indupulse",
-      "path": "10_Projects/indupulse",
+      "path": "projects/indupulse",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "industrial_iot"
       ],
-      "excerpt": "InduPulse: Industrial IoT Vibration & Telemetry Sentinel Authoritative engineering dossier and architectural map for  maintained by Sir and...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -892,14 +884,14 @@
     {
       "id": "10_Projects/kitchen",
       "name": "kitchen",
-      "path": "10_Projects/kitchen",
+      "path": "projects/kitchen",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "iot"
       ],
-      "excerpt": "Kitchen: Smart Kitchen IoT Automation & Mobile Bridge Authoritative engineering dossier and architectural map for  maintained by Sir and Lu...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -909,14 +901,14 @@
     {
       "id": "10_Projects/leetie",
       "name": "leetie",
-      "path": "10_Projects/leetie",
+      "path": "projects/leetie",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "algorithms"
       ],
-      "excerpt": "Leetie: Algorithmic Synthesis & Competitive Coding Sentinel Authoritative engineering dossier and architectural map for  maintained by Sir ...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -926,14 +918,14 @@
     {
       "id": "10_Projects/lyndesk-image",
       "name": "lyndesk-image",
-      "path": "10_Projects/lyndesk-image",
+      "path": "projects/lyndesk-image",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "design_engineering"
       ],
-      "excerpt": "lyndesk-image Authoritative engineering dossier and architectural map for  maintained by Sir and Luna. --- 1. Project Overview & Scope - ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -943,14 +935,14 @@
     {
       "id": "10_Projects/sentia",
       "name": "sentia",
-      "path": "10_Projects/sentia",
+      "path": "projects/sentia",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "healthcare_ai"
       ],
-      "excerpt": "Sentia: Clinical Records, Medical AI & Multi-Modal Diagnostics Authoritative engineering dossier and architectural map for  maintained by S...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -960,14 +952,14 @@
     {
       "id": "10_Projects/sentinelMRO",
       "name": "sentinelMRO",
-      "path": "10_Projects/sentinelMRO",
+      "path": "projects/sentinelmro",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "aerospace"
       ],
-      "excerpt": "SentinelMRO: Aerospace Maintenance & Aircraft Tracking Authoritative engineering dossier and architectural map for  maintained by Sir and L...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -977,14 +969,14 @@
     {
       "id": "10_Projects/toxic",
       "name": "toxic",
-      "path": "10_Projects/toxic",
+      "path": "projects/toxic",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "nlp"
       ],
-      "excerpt": "Toxic: Deep NLP Content Moderation & Adversarial Filter Authoritative engineering dossier and architectural map for  maintained by Sir and ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -994,14 +986,14 @@
     {
       "id": "10_Projects/tssv",
       "name": "tssv",
-      "path": "10_Projects/tssv",
+      "path": "projects/tssv",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "data_engineering"
       ],
-      "excerpt": "TSSV: High-Throughput Tabular SIMD Data Engine Authoritative engineering dossier and architectural map for  maintained by Sir and Luna. --...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1011,14 +1003,14 @@
     {
       "id": "10_Projects/wordgame",
       "name": "wordgame",
-      "path": "10_Projects/wordgame",
+      "path": "projects/wordgame",
       "category": "projects",
       "tags": [
         "project",
         "repo",
         "interactive_web"
       ],
-      "excerpt": "Vanguardz WordGame: High-Throughput Lexical Game Engine Authoritative engineering dossier and architectural map for  maintained by Sir and ...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -1028,7 +1020,7 @@
     {
       "id": "20_Architecture/Aether_Master_Plan",
       "name": "Project Aether: Master Architecture & UI Specification",
-      "path": "20_Architecture/Aether_Master_Plan",
+      "path": "architecture/aether-master-plan",
       "category": "architecture",
       "tags": [
         "aether",
@@ -1038,7 +1030,7 @@
         "ui",
         "graph"
       ],
-      "excerpt": "Project Aether: Master Architecture & UI Specification **Project Codename**: Aether (Living Knowledge Brain & Tactical Mission Control)   **...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 0,
       "val": 6.81,
@@ -1048,7 +1040,7 @@
     {
       "id": "20_Architecture/Alchemists",
       "name": "Alchemists",
-      "path": "20_Architecture/Alchemists",
+      "path": "architecture/alchemists",
       "category": "architecture",
       "tags": [
         "squads",
@@ -1056,7 +1048,7 @@
         "alchemists",
         "intelligence"
       ],
-      "excerpt": "Alchemists A 10-member elite research and reconnaissance team mobilized at the inception, onboarding, or major pivot of any engineering, ma...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 3,
       "val": 8.39,
@@ -1066,7 +1058,7 @@
     {
       "id": "20_Architecture/Armorer",
       "name": "Armorer",
-      "path": "20_Architecture/Armorer",
+      "path": "architecture/armorer",
       "category": "architecture",
       "tags": [
         "architecture",
@@ -1076,7 +1068,7 @@
         "telemetry",
         "chains"
       ],
-      "excerpt": "The Armorer Protocol (Arsenal, Tool & Skill Chain Custodian) **The Armorer** is the sovereign custodian governing the autonomous lifecycle,...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 2,
       "val": 8.39,
@@ -1086,7 +1078,7 @@
     {
       "id": "20_Architecture/Compute",
       "name": "Compute",
-      "path": "20_Architecture/Compute",
+      "path": "architecture/compute",
       "category": "architecture",
       "tags": [
         "architecture",
@@ -1096,7 +1088,7 @@
         "kaggle",
         "offloading"
       ],
-      "excerpt": "Compute The zero-waste ephemeral cloud compute offloading substrate designed to dispatch untrusted, heavy, or battery-draining tasks to fre...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 1,
       "val": 7.92,
@@ -1106,7 +1098,7 @@
     {
       "id": "20_Architecture/Devil",
       "name": "The Devils Advocate",
-      "path": "20_Architecture/Devil",
+      "path": "architecture/devil",
       "category": "architecture",
       "tags": [
         "architecture",
@@ -1115,7 +1107,7 @@
         "safety",
         "defense"
       ],
-      "excerpt": "The Devil's Advocate The sovereign adversarial pre-mortem inquisitor of Luna's cognitive architecture, tasked with ruthless failure hunting...",
+      "excerpt": "",
       "linksCount": 5,
       "backlinksCount": 5,
       "val": 9.96,
@@ -1125,7 +1117,7 @@
     {
       "id": "20_Architecture/Dumb",
       "name": "The Dumb",
-      "path": "20_Architecture/Dumb",
+      "path": "architecture/dumb",
       "category": "architecture",
       "tags": [
         "architecture",
@@ -1135,7 +1127,7 @@
         "notebooks",
         "oral-defense"
       ],
-      "excerpt": "The Dumb The authoritative central architecture node and universal connector for all Living Engineering Study Notebooks and oral defense gu...",
+      "excerpt": "",
       "linksCount": 7,
       "backlinksCount": 2,
       "val": 9.6,
@@ -1145,7 +1137,7 @@
     {
       "id": "20_Architecture/Elders",
       "name": "Elders",
-      "path": "20_Architecture/Elders",
+      "path": "architecture/elders",
       "category": "architecture",
       "tags": [
         "squads",
@@ -1153,7 +1145,7 @@
         "reasoning",
         "neural_substrate"
       ],
-      "excerpt": "Elders The high-speed semantic judgment substrate and decision coprocessor of our ecosystem, operating on Daniel Kahneman's **System One** ...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 5,
       "val": 9.6,
@@ -1163,7 +1155,7 @@
     {
       "id": "20_Architecture/Fleet",
       "name": "Fleet",
-      "path": "20_Architecture/Fleet",
+      "path": "architecture/fleet",
       "category": "architecture",
       "tags": [
         "architecture",
@@ -1173,7 +1165,7 @@
         "deadpool",
         "punisher"
       ],
-      "excerpt": "Fleet The local, air-gapped neural model fleet operating on Ollama (`localhost:11434`) providing sub-second private intelligence across Lun...",
+      "excerpt": "",
       "linksCount": 12,
       "backlinksCount": 6,
       "val": 12.33,
@@ -1183,16 +1175,14 @@
     {
       "id": "20_Architecture/GodFather",
       "name": "GodFather",
-      "path": "20_Architecture/GodFather",
+      "path": "architecture/godfather",
       "category": "architecture",
       "tags": [
         "architecture",
-        "godfather",
-        "watcher",
         "memory",
         "autonomous"
       ],
-      "excerpt": "GodFather The authoritative specification of the autonomous brain management hierarchy governing Luna's memory across Tier 2 (Obsidian NVMe...",
+      "excerpt": "",
       "linksCount": 10,
       "backlinksCount": 8,
       "val": 12.33,
@@ -1202,7 +1192,7 @@
     {
       "id": "20_Architecture/Hilter",
       "name": "The Hilter",
-      "path": "20_Architecture/Hilter",
+      "path": "architecture/hilter",
       "category": "architecture",
       "tags": [
         "architecture",
@@ -1211,7 +1201,7 @@
         "semantic-search",
         "embeddings"
       ],
-      "excerpt": "The Hilter The sovereign custodian of codebase vector data, neural semantic embeddings, and local RAG infrastructure across Luna's entire e...",
+      "excerpt": "",
       "linksCount": 5,
       "backlinksCount": 5,
       "val": 9.96,
@@ -1221,14 +1211,14 @@
     {
       "id": "20_Architecture/Memory",
       "name": "Memory",
-      "path": "20_Architecture/Memory",
+      "path": "architecture/memory",
       "category": "architecture",
       "tags": [
         "architecture",
         "memory",
         "core"
       ],
-      "excerpt": "Memory A resilient, multi-tier cognitive memory architecture establishing absolute persistence, local-first visual collaboration, and autom...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 8,
       "val": 9.6,
@@ -1238,7 +1228,7 @@
     {
       "id": "20_Architecture/Monks",
       "name": "Monks",
-      "path": "20_Architecture/Monks",
+      "path": "architecture/monks",
       "category": "architecture",
       "tags": [
         "squads",
@@ -1246,7 +1236,7 @@
         "five_monks",
         "architecture"
       ],
-      "excerpt": "Monks A 5-member multi-perspective strategic advisory council synthesized by The Chairman (Luna). Designed to subject high-stakes architect...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 9,
       "val": 10.93,
@@ -1256,14 +1246,14 @@
     {
       "id": "20_Architecture/Protocol",
       "name": "Protocol",
-      "path": "20_Architecture/Protocol",
+      "path": "architecture/protocol",
       "category": "architecture",
       "tags": [
         "architecture",
         "protocol",
         "sentinels"
       ],
-      "excerpt": "Protocol Governing principles, architectural mandates, and specialized agent councils powering Luna. 1. Core Operating Principles - **Salu...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 7,
       "val": 9.6,
@@ -1273,7 +1263,7 @@
     {
       "id": "20_Architecture/Rules",
       "name": "Rules",
-      "path": "20_Architecture/Rules",
+      "path": "architecture/rules",
       "category": "architecture",
       "tags": [
         "rules",
@@ -1281,7 +1271,7 @@
         "architecture",
         "governance"
       ],
-      "excerpt": "Rules The comprehensive, codified compilation of all autonomous protocols, security boundaries, and architectural directives governing Luna...",
+      "excerpt": "",
       "linksCount": 6,
       "backlinksCount": 36,
       "val": 17.26,
@@ -1291,7 +1281,7 @@
     {
       "id": "20_Architecture/Shadows",
       "name": "Shadows",
-      "path": "20_Architecture/Shadows",
+      "path": "architecture/shadows",
       "category": "architecture",
       "tags": [
         "squads",
@@ -1299,7 +1289,7 @@
         "seven_shadows",
         "defense"
       ],
-      "excerpt": "Shadows The automated auditing squad operating as a full-spectrum security defense grid. Whenever invoked (`arise shadows`, `git commit`, `...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 7,
       "val": 9.96,
@@ -1309,7 +1299,7 @@
     {
       "id": "20_Architecture/Subagents",
       "name": "Subagents",
-      "path": "20_Architecture/Subagents",
+      "path": "architecture/subagents",
       "category": "architecture",
       "tags": [
         "subagents",
@@ -1317,7 +1307,7 @@
         "architecture",
         "egm"
       ],
-      "excerpt": "Subagents Authoritative specification of the specialized background subagents and swarm models available for parallel task execution and as...",
+      "excerpt": "",
       "linksCount": 5,
       "backlinksCount": 2,
       "val": 8.82,
@@ -1327,15 +1317,14 @@
     {
       "id": "20_Architecture/Watcher",
       "name": "Watcher",
-      "path": "20_Architecture/Watcher",
+      "path": "architecture/watcher",
       "category": "architecture",
       "tags": [
         "architecture",
-        "watcher",
         "guardian",
         "memory"
       ],
-      "excerpt": "Watcher The independent autonomous overseer and real-time guardian of Luna's memory hierarchy across Tier 2 (Obsidian) and Tier 3 (Supabase...",
+      "excerpt": "",
       "linksCount": 6,
       "backlinksCount": 5,
       "val": 10.3,
@@ -1345,7 +1334,7 @@
     {
       "id": "30_Knowledge/AI",
       "name": "AI",
-      "path": "30_Knowledge/AI",
+      "path": "knowledge/ai",
       "category": "skills",
       "tags": [
         "hub",
@@ -1353,7 +1342,7 @@
         "knowledge",
         "ai"
       ],
-      "excerpt": "AI Artificial Intelligence, Neural Models & Agent Frameworks Central domain constellation governing 18 specialist skills. --- 1. Special...",
+      "excerpt": "",
       "linksCount": 21,
       "backlinksCount": 21,
       "val": 17.26,
@@ -1363,7 +1352,7 @@
     {
       "id": "30_Knowledge/Backend",
       "name": "Backend",
-      "path": "30_Knowledge/Backend",
+      "path": "knowledge/backend",
       "category": "skills",
       "tags": [
         "hub",
@@ -1371,7 +1360,7 @@
         "knowledge",
         "backend"
       ],
-      "excerpt": "Backend Backend Architecture, Routes & Network Protocols Central domain constellation governing 21 specialist skills. --- 1. Specialist ...",
+      "excerpt": "",
       "linksCount": 24,
       "backlinksCount": 23,
       "val": 18,
@@ -1381,7 +1370,7 @@
     {
       "id": "30_Knowledge/Database",
       "name": "Database",
-      "path": "30_Knowledge/Database",
+      "path": "knowledge/database",
       "category": "skills",
       "tags": [
         "hub",
@@ -1389,7 +1378,7 @@
         "knowledge",
         "database"
       ],
-      "excerpt": "Database Database Systems, Relational Schemas & Vector Persistence Central domain constellation governing 13 specialist skills. --- 1. S...",
+      "excerpt": "",
       "linksCount": 17,
       "backlinksCount": 15,
       "val": 15.45,
@@ -1399,7 +1388,7 @@
     {
       "id": "30_Knowledge/DevOps",
       "name": "DevOps",
-      "path": "30_Knowledge/DevOps",
+      "path": "knowledge/devops",
       "category": "skills",
       "tags": [
         "hub",
@@ -1407,7 +1396,7 @@
         "knowledge",
         "devops"
       ],
-      "excerpt": "DevOps DevOps, Containerization, Cloud Infrastructure & CI/CD Central domain constellation governing 19 specialist skills. --- 1. Specia...",
+      "excerpt": "",
       "linksCount": 22,
       "backlinksCount": 22,
       "val": 17.59,
@@ -1417,7 +1406,7 @@
     {
       "id": "30_Knowledge/Frontend",
       "name": "Frontend",
-      "path": "30_Knowledge/Frontend",
+      "path": "knowledge/frontend",
       "category": "skills",
       "tags": [
         "hub",
@@ -1425,7 +1414,7 @@
         "knowledge",
         "frontend"
       ],
-      "excerpt": "Frontend Frontend Architecture, UI & Motion Systems Central domain constellation governing 36 specialist skills. --- 1. Specialist Skill...",
+      "excerpt": "",
       "linksCount": 41,
       "backlinksCount": 40,
       "val": 18,
@@ -1435,7 +1424,7 @@
     {
       "id": "30_Knowledge/Hardware",
       "name": "Hardware",
-      "path": "30_Knowledge/Hardware",
+      "path": "knowledge/hardware",
       "category": "skills",
       "tags": [
         "hub",
@@ -1443,7 +1432,7 @@
         "knowledge",
         "hardware"
       ],
-      "excerpt": "Hardware Hardware Engineering, 3D Worlds & Embedded Systems Central domain constellation governing 13 specialist skills. --- 1. Speciali...",
+      "excerpt": "",
       "linksCount": 16,
       "backlinksCount": 17,
       "val": 15.64,
@@ -1453,7 +1442,7 @@
     {
       "id": "30_Knowledge/MCP",
       "name": "MCP",
-      "path": "30_Knowledge/MCP",
+      "path": "knowledge/mcp",
       "category": "skills",
       "tags": [
         "knowledge",
@@ -1462,7 +1451,7 @@
         "tools",
         "protocols"
       ],
-      "excerpt": "MCP The comprehensive catalog and operational standard governing Luna's suite of 20 Model Context Protocol (MCP) servers and external devel...",
+      "excerpt": "",
       "linksCount": 5,
       "backlinksCount": 2,
       "val": 8.82,
@@ -1472,7 +1461,7 @@
     {
       "id": "30_Knowledge/Motion",
       "name": "Motion",
-      "path": "30_Knowledge/Motion",
+      "path": "knowledge/motion",
       "category": "skills",
       "tags": [
         "animation",
@@ -1480,7 +1469,7 @@
         "physics",
         "ui"
       ],
-      "excerpt": "Motion Production standards for fluid, natural web animation and micro-interactions. 1. Physics & Easing Standards - **Out-Expo Decelerati...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 1,
       "val": 7.4,
@@ -1490,7 +1479,7 @@
     {
       "id": "30_Knowledge/SEO",
       "name": "SEO",
-      "path": "30_Knowledge/SEO",
+      "path": "knowledge/seo",
       "category": "skills",
       "tags": [
         "seo",
@@ -1498,7 +1487,7 @@
         "standards",
         "nextjs"
       ],
-      "excerpt": "SEO A production handbook on building crawler-friendly web applications, search engine discovery, and Google Core Web Vitals compliance. 1...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 1,
       "val": 7.4,
@@ -1508,7 +1497,7 @@
     {
       "id": "30_Knowledge/Security",
       "name": "Security",
-      "path": "30_Knowledge/Security",
+      "path": "knowledge/security",
       "category": "skills",
       "tags": [
         "hub",
@@ -1516,7 +1505,7 @@
         "knowledge",
         "security"
       ],
-      "excerpt": "Security Full-Spectrum Security, Threat Auditing & Defense Central domain constellation governing 12 specialist skills. --- 1. Specialis...",
+      "excerpt": "",
       "linksCount": 15,
       "backlinksCount": 15,
       "val": 15.05,
@@ -1526,14 +1515,14 @@
     {
       "id": "30_Knowledge/Skills/academic-report-builder",
       "name": "Skill: academic-report-builder",
-      "path": "30_Knowledge/Skills/academic-report-builder",
+      "path": "knowledge/skills/academic-report-builder",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: academic-report-builder Institutional Engineering Project Report and Thesis Generation Engine. Automatically invoked whenever creati...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1543,14 +1532,14 @@
     {
       "id": "30_Knowledge/Skills/academic-researcher",
       "name": "Skill: academic-researcher",
-      "path": "30_Knowledge/Skills/academic-researcher",
+      "path": "knowledge/skills/academic-researcher",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: academic-researcher Academic Research Lifecycle and Paper Structuring Engine based on Academic Research Skills and OpenMAIC. Automat...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1560,14 +1549,14 @@
     {
       "id": "30_Knowledge/Skills/accessibility-auditor",
       "name": "Skill: accessibility-auditor",
-      "path": "30_Knowledge/Skills/accessibility-auditor",
+      "path": "knowledge/skills/accessibility-auditor",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: accessibility-auditor WCAG 2.2 AAA Accessibility, Screen Reader, and Keyboard Navigation Sentinel. Automatically invoked whenever re...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1577,14 +1566,14 @@
     {
       "id": "30_Knowledge/Skills/acestep-music",
       "name": "Skill: acestep-music",
-      "path": "30_Knowledge/Skills/acestep-music",
+      "path": "knowledge/skills/acestep-music",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: acestep-music Local Neural Music Foundation and DiT Audio Synthesis Engine based on ACE-Step 1.5. Automatically invoked whenever gen...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1594,14 +1583,14 @@
     {
       "id": "30_Knowledge/Skills/agy-customizations",
       "name": "Skill: agy-customizations",
-      "path": "30_Knowledge/Skills/agy-customizations",
+      "path": "knowledge/skills/agy-customizations",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: agy-customizations >- --- 1. Specification & Purpose - **Identifier**:  - **Source Definition**: [](file:///Users/shreeprasandhk/....",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1611,14 +1600,14 @@
     {
       "id": "30_Knowledge/Skills/algorithmic-art",
       "name": "Skill: algorithmic-art",
-      "path": "30_Knowledge/Skills/algorithmic-art",
+      "path": "knowledge/skills/algorithmic-art",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: algorithmic-art Procedural Mathematical P5.js, Canvas Simulation, and Generative SVG Engine. Automatically invoked whenever generati...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1628,14 +1617,14 @@
     {
       "id": "30_Knowledge/Skills/anatomy-graphics",
       "name": "Skill: anatomy-graphics",
-      "path": "30_Knowledge/Skills/anatomy-graphics",
+      "path": "knowledge/skills/anatomy-graphics",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: anatomy-graphics Technical System Anatomy and Isometric Illustration Engine based on Anatomy. Automatically invoked whenever generat...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1645,14 +1634,14 @@
     {
       "id": "30_Knowledge/Skills/android-skills",
       "name": "Skill: android-skills",
-      "path": "30_Knowledge/Skills/android-skills",
+      "path": "knowledge/skills/android-skills",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: android-skills Android Native Architecture, Jetpack Compose, and Kotlin Coroutines Engine. Automatically invoked whenever developing...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1662,14 +1651,14 @@
     {
       "id": "30_Knowledge/Skills/antigravity_guide",
       "name": "Skill: antigravity_guide",
-      "path": "30_Knowledge/Skills/antigravity_guide",
+      "path": "knowledge/skills/antigravity-guide",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: antigravity_guide Provides a comprehensive guide, quick reference, and sitemap for Google Antigravity (AGY), including the Antigravi...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1679,14 +1668,14 @@
     {
       "id": "30_Knowledge/Skills/api-contract-tester",
       "name": "Skill: api-contract-tester",
-      "path": "30_Knowledge/Skills/api-contract-tester",
+      "path": "knowledge/skills/api-contract-tester",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: api-contract-tester API Schema Fuzzing, Boundary Value, and Contract Parity Testing Engine. Automatically invoked whenever testing A...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1696,14 +1685,14 @@
     {
       "id": "30_Knowledge/Skills/api-sentinel",
       "name": "Skill: api-sentinel",
-      "path": "30_Knowledge/Skills/api-sentinel",
+      "path": "knowledge/skills/api-sentinel",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: api-sentinel Production REST, Route Handler, and Streaming Architecture Engine for Next.js 16 App Router and Python FastAPI. Automat...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 3,
       "val": 8.39,
@@ -1713,14 +1702,14 @@
     {
       "id": "30_Knowledge/Skills/artemis-mobile",
       "name": "Skill: artemis-mobile",
-      "path": "30_Knowledge/Skills/artemis-mobile",
+      "path": "knowledge/skills/artemis-mobile",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: artemis-mobile Autonomous natural-language Android automation and mobile QA engine based on Google Artemis. Automatically invoked wh...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1730,14 +1719,14 @@
     {
       "id": "30_Knowledge/Skills/asset-forge",
       "name": "Skill: asset-forge",
-      "path": "30_Knowledge/Skills/asset-forge",
+      "path": "knowledge/skills/asset-forge",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: asset-forge Next-Gen Responsive Media, Lossless SVG, and WebP/AVIF Transmutation Sentinel. Automatically invoked whenever adding ima...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1747,14 +1736,14 @@
     {
       "id": "30_Knowledge/Skills/ast-refactor",
       "name": "Skill: ast-refactor",
-      "path": "30_Knowledge/Skills/ast-refactor",
+      "path": "knowledge/skills/ast-refactor",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: ast-refactor Abstract Syntax Tree Codebase Refactoring and Pattern Analysis Engine using ast-grep. Automatically invoked whenever pe...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1764,14 +1753,14 @@
     {
       "id": "30_Knowledge/Skills/atopile-pcb",
       "name": "Skill: atopile-pcb",
-      "path": "30_Knowledge/Skills/atopile-pcb",
+      "path": "knowledge/skills/atopile-pcb",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: atopile-pcb Code-to-PCB Electronics Compiler and Hardware Architecture Engine based on Atopile. Automatically invoked whenever desig...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1781,14 +1770,14 @@
     {
       "id": "30_Knowledge/Skills/audio-whisper",
       "name": "Skill: audio-whisper",
-      "path": "30_Knowledge/Skills/audio-whisper",
+      "path": "knowledge/skills/audio-whisper",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: audio-whisper Local Speech-to-Text Transcription and Audio Telemetry Engine using Whisper. Automatically invoked whenever transcribi...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1798,14 +1787,14 @@
     {
       "id": "30_Knowledge/Skills/audio2face-3d",
       "name": "Skill: audio2face-3d",
-      "path": "30_Knowledge/Skills/audio2face-3d",
+      "path": "knowledge/skills/audio2face-3d",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: audio2face-3d NVIDIA Omniverse Audio2Face-3D Blendshape Synthesis and Digital Avatar Lip-Sync Engine. Automatically invoked whenever...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1815,14 +1804,14 @@
     {
       "id": "30_Knowledge/Skills/automation",
       "name": "Skill: automation",
-      "path": "30_Knowledge/Skills/automation",
+      "path": "knowledge/skills/automation",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: automation Interactive guide to design and create a scheduled background automation. Use this skill when the user wants to create an...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1832,14 +1821,14 @@
     {
       "id": "30_Knowledge/Skills/better-auth",
       "name": "Skill: better-auth",
-      "path": "30_Knowledge/Skills/better-auth",
+      "path": "knowledge/skills/better-auth",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: better-auth Modern TypeScript Authentication Sentinel based on Better Auth. Automatically invoked whenever configuring user authenti...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -1849,14 +1838,14 @@
     {
       "id": "30_Knowledge/Skills/bim-craft",
       "name": "Skill: bim-craft",
-      "path": "30_Knowledge/Skills/bim-craft",
+      "path": "knowledge/skills/bim-craft",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: bim-craft Open-Source Building Information Modeling (BIM) and Architectural Engineering Engine based on BIMCraft. Automatically invo...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1866,14 +1855,14 @@
     {
       "id": "30_Knowledge/Skills/biome-clean",
       "name": "Skill: biome-clean",
-      "path": "30_Knowledge/Skills/biome-clean",
+      "path": "knowledge/skills/biome-clean",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: biome-clean Sub-150ms Rust-Powered Code Quality, Formatting, and Linting Engine based on Biome. Automatically invoked whenever linti...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1883,14 +1872,14 @@
     {
       "id": "30_Knowledge/Skills/blender-engine",
       "name": "Skill: blender-engine",
-      "path": "30_Knowledge/Skills/blender-engine",
+      "path": "knowledge/skills/blender-engine",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: blender-engine Blender 3D Automation, Live Viewport MCP Bridge, and Headless bpy Scripting Engine. Automatically invoked whenever ge...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 4,
       "val": 8.82,
@@ -1900,14 +1889,14 @@
     {
       "id": "30_Knowledge/Skills/blueprint-planner",
       "name": "Skill: blueprint-planner",
-      "path": "30_Knowledge/Skills/blueprint-planner",
+      "path": "knowledge/skills/blueprint-planner",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: blueprint-planner Vertical-slice architecture and implementation planning engine. Automatically invoked whenever planning complex mu...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1917,14 +1906,14 @@
     {
       "id": "30_Knowledge/Skills/brag",
       "name": "Skill: brag",
-      "path": "30_Knowledge/Skills/brag",
+      "path": "knowledge/skills/brag",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: brag Turn a project directory or a website URL into a short, shareable launch video with music, motion, and share copy. One file, no...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1934,14 +1923,14 @@
     {
       "id": "30_Knowledge/Skills/brand-guidelines-enforcer",
       "name": "Skill: brand-guidelines-enforcer",
-      "path": "30_Knowledge/Skills/brand-guidelines-enforcer",
+      "path": "knowledge/skills/brand-guidelines-enforcer",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: brand-guidelines-enforcer Design System Token, Color Palette, and Institutional Brand Voice Sentinel. Automatically invoked whenever...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1951,14 +1940,14 @@
     {
       "id": "30_Knowledge/Skills/bundle-architect",
       "name": "Skill: bundle-architect",
-      "path": "30_Knowledge/Skills/bundle-architect",
+      "path": "knowledge/skills/bundle-architect",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: bundle-architect Deep Client Bundle Minimizer, Tree-Shaking Sentinel, and Import Optimizer for Next.js 16. Automatically invoked whe...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -1968,14 +1957,14 @@
     {
       "id": "30_Knowledge/Skills/calcom-scheduler",
       "name": "Skill: calcom-scheduler",
-      "path": "30_Knowledge/Skills/calcom-scheduler",
+      "path": "knowledge/skills/calcom-scheduler",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: calcom-scheduler Open-Source Scheduling and Booking Infrastructure Engine based on Cal.com DIY. Automatically invoked whenever build...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -1985,14 +1974,14 @@
     {
       "id": "30_Knowledge/Skills/caveman-compress",
       "name": "Skill: caveman-compress",
-      "path": "30_Knowledge/Skills/caveman-compress",
+      "path": "knowledge/skills/caveman-compress",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: caveman-compress Extreme Token Compression and Terse Communication Mode based on Caveman. Automatically invoked during critical cont...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2002,14 +1991,14 @@
     {
       "id": "30_Knowledge/Skills/changelog-generator",
       "name": "Skill: changelog-generator",
-      "path": "30_Knowledge/Skills/changelog-generator",
+      "path": "knowledge/skills/changelog-generator",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: changelog-generator Semantic Release Notes, Git History Synthesizer, and Version Tagging Engine. Automatically invoked whenever prep...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2019,14 +2008,14 @@
     {
       "id": "30_Knowledge/Skills/chatwoot-support",
       "name": "Skill: chatwoot-support",
-      "path": "30_Knowledge/Skills/chatwoot-support",
+      "path": "knowledge/skills/chatwoot-support",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: chatwoot-support Omnichannel Customer Support and Live-Chat Integration Engine based on Chatwoot. Automatically invoked whenever int...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2036,14 +2025,14 @@
     {
       "id": "30_Knowledge/Skills/circular-dependency-hunter",
       "name": "Skill: circular-dependency-hunter",
-      "path": "30_Knowledge/Skills/circular-dependency-hunter",
+      "path": "knowledge/skills/circular-dependency-hunter",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: circular-dependency-hunter Module Dependency Graph Analysis and Circular Import Resolver. Automatically invoked whenever analyzing i...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2053,14 +2042,14 @@
     {
       "id": "30_Knowledge/Skills/clean-architecture",
       "name": "Skill: clean-architecture",
-      "path": "30_Knowledge/Skills/clean-architecture",
+      "path": "knowledge/skills/clean-architecture",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: clean-architecture Domain-Driven Design, Hexagonal Boundaries, and Layered Architecture Sentinel. Automatically invoked whenever des...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2070,14 +2059,14 @@
     {
       "id": "30_Knowledge/Skills/cli-anything",
       "name": "Skill: cli-anything",
-      "path": "30_Knowledge/Skills/cli-anything",
+      "path": "knowledge/skills/cli-anything",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: cli-anything Agent-Native Command Line Harness Generator based on HKUDS CLI-Anything. Automatically invoked whenever generating CLI ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2087,14 +2076,14 @@
     {
       "id": "30_Knowledge/Skills/cloud-deploy-sentinel",
       "name": "Skill: cloud-deploy-sentinel",
-      "path": "30_Knowledge/Skills/cloud-deploy-sentinel",
+      "path": "knowledge/skills/cloud-deploy-sentinel",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: cloud-deploy-sentinel Zero-Downtime Deployment, Preview Environment, and Production Health Sentinel. Automatically invoked whenever ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2104,14 +2093,14 @@
     {
       "id": "30_Knowledge/Skills/cloudflare-worker-pilot",
       "name": "Skill: cloudflare-worker-pilot",
-      "path": "30_Knowledge/Skills/cloudflare-worker-pilot",
+      "path": "knowledge/skills/cloudflare-worker-pilot",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: cloudflare-worker-pilot Cloudflare Workers, D1 Serverless SQL, Vectorize, and Edge KV Deployment Sentinel. Automatically invoked whe...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2121,7 +2110,7 @@
     {
       "id": "30_Knowledge/Skills/code-mode",
       "name": "Skill: code-mode",
-      "path": "30_Knowledge/Skills/code-mode",
+      "path": "knowledge/skills/code-mode",
       "category": "skills",
       "tags": [
         "skill",
@@ -2130,7 +2119,7 @@
         "execution",
         "performance"
       ],
-      "excerpt": "Skill: code-mode Turing-complete code execution engine and UTCP client for AI agents. Automatically invoked whenever replacing multi-step M...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 1,
       "val": 7.4,
@@ -2140,14 +2129,14 @@
     {
       "id": "30_Knowledge/Skills/code-search",
       "name": "Skill: code-search",
-      "path": "30_Knowledge/Skills/code-search",
+      "path": "knowledge/skills/code-search",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: code-search Local frontier semantic & structural codebase search engine (Luna Cortex 3.0). Indexes and semantically searches across ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2157,14 +2146,14 @@
     {
       "id": "30_Knowledge/Skills/codebase-graphify",
       "name": "Skill: codebase-graphify",
-      "path": "30_Knowledge/Skills/codebase-graphify",
+      "path": "knowledge/skills/codebase-graphify",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: codebase-graphify Deterministic Tree-Sitter AST Codebase Knowledge Graph Generator based on Graphify. Automatically invoked whenever...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2174,14 +2163,14 @@
     {
       "id": "30_Knowledge/Skills/codespace",
       "name": "Skill: codespace",
-      "path": "30_Knowledge/Skills/codespace",
+      "path": "knowledge/skills/codespace",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: codespace Cloud sandbox & Codespaces controller. Offloads untrusted repositories, battery-draining scrapers, Linux-native builds, an...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2191,14 +2180,14 @@
     {
       "id": "30_Knowledge/Skills/coffee",
       "name": "Skill: coffee",
-      "path": "30_Knowledge/Skills/coffee",
+      "path": "knowledge/skills/coffee",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: coffee Keep-awake controller for macOS. Prevents screen timeout, system sleep, and remote session drops. Toggle with /coffee on or /...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -2208,14 +2197,14 @@
     {
       "id": "30_Knowledge/Skills/comfyui-automator",
       "name": "Skill: comfyui-automator",
-      "path": "30_Knowledge/Skills/comfyui-automator",
+      "path": "knowledge/skills/comfyui-automator",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: comfyui-automator Headless ComfyUI Node Automation and Workflow Generation Engine. Automatically invoked whenever generating, queuin...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2225,14 +2214,14 @@
     {
       "id": "30_Knowledge/Skills/composio-toolhub",
       "name": "Skill: composio-toolhub",
-      "path": "30_Knowledge/Skills/composio-toolhub",
+      "path": "knowledge/skills/composio-toolhub",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: composio-toolhub Enterprise Multi-Tool Integration and Authentication Engine based on Composio. Automatically invoked whenever conne...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2242,14 +2231,14 @@
     {
       "id": "30_Knowledge/Skills/cost-telemetry",
       "name": "Skill: cost-telemetry",
-      "path": "30_Knowledge/Skills/cost-telemetry",
+      "path": "knowledge/skills/cost-telemetry",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: cost-telemetry Local token consumption and cost tracking ledger using SQLite. Automatically invoked whenever tracking session token ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2259,14 +2248,14 @@
     {
       "id": "30_Knowledge/Skills/crawl4ai-scraper",
       "name": "Skill: crawl4ai-scraper",
-      "path": "30_Knowledge/Skills/crawl4ai-scraper",
+      "path": "knowledge/skills/crawl4ai-scraper",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: crawl4ai-scraper High-Performance Asynchronous Web and LLM Extraction Engine based on Crawl4AI. Automatically invoked whenever scrap...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2276,14 +2265,14 @@
     {
       "id": "30_Knowledge/Skills/cron-watchdog",
       "name": "Skill: cron-watchdog",
-      "path": "30_Knowledge/Skills/cron-watchdog",
+      "path": "knowledge/skills/cron-watchdog",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: cron-watchdog Background Task, pg_cron, and Distributed Queue Reliability Sentinel. Automatically invoked whenever scheduling backgr...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2293,14 +2282,14 @@
     {
       "id": "30_Knowledge/Skills/csrf-cors-sentry",
       "name": "Skill: csrf-cors-sentry",
-      "path": "30_Knowledge/Skills/csrf-cors-sentry",
+      "path": "knowledge/skills/csrf-cors-sentry",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: csrf-cors-sentry HTTP Security Headers, CORS Policy, and Origin Defense Sentinel. Automatically invoked whenever configuring Next.js...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2310,14 +2299,14 @@
     {
       "id": "30_Knowledge/Skills/cypress-e2e",
       "name": "Skill: cypress-e2e",
-      "path": "30_Knowledge/Skills/cypress-e2e",
+      "path": "knowledge/skills/cypress-e2e",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: cypress-e2e End-to-End Browser Testing, Component Testing, and Network Interception Engine based on Cypress. Automatically invoked w...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -2327,14 +2316,14 @@
     {
       "id": "30_Knowledge/Skills/d2-diagram",
       "name": "Skill: d2-diagram",
-      "path": "30_Knowledge/Skills/d2-diagram",
+      "path": "knowledge/skills/d2-diagram",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: d2-diagram Modern Declarative Architecture and Topology Diagramming Engine based on D2 by Terrastruct. Automatically invoked wheneve...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2344,14 +2333,14 @@
     {
       "id": "30_Knowledge/Skills/data-engine",
       "name": "Skill: data-engine",
-      "path": "30_Knowledge/Skills/data-engine",
+      "path": "knowledge/skills/data-engine",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: data-engine High-Performance Python, Polars, DuckDB, and NumPy SIMD Data Engineering Engine. Automatically invoked whenever writing,...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2361,14 +2350,14 @@
     {
       "id": "30_Knowledge/Skills/dead-code-cleaner",
       "name": "Skill: dead-code-cleaner",
-      "path": "30_Knowledge/Skills/dead-code-cleaner",
+      "path": "knowledge/skills/dead-code-cleaner",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: dead-code-cleaner Codebase Pruning, Unused Export, and Orphan Asset Remover. Automatically invoked whenever performing codebase clea...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2378,14 +2367,14 @@
     {
       "id": "30_Knowledge/Skills/deepseek-harness",
       "name": "Skill: deepseek-harness",
-      "path": "30_Knowledge/Skills/deepseek-harness",
+      "path": "knowledge/skills/deepseek-harness",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: deepseek-harness DeepSeek Agent Harness and Cordis Plugin Architecture Engine. Automatically invoked when configuring modular agent ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2395,14 +2384,14 @@
     {
       "id": "30_Knowledge/Skills/dependency-sentinel",
       "name": "Skill: dependency-sentinel",
-      "path": "30_Knowledge/Skills/dependency-sentinel",
+      "path": "knowledge/skills/dependency-sentinel",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: dependency-sentinel Software Supply Chain, Vulnerability Scanner, and Malicious Package Defense. Automatically invoked whenever runn...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -2412,14 +2401,14 @@
     {
       "id": "30_Knowledge/Skills/doc-coauthor",
       "name": "Skill: doc-coauthor",
-      "path": "30_Knowledge/Skills/doc-coauthor",
+      "path": "knowledge/skills/doc-coauthor",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: doc-coauthor Technical RFC, Architecture Decision Record (ADR), and System Specification Co-Author. Automatically invoked whenever w...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2429,14 +2418,14 @@
     {
       "id": "30_Knowledge/Skills/docker-lean",
       "name": "Skill: docker-lean",
-      "path": "30_Knowledge/Skills/docker-lean",
+      "path": "knowledge/skills/docker-lean",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: docker-lean Zero-Waste Multi-Stage Containerization and Docker Security Sentinel. Automatically invoked whenever writing, editing, o...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2446,14 +2435,14 @@
     {
       "id": "30_Knowledge/Skills/drizzle-orm-sentinel",
       "name": "Skill: drizzle-orm-sentinel",
-      "path": "30_Knowledge/Skills/drizzle-orm-sentinel",
+      "path": "knowledge/skills/drizzle-orm-sentinel",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: drizzle-orm-sentinel Type-Safe Drizzle ORM Schema, Relational Query, and Zero-Lock Migration Engine. Automatically invoked whenever ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2463,14 +2452,14 @@
     {
       "id": "30_Knowledge/Skills/dspy-optimizer",
       "name": "Skill: dspy-optimizer",
-      "path": "30_Knowledge/Skills/dspy-optimizer",
+      "path": "knowledge/skills/dspy-optimizer",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: dspy-optimizer Programmatic Prompt Optimization and Few-Shot Metric Compilation Engine based on Stanford DSPy. Automatically invoked...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2480,14 +2469,14 @@
     {
       "id": "30_Knowledge/Skills/dual-model-consensus",
       "name": "Skill: dual-model-consensus",
-      "path": "30_Knowledge/Skills/dual-model-consensus",
+      "path": "knowledge/skills/dual-model-consensus",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: dual-model-consensus Cross-model adversarial review convergence loop requiring consensus across independent model families before sh...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2497,14 +2486,14 @@
     {
       "id": "30_Knowledge/Skills/duckdb-analytics",
       "name": "Skill: duckdb-analytics",
-      "path": "30_Knowledge/Skills/duckdb-analytics",
+      "path": "knowledge/skills/duckdb-analytics",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: duckdb-analytics In-Process Zero-Copy OLAP and Parquet/CSV Analytics Engine using DuckDB. Automatically invoked whenever querying la...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2514,14 +2503,14 @@
     {
       "id": "30_Knowledge/Skills/earshot-audio",
       "name": "Skill: earshot-audio",
-      "path": "30_Knowledge/Skills/earshot-audio",
+      "path": "knowledge/skills/earshot-audio",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: earshot-audio Audio Perception, Frequency Review, and Sound Quality Engine based on Earshot. Automatically invoked whenever inspecti...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2531,14 +2520,14 @@
     {
       "id": "30_Knowledge/Skills/elasticsearch-sentinel",
       "name": "Skill: elasticsearch-sentinel",
-      "path": "30_Knowledge/Skills/elasticsearch-sentinel",
+      "path": "knowledge/skills/elasticsearch-sentinel",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: elasticsearch-sentinel Enterprise Full-Text Search, BM25 Relevance, and Log Analytics Engine based on Elastic. Automatically invoked...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2548,7 +2537,7 @@
     {
       "id": "30_Knowledge/Skills/elephant-goldfish",
       "name": "Skill: elephant-goldfish",
-      "path": "30_Knowledge/Skills/elephant-goldfish",
+      "path": "knowledge/skills/elephant-goldfish",
       "category": "skills",
       "tags": [
         "skill",
@@ -2557,7 +2546,7 @@
         "architecture",
         "spec"
       ],
-      "excerpt": "Skill: elephant-goldfish Google Elephant-Goldfish Model spec-driven architecture separating stateful specification drafting from stateless ...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 1,
       "val": 7.92,
@@ -2567,14 +2556,14 @@
     {
       "id": "30_Knowledge/Skills/expo-mobile",
       "name": "Skill: expo-mobile",
-      "path": "30_Knowledge/Skills/expo-mobile",
+      "path": "knowledge/skills/expo-mobile",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: expo-mobile Universal React Native and Mobile Application Architecture Engine based on Expo. Automatically invoked whenever developi...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2584,14 +2573,14 @@
     {
       "id": "30_Knowledge/Skills/fastapi-pro",
       "name": "Skill: fastapi-pro",
-      "path": "30_Knowledge/Skills/fastapi-pro",
+      "path": "knowledge/skills/fastapi-pro",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: fastapi-pro High-Performance Asynchronous Python REST API and OpenAPI Engine based on FastAPI. Automatically invoked whenever archit...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -2601,14 +2590,14 @@
     {
       "id": "30_Knowledge/Skills/find-skills",
       "name": "Skill: find-skills",
-      "path": "30_Knowledge/Skills/find-skills",
+      "path": "knowledge/skills/find-skills",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: find-skills Helps discover and install agent skills from the open ecosystem and skills.sh when searching for tools, workflows, or sp...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2618,14 +2607,14 @@
     {
       "id": "30_Knowledge/Skills/firecrawl-agent",
       "name": "Skill: firecrawl-agent",
-      "path": "30_Knowledge/Skills/firecrawl-agent",
+      "path": "knowledge/skills/firecrawl-agent",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: firecrawl-agent Web-to-Markdown Extraction and Documentation Ingestion Engine based on Firecrawl. Automatically invoked whenever scr...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2635,14 +2624,14 @@
     {
       "id": "30_Knowledge/Skills/floorplan",
       "name": "Skill: floorplan",
-      "path": "30_Knowledge/Skills/floorplan",
+      "path": "knowledge/skills/floorplan",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: floorplan Interactive codebase architecture visualizer and plain-English node-graph mapper. Automatically invoked whenever mapping, ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2652,14 +2641,14 @@
     {
       "id": "30_Knowledge/Skills/freedom",
       "name": "Skill: freedom",
-      "path": "30_Knowledge/Skills/freedom",
+      "path": "knowledge/skills/freedom",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: freedom Policy-gated autonomous execution controller. When active, safe file edits, builds, tests, and multi-file refactors are auto...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2669,14 +2658,14 @@
     {
       "id": "30_Knowledge/Skills/game-studio-orchestrator",
       "name": "Skill: game-studio-orchestrator",
-      "path": "30_Knowledge/Skills/game-studio-orchestrator",
+      "path": "knowledge/skills/game-studio-orchestrator",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: game-studio-orchestrator Game Development Studio Lifecycle and Multi-Disciplinary Game Architecture Engine based on Claude Code Game...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2686,14 +2675,14 @@
     {
       "id": "30_Knowledge/Skills/generative_ui",
       "name": "Skill: generative_ui",
-      "path": "30_Knowledge/Skills/generative_ui",
+      "path": "knowledge/skills/generative-ui",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: generative_ui How to render rich interactive HTML widgets inline in the chat or as standalone artifacts. Use this skill when you wan...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 4,
       "val": 8.39,
@@ -2703,14 +2692,14 @@
     {
       "id": "30_Knowledge/Skills/genoffice",
       "name": "Skill: genoffice",
-      "path": "30_Knowledge/Skills/genoffice",
+      "path": "knowledge/skills/genoffice",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: genoffice Local Office document engine to create, convert, read, and edit docx, xlsx, pptx, and pdf files via the genoffice CLI. Aut...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2720,7 +2709,7 @@
     {
       "id": "30_Knowledge/Skills/geo-sleuth",
       "name": "Skill: geo-sleuth",
-      "path": "30_Knowledge/Skills/geo-sleuth",
+      "path": "knowledge/skills/geo-sleuth",
       "category": "skills",
       "tags": [
         "skill",
@@ -2729,7 +2718,7 @@
         "vision",
         "mapping"
       ],
-      "excerpt": "Skill: geo-sleuth Autonomous photo geolocation, terrain elevation matching, and OSINT spatial investigation engine. Automatically invoked w...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 0,
       "val": 6.11,
@@ -2739,14 +2728,14 @@
     {
       "id": "30_Knowledge/Skills/geometry-nodes-pro",
       "name": "Skill: geometry-nodes-pro",
-      "path": "30_Knowledge/Skills/geometry-nodes-pro",
+      "path": "knowledge/skills/geometry-nodes-pro",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: geometry-nodes-pro Blender 5.2 Parametric Architecture, Geometry Nodes Networks, Simulation Zones, and Procedural Scattering Engine....",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -2756,14 +2745,14 @@
     {
       "id": "30_Knowledge/Skills/git-sentinel",
       "name": "Skill: git-sentinel",
-      "path": "30_Knowledge/Skills/git-sentinel",
+      "path": "knowledge/skills/git-sentinel",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: git-sentinel Autonomous Git Architecture, Conventional Commits, Merge Conflict Resolution, and Release Engineering Sentinel. Automat...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2773,14 +2762,14 @@
     {
       "id": "30_Knowledge/Skills/git-worktrees",
       "name": "Skill: git-worktrees",
-      "path": "30_Knowledge/Skills/git-worktrees",
+      "path": "knowledge/skills/git-worktrees",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: git-worktrees Isolated Git Worktree Workspace and Parallel Branch Controller. Automatically invoked whenever running experimental br...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2790,14 +2779,14 @@
     {
       "id": "30_Knowledge/Skills/github-actions-pilot",
       "name": "Skill: github-actions-pilot",
-      "path": "30_Knowledge/Skills/github-actions-pilot",
+      "path": "knowledge/skills/github-actions-pilot",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: github-actions-pilot Continuous Integration, Cached Matrix Workflows, and Branch Protection Sentinel. Automatically invoked whenever...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2807,14 +2796,14 @@
     {
       "id": "30_Knowledge/Skills/godot-engine",
       "name": "Skill: godot-engine",
-      "path": "30_Knowledge/Skills/godot-engine",
+      "path": "knowledge/skills/godot-engine",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: godot-engine Godot 4 Architecture, GDScript Automation, and Headless Project Runner Engine based on Godot MCP. Automatically invoked...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2824,14 +2813,14 @@
     {
       "id": "30_Knowledge/Skills/google-stitch",
       "name": "Skill: google-stitch",
-      "path": "30_Knowledge/Skills/google-stitch",
+      "path": "knowledge/skills/google-stitch",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: google-stitch Google Stitch Generative UI/UX Design Engine. Automatically invoked whenever generating frontend screen layouts, wiref...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -2841,14 +2830,14 @@
     {
       "id": "30_Knowledge/Skills/graphql-nexus",
       "name": "Skill: graphql-nexus",
-      "path": "30_Knowledge/Skills/graphql-nexus",
+      "path": "knowledge/skills/graphql-nexus",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: graphql-nexus Type-Safe GraphQL Schema Modeling, Apollo Server, and Resolver Optimization Engine. Automatically invoked whenever arc...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2858,14 +2847,14 @@
     {
       "id": "30_Knowledge/Skills/grill-me",
       "name": "Skill: grill-me",
-      "path": "30_Knowledge/Skills/grill-me",
+      "path": "knowledge/skills/grill-me",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: grill-me Socratic Architecture Interviewer and Pre-Implementation Stress-Testing Sentinel. Automatically invoked whenever planning c...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2875,14 +2864,14 @@
     {
       "id": "30_Knowledge/Skills/grpc-protobuf",
       "name": "Skill: grpc-protobuf",
-      "path": "30_Knowledge/Skills/grpc-protobuf",
+      "path": "knowledge/skills/grpc-protobuf",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: grpc-protobuf High-Throughput Protocol Buffers and Binary RPC Architecture Engine. Automatically invoked whenever defining .proto sc...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2892,14 +2881,14 @@
     {
       "id": "30_Knowledge/Skills/hairline-graphics",
       "name": "Skill: hairline-graphics",
-      "path": "30_Knowledge/Skills/hairline-graphics",
+      "path": "knowledge/skills/hairline-graphics",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: hairline-graphics Interactive Isometric Line Graphics and Responsive Physics Engine based on Hairline. Automatically invoked wheneve...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2909,7 +2898,7 @@
     {
       "id": "30_Knowledge/Skills/handoff",
       "name": "Skill: handoff",
-      "path": "30_Knowledge/Skills/handoff",
+      "path": "knowledge/skills/handoff",
       "category": "skills",
       "tags": [
         "skill",
@@ -2917,7 +2906,7 @@
         "handoff",
         "sessions"
       ],
-      "excerpt": "Skill: handoff Conversation context compaction and multi-agent session handoff engine. Automatically invoked whenever preparing session han...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 1,
       "val": 6.81,
@@ -2927,14 +2916,14 @@
     {
       "id": "30_Knowledge/Skills/harvey-outreach",
       "name": "Skill: harvey-outreach",
-      "path": "30_Knowledge/Skills/harvey-outreach",
+      "path": "knowledge/skills/harvey-outreach",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: harvey-outreach Local-First Autonomous B2B Outreach and Email Sequencing Engine based on Harvey. Automatically invoked whenever buil...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2944,14 +2933,14 @@
     {
       "id": "30_Knowledge/Skills/hono-api",
       "name": "Skill: hono-api",
-      "path": "30_Knowledge/Skills/hono-api",
+      "path": "knowledge/skills/hono-api",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: hono-api Ultra-Fast Lightweight Web Framework Engine for Cloudflare Workers, Bun, Deno, and Node.js. Automatically invoked whenever ...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -2961,14 +2950,14 @@
     {
       "id": "30_Knowledge/Skills/hookify-sentinel",
       "name": "Skill: hookify-sentinel",
-      "path": "30_Knowledge/Skills/hookify-sentinel",
+      "path": "knowledge/skills/hookify-sentinel",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: hookify-sentinel Declarative pre-tool and post-tool command interceptor and safety rule sentinel. Automatically invoked whenever eva...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2978,14 +2967,14 @@
     {
       "id": "30_Knowledge/Skills/humanizer",
       "name": "Skill: humanizer",
-      "path": "30_Knowledge/Skills/humanizer",
+      "path": "knowledge/skills/humanizer",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: humanizer Anti-AI-Slop Prose Refiner and Natural Technical Writing Engine. Automatically invoked whenever polishing documentation, R...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -2995,14 +2984,14 @@
     {
       "id": "30_Knowledge/Skills/hydration-guard",
       "name": "Skill: hydration-guard",
-      "path": "30_Knowledge/Skills/hydration-guard",
+      "path": "knowledge/skills/hydration-guard",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: hydration-guard React 19 and Next.js 16 SSR/CSR Hydration Mismatch Sentinel. Automatically invoked whenever encountering hydration e...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3012,14 +3001,14 @@
     {
       "id": "30_Knowledge/Skills/hyperframes",
       "name": "Skill: hyperframes",
-      "path": "30_Knowledge/Skills/hyperframes",
+      "path": "knowledge/skills/hyperframes",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: hyperframes Deterministic Code-to-Video Rendering Engine based on HeyGen Hyperframes and Procedural Whiteboard Animation. Automatica...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3029,14 +3018,14 @@
     {
       "id": "30_Knowledge/Skills/image-blaster",
       "name": "Skill: image-blaster",
-      "path": "30_Knowledge/Skills/image-blaster",
+      "path": "knowledge/skills/image-blaster",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: image-blaster Image-to-World 3D Asset Pack and Gaussian Splat Pipeline Engine based on Image-Blaster. Automatically invoked whenever...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3046,7 +3035,7 @@
     {
       "id": "30_Knowledge/Skills/insomnia",
       "name": "Skill: insomnia",
-      "path": "30_Knowledge/Skills/insomnia",
+      "path": "knowledge/skills/insomnia",
       "category": "skills",
       "tags": [
         "skill",
@@ -3054,7 +3043,7 @@
         "automation",
         "macos"
       ],
-      "excerpt": "Skill: insomnia macOS keep-awake, clamshell sleep prevention, timed countdown, and task-bound auto-shutdown or sleep controller. Supports `...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 2,
       "val": 7.92,
@@ -3064,14 +3053,14 @@
     {
       "id": "30_Knowledge/Skills/instinct-core",
       "name": "Skill: instinct-core",
-      "path": "30_Knowledge/Skills/instinct-core",
+      "path": "knowledge/skills/instinct-core",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: instinct-core Continuous learning engine extracting atomic, confidence-scored behavioral patterns from user corrections and preferen...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3081,14 +3070,14 @@
     {
       "id": "30_Knowledge/Skills/invidious-stream",
       "name": "Skill: invidious-stream",
-      "path": "30_Knowledge/Skills/invidious-stream",
+      "path": "knowledge/skills/invidious-stream",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: invidious-stream Privacy-Respecting YouTube Stream and Video Metadata Extractor based on Invidious. Automatically invoked whenever e...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3098,14 +3087,14 @@
     {
       "id": "30_Knowledge/Skills/kaggle",
       "name": "Skill: kaggle",
-      "path": "30_Knowledge/Skills/kaggle",
+      "path": "knowledge/skills/kaggle",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: kaggle Headless Cloud GPU & Kaggle compute controller. Dispatches deep learning, PyTorch, LoRA fine-tuning, and CUDA workloads to fr...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3115,14 +3104,14 @@
     {
       "id": "30_Knowledge/Skills/kubernetes-sentinel",
       "name": "Skill: kubernetes-sentinel",
-      "path": "30_Knowledge/Skills/kubernetes-sentinel",
+      "path": "knowledge/skills/kubernetes-sentinel",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: kubernetes-sentinel Kubernetes Manifest, Helm Chart, Ingress, and Container Reliability Sentinel. Automatically invoked whenever wri...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3132,14 +3121,14 @@
     {
       "id": "30_Knowledge/Skills/langgraph-flows",
       "name": "Skill: langgraph-flows",
-      "path": "30_Knowledge/Skills/langgraph-flows",
+      "path": "knowledge/skills/langgraph-flows",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: langgraph-flows Cyclic Multi-Agent State Machine and Graph Orchestration Engine based on LangGraph. Automatically invoked whenever a...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3149,14 +3138,14 @@
     {
       "id": "30_Knowledge/Skills/lighthouse-optimizer",
       "name": "Skill: lighthouse-optimizer",
-      "path": "30_Knowledge/Skills/lighthouse-optimizer",
+      "path": "knowledge/skills/lighthouse-optimizer",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: lighthouse-optimizer Core Web Vitals, LCP, CLS, and Headless Google Lighthouse Optimization Sentinel. Automatically invoked whenever...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -3166,14 +3155,14 @@
     {
       "id": "30_Knowledge/Skills/livekit-webrtc",
       "name": "Skill: livekit-webrtc",
-      "path": "30_Knowledge/Skills/livekit-webrtc",
+      "path": "knowledge/skills/livekit-webrtc",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: livekit-webrtc Real-Time WebRTC Audio Streaming and Voice Agent Engine based on LiveKit. Automatically invoked whenever building low...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3183,14 +3172,14 @@
     {
       "id": "30_Knowledge/Skills/logo-design",
       "name": "Skill: logo-design",
-      "path": "30_Knowledge/Skills/logo-design",
+      "path": "knowledge/skills/logo-design",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: logo-design Professional logo and brand-mark design engine from discovery to production SVG assets. Automatically invoked whenever d...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3200,14 +3189,14 @@
     {
       "id": "30_Knowledge/Skills/luna-ollama",
       "name": "Skill: luna-ollama",
-      "path": "30_Knowledge/Skills/luna-ollama",
+      "path": "knowledge/skills/luna-ollama",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: luna-ollama Local, air-gapped neural fleet and active resource balancing substrate on Ollama (localhost:11434). Provides sub-second ...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 4,
       "val": 8.39,
@@ -3217,14 +3206,14 @@
     {
       "id": "30_Knowledge/Skills/luna",
       "name": "Skill: luna",
-      "path": "30_Knowledge/Skills/luna",
+      "path": "knowledge/skills/luna",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: luna Master cockpit & assistant controller. Provides instant system health diagnostics (/luna doc or /luna doctor), predictive proje...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3234,14 +3223,14 @@
     {
       "id": "30_Knowledge/Skills/magika-detect",
       "name": "Skill: magika-detect",
-      "path": "30_Knowledge/Skills/magika-detect",
+      "path": "knowledge/skills/magika-detect",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: magika-detect Deep learning AI file content type detection using Google Magika. Automatically invoked whenever verifying file format...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3251,14 +3240,14 @@
     {
       "id": "30_Knowledge/Skills/mcp-builder",
       "name": "Skill: mcp-builder",
-      "path": "30_Knowledge/Skills/mcp-builder",
+      "path": "knowledge/skills/mcp-builder",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: mcp-builder Model Context Protocol (MCP) Server Architect and FastMCP Tooling Engine. Automatically invoked whenever building, modif...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3268,14 +3257,14 @@
     {
       "id": "30_Knowledge/Skills/memory-leak-hunter",
       "name": "Skill: memory-leak-hunter",
-      "path": "30_Knowledge/Skills/memory-leak-hunter",
+      "path": "knowledge/skills/memory-leak-hunter",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: memory-leak-hunter Heap Snapshot, Event Listener, and Unbounded Cache Diagnostic Sentinel for Node.js and SPAs. Automatically invoke...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3285,14 +3274,14 @@
     {
       "id": "30_Knowledge/Skills/migrate-workflows",
       "name": "Skill: migrate-workflows",
-      "path": "30_Knowledge/Skills/migrate-workflows",
+      "path": "knowledge/skills/migrate-workflows",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: migrate-workflows Automatically migrate legacy workflows to modern skills across global and workspace configurations. Scans for exis...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3302,14 +3291,14 @@
     {
       "id": "30_Knowledge/Skills/minimind-trainer",
       "name": "Skill: minimind-trainer",
-      "path": "30_Knowledge/Skills/minimind-trainer",
+      "path": "knowledge/skills/minimind-trainer",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: minimind-trainer Minimalist PyTorch Language Model Training Engine based on MiniMind. Automatically invoked whenever training, fine-...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3319,14 +3308,14 @@
     {
       "id": "30_Knowledge/Skills/mlx-vision",
       "name": "Skill: mlx-vision",
-      "path": "30_Knowledge/Skills/mlx-vision",
+      "path": "knowledge/skills/mlx-vision",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: mlx-vision Apple Silicon Native Vision-Language Inference Engine based on MLX-VLM. Automatically invoked whenever inspecting UI scre...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3336,14 +3325,14 @@
     {
       "id": "30_Knowledge/Skills/money-printer",
       "name": "Skill: money-printer",
-      "path": "30_Knowledge/Skills/money-printer",
+      "path": "knowledge/skills/money-printer",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: money-printer Automated Video Pipeline Engine based on MoneyPrinterTurbo. Automatically invoked whenever generating end-to-end short...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3353,14 +3342,14 @@
     {
       "id": "30_Knowledge/Skills/n8n-automation",
       "name": "Skill: n8n-automation",
-      "path": "30_Knowledge/Skills/n8n-automation",
+      "path": "knowledge/skills/n8n-automation",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: n8n-automation Low-Code Node Pipeline and Workflow Automation Engine based on n8n. Automatically invoked whenever designing, buildin...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3370,14 +3359,14 @@
     {
       "id": "30_Knowledge/Skills/obsidian-vault",
       "name": "Skill: obsidian-vault",
-      "path": "30_Knowledge/Skills/obsidian-vault",
+      "path": "knowledge/skills/obsidian-vault",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: obsidian-vault Obsidian vault manager, visual canvas generator, and bidirectional linking engine. Automatically invoked whenever org...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 1,
       "val": 6.81,
@@ -3387,14 +3376,14 @@
     {
       "id": "30_Knowledge/Skills/open-higgsfield",
       "name": "Skill: open-higgsfield",
-      "path": "30_Knowledge/Skills/open-higgsfield",
+      "path": "knowledge/skills/open-higgsfield",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: open-higgsfield Generative Video and Creative Cinema Studio Engine. Automatically invoked whenever orchestrating multi-model image-t...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3404,14 +3393,14 @@
     {
       "id": "30_Knowledge/Skills/opencode-interpreter",
       "name": "Skill: opencode-interpreter",
-      "path": "30_Knowledge/Skills/opencode-interpreter",
+      "path": "knowledge/skills/opencode-interpreter",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: opencode-interpreter Autonomous Code Execution and REPL Sandbox Engine based on OpenCode and OpenClaude. Automatically invoked whene...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3421,14 +3410,14 @@
     {
       "id": "30_Knowledge/Skills/openproject-pm",
       "name": "Skill: openproject-pm",
-      "path": "30_Knowledge/Skills/openproject-pm",
+      "path": "knowledge/skills/openproject-pm",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: openproject-pm Enterprise Agile Project Management and Work Package Engine based on OpenProject. Automatically invoked whenever stru...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3438,14 +3427,14 @@
     {
       "id": "30_Knowledge/Skills/opentelemetry-tracing",
       "name": "Skill: opentelemetry-tracing",
-      "path": "30_Knowledge/Skills/opentelemetry-tracing",
+      "path": "knowledge/skills/opentelemetry-tracing",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: opentelemetry-tracing Vendor-Neutral Distributed Telemetry and Span Instrumentation Engine based on OpenTelemetry. Automatically inv...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3455,14 +3444,14 @@
     {
       "id": "30_Knowledge/Skills/openverse-media",
       "name": "Skill: openverse-media",
-      "path": "30_Knowledge/Skills/openverse-media",
+      "path": "knowledge/skills/openverse-media",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: openverse-media Royalty-Free Open Media and Sound Effects Engine based on Openverse and RealSFX. Automatically invoked whenever sear...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3472,14 +3461,14 @@
     {
       "id": "30_Knowledge/Skills/openwa-gateway",
       "name": "Skill: openwa-gateway",
-      "path": "30_Knowledge/Skills/openwa-gateway",
+      "path": "knowledge/skills/openwa-gateway",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: openwa-gateway Self-Hosted WhatsApp Messaging and Automation Gateway based on OpenWA. Automatically invoked whenever configuring aut...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3489,14 +3478,14 @@
     {
       "id": "30_Knowledge/Skills/orca-fleet",
       "name": "Skill: orca-fleet",
-      "path": "30_Knowledge/Skills/orca-fleet",
+      "path": "knowledge/skills/orca-fleet",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: orca-fleet Multi-Agent Fleet Orchestration across Local and Remote Runtimes based on Stably AI Orca. Automatically invoked when orch...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3506,14 +3495,14 @@
     {
       "id": "30_Knowledge/Skills/osv-scanner",
       "name": "Skill: osv-scanner",
-      "path": "30_Knowledge/Skills/osv-scanner",
+      "path": "knowledge/skills/osv-scanner",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: osv-scanner Open Source Vulnerability scanner powered by Google OSV database. Automatically invoked whenever auditing lockfiles, det...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3523,14 +3512,14 @@
     {
       "id": "30_Knowledge/Skills/pbr-texture-lab",
       "name": "Skill: pbr-texture-lab",
-      "path": "30_Knowledge/Skills/pbr-texture-lab",
+      "path": "knowledge/skills/pbr-texture-lab",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: pbr-texture-lab PBR Material Synthesis, Procedural Texturing, UV Unwrapping, and Texture Map Baking Engine for Blender 5.2. Automati...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -3540,14 +3529,14 @@
     {
       "id": "30_Knowledge/Skills/perf-pulse",
       "name": "Skill: perf-pulse",
-      "path": "30_Knowledge/Skills/perf-pulse",
+      "path": "knowledge/skills/perf-pulse",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: perf-pulse Next.js 16 and React 19 Client Bundle, Core Web Vitals, and Asset Performance Sentinel. Automatically invoked whenever au...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 3,
       "val": 8.39,
@@ -3557,14 +3546,14 @@
     {
       "id": "30_Knowledge/Skills/permissioned-github",
       "name": "Skill: permissioned-github",
-      "path": "30_Knowledge/Skills/permissioned-github",
+      "path": "knowledge/skills/permissioned-github",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: permissioned-github Guidelines for interacting with GitHub and request permissions from the user when commands fail due to restricti...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3574,14 +3563,14 @@
     {
       "id": "30_Knowledge/Skills/perplexity-research",
       "name": "Skill: perplexity-research",
-      "path": "30_Knowledge/Skills/perplexity-research",
+      "path": "knowledge/skills/perplexity-research",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: perplexity-research Citation-Grounded Real-Time Deep Web Research Engine based on Perplexity. Automatically invoked whenever verifyi...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3591,14 +3580,14 @@
     {
       "id": "30_Knowledge/Skills/pg-architect",
       "name": "Skill: pg-architect",
-      "path": "30_Knowledge/Skills/pg-architect",
+      "path": "knowledge/skills/pg-architect",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: pg-architect PostgreSQL and Supabase Database Architecture, Query Optimization, and Zero-Lock Migration Engine. Automatically invoke...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 3,
       "val": 8.39,
@@ -3608,14 +3597,14 @@
     {
       "id": "30_Knowledge/Skills/pgvector-pro",
       "name": "Skill: pgvector-pro",
-      "path": "30_Knowledge/Skills/pgvector-pro",
+      "path": "knowledge/skills/pgvector-pro",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: pgvector-pro High-Performance Vector Search and HNSW Indexing Engine for pgvector and Supabase. Automatically invoked whenever writi...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -3625,14 +3614,14 @@
     {
       "id": "30_Knowledge/Skills/playwright-e2e",
       "name": "Skill: playwright-e2e",
-      "path": "30_Knowledge/Skills/playwright-e2e",
+      "path": "knowledge/skills/playwright-e2e",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: playwright-e2e Headless End-to-End User Flow Automation and Visual Browser Testing Engine. Automatically invoked whenever writing en...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -3642,14 +3631,14 @@
     {
       "id": "30_Knowledge/Skills/plugin",
       "name": "Skill: plugin",
-      "path": "30_Knowledge/Skills/plugin",
+      "path": "knowledge/skills/plugin",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: plugin How to manage and create plugins — namespaced bundles of skills, agents, rules, MCP servers and hooks that install, enable an...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3659,14 +3648,14 @@
     {
       "id": "30_Knowledge/Skills/posthog-analytics",
       "name": "Skill: posthog-analytics",
-      "path": "30_Knowledge/Skills/posthog-analytics",
+      "path": "knowledge/skills/posthog-analytics",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: posthog-analytics Production Product Analytics, Feature Flags, and Session Replay Engine for Next.js 16 based on PostHog. Automatica...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3676,14 +3665,14 @@
     {
       "id": "30_Knowledge/Skills/pr-review-copilot",
       "name": "Skill: pr-review-copilot",
-      "path": "30_Knowledge/Skills/pr-review-copilot",
+      "path": "knowledge/skills/pr-review-copilot",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: pr-review-copilot Automated Pull Request Code Reviewer and Engineering Health Sentinel. Automatically invoked whenever inspecting gi...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3693,14 +3682,14 @@
     {
       "id": "30_Knowledge/Skills/prisma-architect",
       "name": "Skill: prisma-architect",
-      "path": "30_Knowledge/Skills/prisma-architect",
+      "path": "knowledge/skills/prisma-architect",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: prisma-architect Prisma ORM Schema Modeling, Zero-Downtime Migration, and Query Optimization Engine. Automatically invoked whenever ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3710,14 +3699,14 @@
     {
       "id": "30_Knowledge/Skills/prompt-injection-shield",
       "name": "Skill: prompt-injection-shield",
-      "path": "30_Knowledge/Skills/prompt-injection-shield",
+      "path": "knowledge/skills/prompt-injection-shield",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: prompt-injection-shield LLM Input Sanitization, Jailbreak Defense, and System Prompt Exfiltration Sentinel. Automatically invoked wh...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3727,14 +3716,14 @@
     {
       "id": "30_Knowledge/Skills/rag-eval",
       "name": "Skill: rag-eval",
-      "path": "30_Knowledge/Skills/rag-eval",
+      "path": "knowledge/skills/rag-eval",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: rag-eval RAG Retrieval Metrics, Context Relevance, and Hallucination Scoring Sentinel. Automatically invoked whenever evaluating vec...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3744,7 +3733,7 @@
     {
       "id": "30_Knowledge/Skills/reasoning-effort-router",
       "name": "Skill: reasoning-effort-router",
-      "path": "30_Knowledge/Skills/reasoning-effort-router",
+      "path": "knowledge/skills/reasoning-effort-router",
       "category": "skills",
       "tags": [
         "skill",
@@ -3754,7 +3743,7 @@
         "optimization",
         "cost"
       ],
-      "excerpt": "Skill: reasoning-effort-router Autonomous Tiered Model Selection, Reasoning Effort Escalation, and Zero-Waste Routing Engine. Automatically...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 0,
       "val": 6.81,
@@ -3764,14 +3753,14 @@
     {
       "id": "30_Knowledge/Skills/recordly-screen",
       "name": "Skill: recordly-screen",
-      "path": "30_Knowledge/Skills/recordly-screen",
+      "path": "knowledge/skills/recordly-screen",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: recordly-screen Desktop Screen Recording and Presentation Video Engine based on Recordly and Cap. Automatically invoked whenever aut...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3781,14 +3770,14 @@
     {
       "id": "30_Knowledge/Skills/redis-upstash-cache",
       "name": "Skill: redis-upstash-cache",
-      "path": "30_Knowledge/Skills/redis-upstash-cache",
+      "path": "knowledge/skills/redis-upstash-cache",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: redis-upstash-cache Distributed Caching, Session Store, and Sliding-Window Rate Limiting Engine for Redis and Upstash. Automatically...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3798,14 +3787,14 @@
     {
       "id": "30_Knowledge/Skills/remote-control",
       "name": "Skill: remote-control",
-      "path": "30_Knowledge/Skills/remote-control",
+      "path": "knowledge/skills/remote-control",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: remote-control Remote control session controller and sleep-prevention manager. Automatically runs coffee on to keep the Mac awake, i...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3815,7 +3804,7 @@
     {
       "id": "30_Knowledge/Skills/remotion-best-practices",
       "name": "Skill: remotion-best-practices",
-      "path": "30_Knowledge/Skills/remotion-best-practices",
+      "path": "knowledge/skills/remotion-best-practices",
       "category": "skills",
       "tags": [
         "skill",
@@ -3825,7 +3814,7 @@
         "animation",
         "motion-graphics"
       ],
-      "excerpt": "Skill: remotion-best-practices Programmatic React video creation, motion graphics, and Remotion rendering engine. Automatically invoked whe...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 0,
       "val": 6.11,
@@ -3835,14 +3824,14 @@
     {
       "id": "30_Knowledge/Skills/repo-onboarding",
       "name": "Skill: repo-onboarding",
-      "path": "30_Knowledge/Skills/repo-onboarding",
+      "path": "knowledge/skills/repo-onboarding",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: repo-onboarding Rapid Codebase Cartography, Dependency Analysis, and Quickstart Synthesizer. Automatically invoked whenever opening,...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3852,14 +3841,14 @@
     {
       "id": "30_Knowledge/Skills/resend-email",
       "name": "Skill: resend-email",
-      "path": "30_Knowledge/Skills/resend-email",
+      "path": "knowledge/skills/resend-email",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: resend-email Transactional Email and React Email Architecture Engine based on Resend. Automatically invoked whenever designing React...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3869,14 +3858,14 @@
     {
       "id": "30_Knowledge/Skills/reverse-engineer-anything",
       "name": "Skill: reverse-engineer-anything",
-      "path": "30_Knowledge/Skills/reverse-engineer-anything",
+      "path": "knowledge/skills/reverse-engineer-anything",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: reverse-engineer-anything Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA. U...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3886,14 +3875,14 @@
     {
       "id": "30_Knowledge/Skills/rig-animator",
       "name": "Skill: rig-animator",
-      "path": "30_Knowledge/Skills/rig-animator",
+      "path": "knowledge/skills/rig-animator",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: rig-animator Skeletal Rigging, Inverse Kinematics, Rigify Automation, and Motion Capture Retargeting Engine for Blender 5.2. Automat...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3903,14 +3892,14 @@
     {
       "id": "30_Knowledge/Skills/run-workflow",
       "name": "Skill: run-workflow",
-      "path": "30_Knowledge/Skills/run-workflow",
+      "path": "knowledge/skills/run-workflow",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: run-workflow >- --- 1. Specification & Purpose - **Identifier**:  - **Source Definition**: [](file:///Users/shreeprasandhk/.gemini...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3920,14 +3909,14 @@
     {
       "id": "30_Knowledge/Skills/schema-drift-sentinel",
       "name": "Skill: schema-drift-sentinel",
-      "path": "30_Knowledge/Skills/schema-drift-sentinel",
+      "path": "knowledge/skills/schema-drift-sentinel",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: schema-drift-sentinel Database Migration Drift and Schema Parity Auditor. Automatically invoked whenever running migrations, compari...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3937,14 +3926,14 @@
     {
       "id": "30_Knowledge/Skills/sdlc-orchestrator",
       "name": "Skill: sdlc-orchestrator",
-      "path": "30_Knowledge/Skills/sdlc-orchestrator",
+      "path": "knowledge/skills/sdlc-orchestrator",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: sdlc-orchestrator Full SDLC Phase Gate and Workflow Orchestrator based on Addy Osmani Agent-Skills and Superpowers. Automatically in...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -3954,14 +3943,14 @@
     {
       "id": "30_Knowledge/Skills/secret-sanitizer",
       "name": "Skill: secret-sanitizer",
-      "path": "30_Knowledge/Skills/secret-sanitizer",
+      "path": "knowledge/skills/secret-sanitizer",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: secret-sanitizer Pre-Flight Credential, Secret Leak, and High-Entropy String Scanner. Automatically invoked whenever reviewing git d...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 3,
       "val": 8.39,
@@ -3971,14 +3960,14 @@
     {
       "id": "30_Knowledge/Skills/security-auditor",
       "name": "Skill: security-auditor",
-      "path": "30_Knowledge/Skills/security-auditor",
+      "path": "knowledge/skills/security-auditor",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: security-auditor Multi-Phase Sandboxed Security Audit and Externalized Ledger Engine inspired by Cloudflare Security Audit. Automati...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -3988,14 +3977,14 @@
     {
       "id": "30_Knowledge/Skills/sentry-observability",
       "name": "Skill: sentry-observability",
-      "path": "30_Knowledge/Skills/sentry-observability",
+      "path": "knowledge/skills/sentry-observability",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: sentry-observability Production Error Monitoring, Performance Tracing, and Telemetry Sentinel based on Sentry. Automatically invoked...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4005,14 +3994,14 @@
     {
       "id": "30_Knowledge/Skills/seo-auditor",
       "name": "Skill: seo-auditor",
-      "path": "30_Knowledge/Skills/seo-auditor",
+      "path": "knowledge/skills/seo-auditor",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: seo-auditor Next.js 16 Production Technical SEO, 25-Point Pre-Flight Launch Sentinel, and Schema.org JSON-LD Engine. Automatically i...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4022,14 +4011,14 @@
     {
       "id": "30_Knowledge/Skills/session-checkpoint",
       "name": "Skill: session-checkpoint",
-      "path": "30_Knowledge/Skills/session-checkpoint",
+      "path": "knowledge/skills/session-checkpoint",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: session-checkpoint Session Context Checkpoint and State Freeze/Resume Engine inspired by ECC Context Kit. Automatically invoked befo...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4039,14 +4028,14 @@
     {
       "id": "30_Knowledge/Skills/shadcn-ui",
       "name": "Skill: shadcn-ui",
-      "path": "30_Knowledge/Skills/shadcn-ui",
+      "path": "knowledge/skills/shadcn-ui",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: shadcn-ui Accessible Radix UI Primitive and Component Registry Architect for Tailwind CSS. Automatically invoked whenever scaffoldin...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4056,14 +4045,14 @@
     {
       "id": "30_Knowledge/Skills/sherlock-osint",
       "name": "Skill: sherlock-osint",
-      "path": "30_Knowledge/Skills/sherlock-osint",
+      "path": "knowledge/skills/sherlock-osint",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: sherlock-osint OSINT Identity Reconnaissance and Username Discovery Engine based on Sherlock. Automatically invoked whenever searchi...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4073,14 +4062,14 @@
     {
       "id": "30_Knowledge/Skills/skill-forge",
       "name": "Skill: skill-forge",
-      "path": "30_Knowledge/Skills/skill-forge",
+      "path": "knowledge/skills/skill-forge",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: skill-forge Meta-Skill Compiler and Agent Capability Architect adhering to the Agentic AI Foundation (AAIF) and Anthropic Agent Skil...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -4090,14 +4079,14 @@
     {
       "id": "30_Knowledge/Skills/skillspector",
       "name": "Skill: skillspector",
-      "path": "30_Knowledge/Skills/skillspector",
+      "path": "knowledge/skills/skillspector",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: skillspector NVIDIA SkillSpector Security Scanner for AI Agent Skills and MCP Extensions. Automatically invoked whenever inspecting,...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4107,14 +4096,14 @@
     {
       "id": "30_Knowledge/Skills/social-media-agent",
       "name": "Skill: social-media-agent",
-      "path": "30_Knowledge/Skills/social-media-agent",
+      "path": "knowledge/skills/social-media-agent",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: social-media-agent Social Media Content Creation, Post Formatting, and Scheduling Engine. Automatically invoked whenever writing pro...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4124,14 +4113,14 @@
     {
       "id": "30_Knowledge/Skills/social-reach",
       "name": "Skill: social-reach",
-      "path": "30_Knowledge/Skills/social-reach",
+      "path": "knowledge/skills/social-reach",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: social-reach Zero-API Community Reconnaissance and Live Forum Search Engine based on Agent-Reach. Automatically invoked whenever res...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4141,14 +4130,14 @@
     {
       "id": "30_Knowledge/Skills/stagehand-browser",
       "name": "Skill: stagehand-browser",
-      "path": "30_Knowledge/Skills/stagehand-browser",
+      "path": "knowledge/skills/stagehand-browser",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: stagehand-browser AI-Native Autonomous Browser Automation SDK based on Stagehand by Browserbase. Automatically invoked whenever auto...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4158,14 +4147,14 @@
     {
       "id": "30_Knowledge/Skills/state-sync",
       "name": "Skill: state-sync",
-      "path": "30_Knowledge/Skills/state-sync",
+      "path": "knowledge/skills/state-sync",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: state-sync React 19 Optimistic UI, Server Actions Rollback, and Client Cache Coordination Engine. Automatically invoked whenever imp...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4175,14 +4164,14 @@
     {
       "id": "30_Knowledge/Skills/stream-protocol",
       "name": "Skill: stream-protocol",
-      "path": "30_Knowledge/Skills/stream-protocol",
+      "path": "knowledge/skills/stream-protocol",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: stream-protocol Server-Sent Events (SSE) and Real-Time LLM Token Streaming Engine. Automatically invoked whenever building streaming...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4192,14 +4181,14 @@
     {
       "id": "30_Knowledge/Skills/stripe-payments",
       "name": "Skill: stripe-payments",
-      "path": "30_Knowledge/Skills/stripe-payments",
+      "path": "knowledge/skills/stripe-payments",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: stripe-payments Stripe Payment and Billing Integration Engine based on Stripe AI Toolkit. Automatically invoked whenever implementin...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4209,7 +4198,7 @@
     {
       "id": "30_Knowledge/Skills/supabase-postgres-best-practices",
       "name": "Skill: supabase-postgres-best-practices",
-      "path": "30_Knowledge/Skills/supabase-postgres-best-practices",
+      "path": "knowledge/skills/supabase-postgres-best-practices",
       "category": "skills",
       "tags": [
         "skill",
@@ -4220,7 +4209,7 @@
         "rls",
         "security"
       ],
-      "excerpt": "Skill: supabase-postgres-best-practices Official Supabase PostgreSQL schema, RLS security, and query indexing sentinel. Automatically invok...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 1,
       "val": 6.81,
@@ -4230,14 +4219,14 @@
     {
       "id": "30_Knowledge/Skills/supabase-rls-guard",
       "name": "Skill: supabase-rls-guard",
-      "path": "30_Knowledge/Skills/supabase-rls-guard",
+      "path": "knowledge/skills/supabase-rls-guard",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: supabase-rls-guard Enterprise Row Level Security (RLS) Policy and Multi-Tenant Isolation Sentinel. Automatically invoked whenever wr...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 3,
       "val": 8.39,
@@ -4247,14 +4236,14 @@
     {
       "id": "30_Knowledge/Skills/svg-system",
       "name": "Skill: svg-system",
-      "path": "30_Knowledge/Skills/svg-system",
+      "path": "knowledge/skills/svg-system",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: svg-system Programmatic SVG Generator for Badges, Gauges, Sparklines, and System Architecture Diagrams. Automatically invoked whenev...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4264,7 +4253,7 @@
     {
       "id": "30_Knowledge/Skills/swarm-orchestrator",
       "name": "Skill: swarm-orchestrator",
-      "path": "30_Knowledge/Skills/swarm-orchestrator",
+      "path": "knowledge/skills/swarm-orchestrator",
       "category": "skills",
       "tags": [
         "skill",
@@ -4273,7 +4262,7 @@
         "fleet",
         "swarm"
       ],
-      "excerpt": "Skill: swarm-orchestrator High-concurrency multi-agent parallel execution engine decomposing tasks into dependency DAGs with live thought t...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 1,
       "val": 7.92,
@@ -4283,14 +4272,14 @@
     {
       "id": "30_Knowledge/Skills/synthetic-data-lab",
       "name": "Skill: synthetic-data-lab",
-      "path": "30_Knowledge/Skills/synthetic-data-lab",
+      "path": "knowledge/skills/synthetic-data-lab",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: synthetic-data-lab Realistic Domain Telemetry, Seed Dataset, and Mock Generator. Automatically invoked whenever generating test data...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4300,14 +4289,14 @@
     {
       "id": "30_Knowledge/Skills/systematic-debugging",
       "name": "Skill: systematic-debugging",
-      "path": "30_Knowledge/Skills/systematic-debugging",
+      "path": "knowledge/skills/systematic-debugging",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: systematic-debugging Deterministic 4-phase root-cause isolation and debugging protocol. Automatically invoked whenever encountering ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4317,14 +4306,14 @@
     {
       "id": "30_Knowledge/Skills/tanstack-query",
       "name": "Skill: tanstack-query",
-      "path": "30_Knowledge/Skills/tanstack-query",
+      "path": "knowledge/skills/tanstack-query",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: tanstack-query Server-State Management, Optimistic UI Mutations, and Cache Deduplication Engine. Automatically invoked whenever impl...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4334,14 +4323,14 @@
     {
       "id": "30_Knowledge/Skills/taste-evaluator",
       "name": "Skill: taste-evaluator",
-      "path": "30_Knowledge/Skills/taste-evaluator",
+      "path": "knowledge/skills/taste-evaluator",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: taste-evaluator Visual Taste, Art Direction, and Anti-Slop Aesthetic Evaluator based on Taste-Skill, Impeccable, and Emil Kowalski D...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4351,14 +4340,14 @@
     {
       "id": "30_Knowledge/Skills/tdd-enforcer",
       "name": "Skill: tdd-enforcer",
-      "path": "30_Knowledge/Skills/tdd-enforcer",
+      "path": "knowledge/skills/tdd-enforcer",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: tdd-enforcer Test-Driven Development Sentinel and Red-Green-Refactor Protocol Enforcer. Automatically invoked whenever authoring new...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4368,14 +4357,14 @@
     {
       "id": "30_Knowledge/Skills/terraform-pilot",
       "name": "Skill: terraform-pilot",
-      "path": "30_Knowledge/Skills/terraform-pilot",
+      "path": "knowledge/skills/terraform-pilot",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: terraform-pilot Declarative Infrastructure as Code and HashiCorp HCL Architecture Engine. Automatically invoked whenever authoring T...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4385,14 +4374,14 @@
     {
       "id": "30_Knowledge/Skills/test-flight",
       "name": "Skill: test-flight",
-      "path": "30_Knowledge/Skills/test-flight",
+      "path": "knowledge/skills/test-flight",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: test-flight Autonomous Web QA, Latency, and Hydration Sentinel. Automatically invoked after completing major frontend modifications ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4402,14 +4391,14 @@
     {
       "id": "30_Knowledge/Skills/text-to-cad",
       "name": "Skill: text-to-cad",
-      "path": "30_Knowledge/Skills/text-to-cad",
+      "path": "knowledge/skills/text-to-cad",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: text-to-cad Parametric Mechanical 3D CAD Modeling and OpenCASCADE Engine based on Text-to-CAD and build123d. Automatically invoked w...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4419,14 +4408,14 @@
     {
       "id": "30_Knowledge/Skills/the-alchemists",
       "name": "Skill: the-alchemists",
-      "path": "30_Knowledge/Skills/the-alchemists",
+      "path": "knowledge/skills/the-alchemists",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: the-alchemists >- --- 1. Specification & Purpose - **Identifier**:  - **Source Definition**: [](file:///Users/shreeprasandhk/.agen...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -4436,7 +4425,7 @@
     {
       "id": "30_Knowledge/Skills/the-armorer",
       "name": "Skill: the-armorer",
-      "path": "30_Knowledge/Skills/the-armorer",
+      "path": "knowledge/skills/the-armorer",
       "category": "skills",
       "tags": [
         "skill",
@@ -4445,7 +4434,7 @@
         "armorer",
         "arsenal"
       ],
-      "excerpt": "Skill: the-armorer Sovereign Skill, Tool, and Chained Pipeline Custodian. Automatically invoked whenever coordinating multi-skill execution...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 0,
       "val": 6.81,
@@ -4455,14 +4444,14 @@
     {
       "id": "30_Knowledge/Skills/the-dumb",
       "name": "Skill: the-dumb",
-      "path": "30_Knowledge/Skills/the-dumb",
+      "path": "knowledge/skills/the-dumb",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: the-dumb Token-frugal living engineering study notebook and oral defense guide. Silently maintains and updates <PROJECT_NAME>_MASTER...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -4472,14 +4461,14 @@
     {
       "id": "30_Knowledge/Skills/the-elders",
       "name": "Skill: the-elders",
-      "path": "30_Knowledge/Skills/the-elders",
+      "path": "knowledge/skills/the-elders",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: the-elders >- --- 1. Specification & Purpose - **Identifier**:  - **Source Definition**: [](file:///Users/shreeprasandhk/.agents/s...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -4489,14 +4478,14 @@
     {
       "id": "30_Knowledge/Skills/the-five-monks",
       "name": "Skill: the-five-monks",
-      "path": "30_Knowledge/Skills/the-five-monks",
+      "path": "knowledge/skills/the-five-monks",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: the-five-monks Strategic 5-perspective advisory council (The Contrarian, The Principal Advisor, The Expansionist, The Outsider, The ...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -4506,14 +4495,14 @@
     {
       "id": "30_Knowledge/Skills/the-seven-shadows",
       "name": "Skill: the-seven-shadows",
-      "path": "30_Knowledge/Skills/the-seven-shadows",
+      "path": "knowledge/skills/the-seven-shadows",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: the-seven-shadows The automated auditing squad and full-spectrum security defense grid. Conducts deep audits across 7 specialized se...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -4523,7 +4512,7 @@
     {
       "id": "30_Knowledge/Skills/timesfm-forecaster",
       "name": "Skill: timesfm-forecaster",
-      "path": "30_Knowledge/Skills/timesfm-forecaster",
+      "path": "knowledge/skills/timesfm-forecaster",
       "category": "skills",
       "tags": [
         "skill",
@@ -4532,7 +4521,7 @@
         "telemetry",
         "forecasting"
       ],
-      "excerpt": "Skill: timesfm-forecaster Google Research TimesFM zero-shot time-series foundation model engine for capacity planning, hardware telemetry f...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 1,
       "val": 7.92,
@@ -4542,14 +4531,14 @@
     {
       "id": "30_Knowledge/Skills/torch-accelerator",
       "name": "Skill: torch-accelerator",
-      "path": "30_Knowledge/Skills/torch-accelerator",
+      "path": "knowledge/skills/torch-accelerator",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: torch-accelerator PyTorch Compute Sizing, Apple Silicon MPS Acceleration, and Mixed-Precision Engine. Automatically invoked whenever...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4559,14 +4548,14 @@
     {
       "id": "30_Knowledge/Skills/total-typescript",
       "name": "Skill: total-typescript",
-      "path": "30_Knowledge/Skills/total-typescript",
+      "path": "knowledge/skills/total-typescript",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: total-typescript Senior type-level engineering, strict type safety, and zero-any sentinel for Next.js 16, React 19, and Supabase. Au...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4576,14 +4565,14 @@
     {
       "id": "30_Knowledge/Skills/trail-of-bits-audit",
       "name": "Skill: trail-of-bits-audit",
-      "path": "30_Knowledge/Skills/trail-of-bits-audit",
+      "path": "knowledge/skills/trail-of-bits-audit",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: trail-of-bits-audit Automated Security Audit, OWASP Top 10 Sentinel, and Vulnerability Scanner. Automatically invoked whenever revie...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4593,14 +4582,14 @@
     {
       "id": "30_Knowledge/Skills/trellis-3d",
       "name": "Skill: trellis-3d",
-      "path": "30_Knowledge/Skills/trellis-3d",
+      "path": "knowledge/skills/trellis-3d",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: trellis-3d Large-Scale Generative 3D Asset Creation and PBR Mesh Pipeline based on Microsoft TRELLIS. Automatically invoked whenever...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4610,7 +4599,7 @@
     {
       "id": "30_Knowledge/Skills/trompe-level-baker",
       "name": "Skill: trompe-level-baker",
-      "path": "30_Knowledge/Skills/trompe-level-baker",
+      "path": "knowledge/skills/trompe-level-baker",
       "category": "skills",
       "tags": [
         "skill",
@@ -4620,7 +4609,7 @@
         "textures",
         "baking"
       ],
-      "excerpt": "Skill: trompe-level-baker Automated 3D Level Greybox Camera Planning, Multi-View Inpainting, and Texture Projection Baker. Automatically in...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 0,
       "val": 6.81,
@@ -4630,14 +4619,14 @@
     {
       "id": "30_Knowledge/Skills/trpc-pilot",
       "name": "Skill: trpc-pilot",
-      "path": "30_Knowledge/Skills/trpc-pilot",
+      "path": "knowledge/skills/trpc-pilot",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: trpc-pilot End-to-End Type-Safe RPC and Router Architecture Engine for Full-Stack TypeScript. Automatically invoked whenever buildin...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4647,14 +4636,14 @@
     {
       "id": "30_Knowledge/Skills/ui-extension",
       "name": "Skill: ui-extension",
-      "path": "30_Knowledge/Skills/ui-extension",
+      "path": "knowledge/skills/ui-extension",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: ui-extension >- --- 1. Specification & Purpose - **Identifier**:  - **Source Definition**: [](file:///Users/shreeprasandhk/.gemini...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4664,14 +4653,14 @@
     {
       "id": "30_Knowledge/Skills/ui-motion",
       "name": "Skill: ui-motion",
-      "path": "30_Knowledge/Skills/ui-motion",
+      "path": "knowledge/skills/ui-motion",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: ui-motion Enterprise Web Animation and Smooth-Scrolling Motion Engine using GSAP, Lenis, Framer Motion, and Emil Kowalski Design Eng...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4681,14 +4670,14 @@
     {
       "id": "30_Knowledge/Skills/ui-plugin-navigation",
       "name": "Skill: ui-plugin-navigation",
-      "path": "30_Knowledge/Skills/ui-plugin-navigation",
+      "path": "knowledge/skills/ui-plugin-navigation",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: ui-plugin-navigation Discover UI plugin panels relevant to the current task and surface a one-click pill in chat to open (toggle) th...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4698,14 +4687,14 @@
     {
       "id": "30_Knowledge/Skills/ui-ux",
       "name": "Skill: ui-ux",
-      "path": "30_Knowledge/Skills/ui-ux",
+      "path": "knowledge/skills/ui-ux",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: ui-ux Design Intelligence and Anti-AI Slop Framework for Next.js 16, React 19, and Tailwind CSS v4. Automatically invoked whenever d...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4715,14 +4704,14 @@
     {
       "id": "30_Knowledge/Skills/unreal-engine",
       "name": "Skill: unreal-engine",
-      "path": "30_Knowledge/Skills/unreal-engine",
+      "path": "knowledge/skills/unreal-engine",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: unreal-engine Unreal Engine 5 Architecture, Blueprint Scaffolding, and Editor Automation Engine based on UnrealClaude and UE5 MCP Br...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4732,14 +4721,14 @@
     {
       "id": "30_Knowledge/Skills/unslop",
       "name": "Skill: unslop",
-      "path": "30_Knowledge/Skills/unslop",
+      "path": "knowledge/skills/unslop",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: unslop Anti-slop UI design refiner turning AI-generated interfaces into deliberate human-crafted designs. Automatically invoked when...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4749,7 +4738,7 @@
     {
       "id": "30_Knowledge/Skills/vercel-react-best-practices",
       "name": "Skill: vercel-react-best-practices",
-      "path": "30_Knowledge/Skills/vercel-react-best-practices",
+      "path": "knowledge/skills/vercel-react-best-practices",
       "category": "skills",
       "tags": [
         "skill",
@@ -4759,7 +4748,7 @@
         "optimization",
         "vercel"
       ],
-      "excerpt": "Skill: vercel-react-best-practices Official Vercel performance, caching, and Server Component engineering guidelines. Automatically invoked...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 1,
       "val": 6.81,
@@ -4769,7 +4758,7 @@
     {
       "id": "30_Knowledge/Skills/vercel-react-view-transitions",
       "name": "Skill: vercel-react-view-transitions",
-      "path": "30_Knowledge/Skills/vercel-react-view-transitions",
+      "path": "knowledge/skills/vercel-react-view-transitions",
       "category": "skills",
       "tags": [
         "skill",
@@ -4779,7 +4768,7 @@
         "nextjs",
         "vercel"
       ],
-      "excerpt": "Skill: vercel-react-view-transitions Native React 19 View Transitions API and route animation engine. Automatically invoked whenever adding...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 1,
       "val": 6.81,
@@ -4789,14 +4778,14 @@
     {
       "id": "30_Knowledge/Skills/visual-regression",
       "name": "Skill: visual-regression",
-      "path": "30_Knowledge/Skills/visual-regression",
+      "path": "knowledge/skills/visual-regression",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: visual-regression Pixel-Diff Snapshot Testing and Responsive Viewport Shift Sentinel. Automatically invoked whenever verifying visua...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4806,14 +4795,14 @@
     {
       "id": "30_Knowledge/Skills/vitest-fast",
       "name": "Skill: vitest-fast",
-      "path": "30_Knowledge/Skills/vitest-fast",
+      "path": "knowledge/skills/vitest-fast",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: vitest-fast Sub-Second Unit and Component Testing Engine for TypeScript and Next.js. Automatically invoked whenever writing unit tes...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 3,
       "val": 8.39,
@@ -4823,14 +4812,14 @@
     {
       "id": "30_Knowledge/Skills/vllm-inference",
       "name": "Skill: vllm-inference",
-      "path": "30_Knowledge/Skills/vllm-inference",
+      "path": "knowledge/skills/vllm-inference",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: vllm-inference High-Throughput Local LLM Serving and PagedAttention Optimization Engine based on vLLM. Automatically invoked wheneve...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4840,14 +4829,14 @@
     {
       "id": "30_Knowledge/Skills/voice-synth",
       "name": "Skill: voice-synth",
-      "path": "30_Knowledge/Skills/voice-synth",
+      "path": "knowledge/skills/voice-synth",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: voice-synth Local Offline Voice Synthesis, TTS, and Audio Narration Engine on Apple Silicon based on VoiceStudio. Automatically invo...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4857,7 +4846,7 @@
     {
       "id": "30_Knowledge/Skills/watermark-sanitizer",
       "name": "Skill: watermark-sanitizer",
-      "path": "30_Knowledge/Skills/watermark-sanitizer",
+      "path": "knowledge/skills/watermark-sanitizer",
       "category": "skills",
       "tags": [
         "skill",
@@ -4866,7 +4855,7 @@
         "provenance",
         "watermarks"
       ],
-      "excerpt": "Skill: watermark-sanitizer AI Provenance, Invisible Unicode, and Tracking Watermark Sanitizer. Automatically invoked whenever sanitizing te...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 0,
       "val": 6.11,
@@ -4876,14 +4865,14 @@
     {
       "id": "30_Knowledge/Skills/webgpu-threejs",
       "name": "Skill: webgpu-threejs",
-      "path": "30_Knowledge/Skills/webgpu-threejs",
+      "path": "knowledge/skills/webgpu-threejs",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: webgpu-threejs Interactive Web 3D, WebGPU, Three.js, and React Three Fiber (R3F) Engine for Next.js 16. Automatically invoked whenev...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4893,14 +4882,14 @@
     {
       "id": "30_Knowledge/Skills/webhook-vault",
       "name": "Skill: webhook-vault",
-      "path": "30_Knowledge/Skills/webhook-vault",
+      "path": "knowledge/skills/webhook-vault",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: webhook-vault Cryptographic Webhook Verification, Replay Attack Defense, and Idempotent Ingestion Sentinel. Automatically invoked wh...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4910,14 +4899,14 @@
     {
       "id": "30_Knowledge/Skills/websocket-relay",
       "name": "Skill: websocket-relay",
-      "path": "30_Knowledge/Skills/websocket-relay",
+      "path": "knowledge/skills/websocket-relay",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: websocket-relay Bidirectional WebSocket and Supabase Realtime Channel Manager. Automatically invoked whenever implementing live coll...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4927,7 +4916,7 @@
     {
       "id": "30_Knowledge/Skills/weight-space-programming",
       "name": "Skill: weight-space-programming",
-      "path": "30_Knowledge/Skills/weight-space-programming",
+      "path": "knowledge/skills/weight-space-programming",
       "category": "skills",
       "tags": [
         "skill",
@@ -4936,7 +4925,7 @@
         "neural",
         "weights"
       ],
-      "excerpt": "Skill: weight-space-programming Direct tensor diagnostics, representation steering, and surgical weight vector editing for neural models wi...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 1,
       "val": 7.92,
@@ -4946,14 +4935,14 @@
     {
       "id": "30_Knowledge/Skills/weknora-rag",
       "name": "Skill: weknora-rag",
-      "path": "30_Knowledge/Skills/weknora-rag",
+      "path": "knowledge/skills/weknora-rag",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: weknora-rag Enterprise Multimodal Knowledge Base and ReAct RAG Platform based on Tencent WeKnora. Automatically invoked whenever arc...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4963,14 +4952,14 @@
     {
       "id": "30_Knowledge/Skills/xstate-machine",
       "name": "Skill: xstate-machine",
-      "path": "30_Knowledge/Skills/xstate-machine",
+      "path": "knowledge/skills/xstate-machine",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: xstate-machine Deterministic Finite State Machine and Statechart Engine based on XState v5. Automatically invoked whenever modeling ...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4980,14 +4969,14 @@
     {
       "id": "30_Knowledge/Skills/yagni-enforcer",
       "name": "Skill: yagni-enforcer",
-      "path": "30_Knowledge/Skills/yagni-enforcer",
+      "path": "knowledge/skills/yagni-enforcer",
       "category": "skills",
       "tags": [
         "skill",
         "capability",
         "tooling"
       ],
-      "excerpt": "Skill: yagni-enforcer You Arent Gonna Need It Architecture Sentinel and Codebase Bloat Eliminator. Automatically invoked whenever reviewing...",
+      "excerpt": "",
       "linksCount": 1,
       "backlinksCount": 1,
       "val": 6.11,
@@ -4997,7 +4986,7 @@
     {
       "id": "30_Knowledge/Skills",
       "name": "Skills",
-      "path": "30_Knowledge/Skills",
+      "path": "knowledge/skills",
       "category": "skills",
       "tags": [
         "skills",
@@ -5005,7 +4994,7 @@
         "capabilities",
         "tooling"
       ],
-      "excerpt": "Skills The master registry of all 191 specialist agent skills, organized hierarchically into 10 cohesive domain constellations. --- 1. Th...",
+      "excerpt": "",
       "linksCount": 14,
       "backlinksCount": 25,
       "val": 16.74,
@@ -5015,7 +5004,7 @@
     {
       "id": "30_Knowledge/Taste",
       "name": "Taste",
-      "path": "30_Knowledge/Taste",
+      "path": "knowledge/taste",
       "category": "skills",
       "tags": [
         "hub",
@@ -5023,7 +5012,7 @@
         "knowledge",
         "taste"
       ],
-      "excerpt": "Taste Visual Taste, Design Systems & Editorial Standards Central domain constellation governing 5 specialist skills. --- 1. Specialist S...",
+      "excerpt": "",
       "linksCount": 8,
       "backlinksCount": 9,
       "val": 12.07,
@@ -5033,7 +5022,7 @@
     {
       "id": "30_Knowledge/Testing",
       "name": "Testing",
-      "path": "30_Knowledge/Testing",
+      "path": "knowledge/testing",
       "category": "skills",
       "tags": [
         "hub",
@@ -5041,7 +5030,7 @@
         "knowledge",
         "testing"
       ],
-      "excerpt": "Testing Testing Engineering, End-to-End QA & Verification Central domain constellation governing 10 specialist skills. --- 1. Specialist...",
+      "excerpt": "",
       "linksCount": 13,
       "backlinksCount": 12,
       "val": 14,
@@ -5051,7 +5040,7 @@
     {
       "id": "30_Knowledge/Tools",
       "name": "Tools",
-      "path": "30_Knowledge/Tools",
+      "path": "knowledge/tools",
       "category": "skills",
       "tags": [
         "hub",
@@ -5059,7 +5048,7 @@
         "knowledge",
         "tools"
       ],
-      "excerpt": "Tools Developer Tooling, Refactoring & Cognitive Runtimes Central domain constellation governing 44 specialist skills. --- 1. Specialist...",
+      "excerpt": "",
       "linksCount": 48,
       "backlinksCount": 54,
       "val": 18,
@@ -5069,7 +5058,7 @@
     {
       "id": "30_Knowledge/Vector",
       "name": "Vector",
-      "path": "30_Knowledge/Vector",
+      "path": "knowledge/vector",
       "category": "skills",
       "tags": [
         "rag",
@@ -5078,7 +5067,7 @@
         "search",
         "knowledge"
       ],
-      "excerpt": "Vector (Luna Cortex 3.0 Frontier Engine) Authoritative specification of the air-gapped, sub-50ms hybrid semantic and structural code retrie...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -5087,8 +5076,8 @@
     },
     {
       "id": "50_Ideas/Concepts",
-      "name": "Concepts",
-      "path": "50_Ideas/Concepts",
+      "name": "System Blueprints",
+      "path": "ideas/concepts",
       "category": "ideas",
       "tags": [
         "ideas",
@@ -5097,7 +5086,7 @@
         "projects",
         "ventures"
       ],
-      "excerpt": "Concepts The authoritative repository for early-stage project ideas, architectural plans, hardware hacks, and prospective venture blueprint...",
+      "excerpt": "",
       "linksCount": 3,
       "backlinksCount": 5,
       "val": 9.22,
@@ -5106,8 +5095,8 @@
     },
     {
       "id": "50_Ideas/Incubator",
-      "name": "Incubator",
-      "path": "50_Ideas/Incubator",
+      "name": "Research Incubator",
+      "path": "ideas/incubator",
       "category": "ideas",
       "tags": [
         "index",
@@ -5116,7 +5105,7 @@
         "concepts",
         "remember"
       ],
-      "excerpt": "Incubator The creative seed vault and intellectual incubator of Luna's ecosystem, structured into two synchronized domains: active project ...",
+      "excerpt": "",
       "linksCount": 4,
       "backlinksCount": 4,
       "val": 9.22,
@@ -5125,8 +5114,8 @@
     },
     {
       "id": "50_Ideas/LidTap",
-      "name": "LidTap",
-      "path": "50_Ideas/LidTap",
+      "name": "Haptic Interface",
+      "path": "ideas/lidtap",
       "category": "ideas",
       "tags": [
         "idea",
@@ -5135,7 +5124,7 @@
         "utility",
         "backlog"
       ],
-      "excerpt": "LidTap An experimental macOS utility that uses internal MacBook hinge-angle and accelerometer micro-vibrations (~800 Hz) to create a tap-re...",
+      "excerpt": "",
       "linksCount": 2,
       "backlinksCount": 2,
       "val": 7.4,
@@ -5144,8 +5133,8 @@
     },
     {
       "id": "50_Ideas/Remember",
-      "name": "Remember",
-      "path": "50_Ideas/Remember",
+      "name": "Knowledge Index",
+      "path": "ideas/remember",
       "category": "ideas",
       "tags": [
         "memory",
@@ -5155,7 +5144,7 @@
         "utilities",
         "future-use"
       ],
-      "excerpt": "Remember The persistent operational memory ledger cataloging high-leverage developer tools, emerging open-source libraries, critical CLI fl...",
+      "excerpt": "",
       "linksCount": 10,
       "backlinksCount": 14,
       "val": 13.78,
