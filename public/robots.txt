@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shreeprasandh.vercel.app/sitemap.xml
