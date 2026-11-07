@@ -1386,6 +1386,10 @@
         tvWrap.style.pointerEvents = 'auto';
         tvWrap.style.opacity = '1';
       }
+      const iframe = document.getElementById('tv-aether-iframe');
+      if (iframe) {
+        iframe.src = 'vault-embed.html?v=' + Date.now();
+      }
       if (window.postAetherTvBrain) {
         window.postAetherTvBrain({ type: 'RESUME' });
         window.postAetherTvBrain({ type: 'RESIZE' });
@@ -2978,14 +2982,15 @@ body.theme-mode-light .playlist-item.is-active,
     font-size: min(var(--_fonts---h1--size), 9.2vw) !important;
   }
 
-  /* Work Section Mobile: Natural Fluid Height & Touch Swipeable Carousel */
+  /* Work Section Mobile: Clean Title Header Only - Thumbnails Hidden on Mobile */
   .m-featured {
     height: auto !important;
     min-height: 0 !important;
-    padding: 40px 0 28px 0 !important;
+    padding: 64px 20px 44px 20px !important;
     position: relative !important;
     overflow: visible !important;
     max-width: 100vw !important;
+    text-align: center !important;
   }
   .m-featured-inner {
     height: auto !important;
@@ -2994,58 +2999,23 @@ body.theme-mode-light .playlist-item.is-active,
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
     overflow: visible !important;
   }
   .m-featured-heading-wrap {
     position: relative !important;
     height: auto !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 0 !important;
     text-align: center !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    gap: 12px !important;
     z-index: 5 !important;
   }
-  .div-block-9,
-  .collection-list-wrapper-2 {
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding: 8px 0 16px 0 !important;
-    scrollbar-width: none !important;
-    transform: none !important;
-  }
-  .collection-list-wrapper-2::-webkit-scrollbar {
+  .m-featured .div-block-9,
+  .m-featured .collection-list-wrapper-2 {
     display: none !important;
-  }
-  .collection-list-2 {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 16px !important;
-    padding: 0 20px !important;
-    width: max-content !important;
-    transform: none !important;
-  }
-  .collection-item-2 {
-    flex: 0 0 auto !important;
-    width: 250px !important;
-    height: 160px !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
-    transform: none !important;
-  }
-  .collection-item-2 .img,
-  .collection-item-2 img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-    border-radius: 12px !important;
   }
 
   /* TV Chassis & Vault Mobile Responsive Sizing */
@@ -3065,6 +3035,13 @@ body.theme-mode-light .playlist-item.is-active,
   .standalone-vault-mount {
     width: 100% !important;
     max-width: 100% !important;
+  }
+  .standalone-vault-wrapper,
+  .standalone-vault-mount,
+  .standalone-vault-mount *,
+  [data-hairline="vault"],
+  [data-hairline] {
+    touch-action: none !important;
   }
   .tv-chassis {
     width: 100% !important;
@@ -3116,27 +3093,49 @@ body.theme-mode-light .playlist-item.is-active,
     gap: 16px !important;
   }
 
-  /* Mobile Bottom Corner Names (shree & prasandh) */
-  .sticky-name,
-  .sticky-name-inner {
+  /* Mobile Bottom Corner Names & Merged Authentic Footer */
+  .m-footer-inner.is-mobile {
+    display: none !important;
+  }
+  .sticky-name {
     display: flex !important;
-    opacity: 0.18 !important;
+    position: fixed !important;
+    inset: auto 0% 0% !important;
+    height: 72px !important;
+    padding: 0 20px 16px 20px !important;
     pointer-events: none !important;
     z-index: 95 !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    box-sizing: border-box !important;
+  }
+  .sticky-name-inner {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    position: relative !important;
+    pointer-events: none !important;
+  }
+  .sticky-name-meta {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    position: absolute !important;
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 6px !important;
+    pointer-events: none !important;
+  }
+  .sticky-name-meta [data-sticky-meta="text"] {
+    font-size: 11px !important;
+    letter-spacing: 0.04em !important;
+    opacity: 0.55 !important;
+    line-height: 1.2 !important;
   }
   .name-part-wrap .h1 {
     font-size: clamp(20px, 5.5vw, 28px) !important;
     line-height: 1 !important;
-  }
-
-  /* Mobile Footer Name Fitting (Full shreeprasandh with zero truncation) */
-  .m-footer-name .h1.is-display {
-    font-size: clamp(24px, 8.8vw, 42px) !important;
-    letter-spacing: -0.02em !important;
-    text-align: center !important;
-    width: 100% !important;
-    white-space: nowrap !important;
-    overflow: visible !important;
   }
 }
 </style>
@@ -5063,6 +5062,10 @@ document.addEventListener('DOMContentLoaded', () => {
           // 4. TV Chassis blooms in-place from dead center without moving a single pixel
           tvWrap.style.visibility = 'visible';
           tvWrap.style.pointerEvents = 'auto';
+          const iframe = document.getElementById('tv-aether-iframe');
+          if (iframe) {
+            iframe.src = 'vault-embed.html?v=' + Date.now();
+          }
           gsap.fromTo(tvWrap,
             { opacity: 0 },
             { opacity: 1, duration: 1.0, ease: 'power2.out' }
@@ -5083,6 +5086,10 @@ document.addEventListener('DOMContentLoaded', () => {
           tvWrap.style.visibility = 'visible';
           tvWrap.style.pointerEvents = 'auto';
           tvWrap.style.opacity = '1';
+          const iframe = document.getElementById('tv-aether-iframe');
+          if (iframe) {
+            iframe.src = 'vault-embed.html?v=' + Date.now();
+          }
 
           setTimeout(() => {
             window.dispatchEvent(new Event('resize'));

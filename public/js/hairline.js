@@ -5575,8 +5575,8 @@ var mount33 = ({ stage, svg, read }, value) => {
   const B6 = register(stage, (dt, now) => {
     let m = stepSpin(dt, now);
     const near = Math.abs(wrap(spin.a - COMBO));
-    if (!opened && near < 0.8 && Math.abs(spin.w) < 6) setOpen(true, now);
-    else if (opened && near > 2.5) setOpen(false, now);
+    if (!opened && near < 1.8 && Math.abs(spin.w) < 16) setOpen(true, now);
+    else if (opened && near > 3.5) setOpen(false, now);
     drawDial();
     bolts.forEach((b) => {
       drawBolt(b, tval(b.tw, now));
