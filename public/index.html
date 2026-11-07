@@ -1387,8 +1387,8 @@
         tvWrap.style.opacity = '1';
       }
       const iframe = document.getElementById('tv-aether-iframe');
-      if (iframe) {
-        iframe.src = 'vault-embed.html?v=' + Date.now();
+      if (iframe && (!iframe.src || iframe.src.includes('about:blank') || iframe.src.endsWith('/'))) {
+        iframe.src = '/vault-embed.html?v=synapse-4';
       }
       if (window.postAetherTvBrain) {
         window.postAetherTvBrain({ type: 'RESUME' });
@@ -4449,7 +4449,7 @@ body.theme-mode-light .playlist-item.is-active,
           <!-- Screen Frame -->
           <div class="tv-screen-frame">
             <div class="tv-screen-glass">
-              <iframe id="tv-aether-iframe" src="vault-embed.html?v=synapse-3" style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; border: none; display: block; background: #1a1a1a;" title="Luna Living Brain"></iframe>
+              <iframe id="tv-aether-iframe" src="/vault-embed.html?v=synapse-4" style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; border: none; display: block; background: #1a1a1a;" title="Luna Living Brain"></iframe>
               <div class="tv-crt-overlay"></div>
             </div>
           </div>
@@ -5063,8 +5063,8 @@ document.addEventListener('DOMContentLoaded', () => {
           tvWrap.style.visibility = 'visible';
           tvWrap.style.pointerEvents = 'auto';
           const iframe = document.getElementById('tv-aether-iframe');
-          if (iframe) {
-            iframe.src = 'vault-embed.html?v=' + Date.now();
+          if (iframe && (!iframe.src || iframe.src.includes('about:blank') || iframe.src.endsWith('/'))) {
+            iframe.src = '/vault-embed.html?v=synapse-4';
           }
           gsap.fromTo(tvWrap,
             { opacity: 0 },
@@ -5087,8 +5087,8 @@ document.addEventListener('DOMContentLoaded', () => {
           tvWrap.style.pointerEvents = 'auto';
           tvWrap.style.opacity = '1';
           const iframe = document.getElementById('tv-aether-iframe');
-          if (iframe) {
-            iframe.src = 'vault-embed.html?v=' + Date.now();
+          if (iframe && (!iframe.src || iframe.src.includes('about:blank') || iframe.src.endsWith('/'))) {
+            iframe.src = '/vault-embed.html?v=synapse-4';
           }
 
           setTimeout(() => {
