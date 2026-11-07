@@ -3226,17 +3226,18 @@ body.theme-mode-light .playlist-item.is-active,
     bottom: auto !important;
     width: 100% !important;
     margin-top: 6px !important;
-    gap: 12px !important;
+    gap: 16px !important;
     pointer-events: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
-    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    transform: translateY(6px) !important;
+    transform: translateY(8px) !important;
+    transition: opacity 0.25s ease, transform 0.25s ease !important;
   }
   .sticky-name.is-at-bottom .sticky-name-meta {
     opacity: 0.65 !important;
     visibility: visible !important;
     transform: translateY(0) !important;
+    transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.35s, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.35s !important;
   }
   .sticky-name-meta [data-sticky-meta="text"] {
     font-size: 10.5px !important;
