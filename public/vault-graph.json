@@ -150,8 +150,8 @@
     },
     {
       "id": "01_Directives_&_Persona/Sir_Preferences_Catalog_106",
-      "name": "Cognitive Architecture",
-      "path": "directives-&-persona/sir-preferences-catalog-106",
+      "name": "Cognitive Architecture Codex",
+      "path": "directives/cognitive-architecture",
       "category": "hub",
       "tags": [
         "architecture",
@@ -256,8 +256,8 @@
     },
     {
       "id": "10_Projects/Home",
-      "name": "Home",
-      "path": "projects/home",
+      "name": "IoT & Automation",
+      "path": "projects/iot-automation",
       "category": "projects",
       "tags": [
         "project",
@@ -469,8 +469,8 @@
     },
     {
       "id": "10_Projects/Master_Notebooks/kitchen MSN",
-      "name": "Embedded Systems Architecture",
-      "path": "projects/master-notebooks/kitchen msn",
+      "name": "Embedded Robotics Architecture",
+      "path": "projects/embedded-robotics-msn",
       "category": "projects",
       "tags": [],
       "excerpt": "",
@@ -521,8 +521,8 @@
     },
     {
       "id": "10_Projects/Medical",
-      "name": "Medical",
-      "path": "projects/medical",
+      "name": "Biomedical Systems",
+      "path": "projects/biomedical-systems",
       "category": "projects",
       "tags": [
         "hub",
@@ -711,8 +711,8 @@
     },
     {
       "id": "10_Projects/company",
-      "name": "company",
-      "path": "projects/company",
+      "name": "Enterprise Architecture",
+      "path": "projects/enterprise-architecture",
       "category": "projects",
       "tags": [
         "project",
@@ -883,8 +883,8 @@
     },
     {
       "id": "10_Projects/kitchen",
-      "name": "kitchen",
-      "path": "projects/kitchen",
+      "name": "Embedded Systems",
+      "path": "projects/embedded-systems",
       "category": "projects",
       "tags": [
         "project",
