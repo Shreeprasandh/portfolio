@@ -4576,7 +4576,7 @@ body.theme-mode-light .playlist-item.is-active,
           <!-- Screen Frame -->
           <div class="tv-screen-frame">
             <div class="tv-screen-glass">
-              <iframe id="tv-aether-iframe" data-src="/vault-embed.html?v=synapse-4" src="" style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; border: none; display: block; background: #1a1a1a;" title="Luna Living Brain"></iframe>
+              <iframe id="tv-aether-iframe" data-src="/vault-embed.html?v=synapse-4" src="about:blank" style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; border: none; display: block; background: #1a1a1a;" title="Luna Living Brain"></iframe>
               <div class="tv-crt-overlay"></div>
             </div>
           </div>
@@ -4808,8 +4808,8 @@ body.theme-mode-light .playlist-item.is-active,
               <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
 
-            <audio id="sonics-audio-element" preload="metadata">
-              <source src="audio/vizhiyin-eeram.mp3" type="audio/mpeg">
+            <audio id="sonics-audio-element" preload="none">
+              <source src="/audio/vizhiyin-eeram.mp3" type="audio/mpeg">
             </audio>
 
             <!-- Interactive Hairline Scrubber & Time -->
@@ -4825,12 +4825,12 @@ body.theme-mode-light .playlist-item.is-active,
 
             <!-- Minimalist Dual-Track Playlist -->
             <div class="sonics-playlist">
-              <div data-reveal="text" class="playlist-item is-active" data-src="audio/vizhiyin-eeram.mp3" data-title="Vizhiyin Eeram" data-artist="Acoustic Indie Melody · Lyricist: Shreeprasandh K" data-duration="3:42">
+              <div data-reveal="text" class="playlist-item is-active" data-src="/audio/vizhiyin-eeram.mp3" data-title="Vizhiyin Eeram" data-artist="Acoustic Indie Melody · Lyricist: Shreeprasandh K" data-duration="3:42">
                 <span class="pl-num">01</span>
                 <span class="pl-name">Vizhiyin Eeram (விழியின் ஈரம்)</span>
                 <span class="pl-dur">3:42</span>
               </div>
-              <div data-reveal="text" class="playlist-item" data-src="audio/pillow-held-tight.mp3" data-title="Pillow Held Tight" data-artist="Acoustic Ballad · Lyricist: Shreeprasandh K" data-duration="2:58">
+              <div data-reveal="text" class="playlist-item" data-src="/audio/pillow-held-tight.mp3" data-title="Pillow Held Tight" data-artist="Acoustic Ballad · Lyricist: Shreeprasandh K" data-duration="2:58">
                 <span class="pl-num">02</span>
                 <span class="pl-name">Pillow Held Tight</span>
                 <span class="pl-dur">2:58</span>
@@ -4852,7 +4852,15 @@ body.theme-mode-light .playlist-item.is-active,
 <script type="module">
   try {
     const { WebHaptics } = await import('https://cdn.jsdelivr.net/npm/web-haptics/+esm');
-    window._haptics = new WebHaptics();
+    const _rawHaptics = new WebHaptics();
+    window._haptics = {
+      trigger: (type = 'medium') => {
+        try {
+          if (typeof navigator !== 'undefined' && navigator.userActivation && !navigator.userActivation.hasBeenActive) return;
+          _rawHaptics.trigger(type);
+        } catch (err) {}
+      }
+    };
   } catch (e) {
     window._haptics = { trigger: () => {} };
   }
