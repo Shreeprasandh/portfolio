@@ -2227,12 +2227,14 @@ body.theme-mode-light .tv-sticky-paper,
   align-items: center;
   justify-content: center;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   padding: 20px;
 }
 .tv-sticky-modal.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 .tv-sticky-backdrop {
@@ -4585,7 +4587,7 @@ body.theme-mode-light .playlist-item.is-active,
           <div class="tv-control-strip">
             <div class="tv-dial-wrap">
               <div class="tv-dial-label">ROT</div>
-              <div class="tv-rotary-dial" id="tv-dial-rot" title="Rotate Living Graph">
+              <div class="tv-rotary-dial" id="tv-dial-rot" title="Rotate Living Graph" role="button" tabindex="0" aria-label="Rotate Living Graph">
                 <div class="tv-dial-notch"></div>
               </div>
             </div>
@@ -4594,7 +4596,7 @@ body.theme-mode-light .playlist-item.is-active,
             </button>
             <div class="tv-dial-wrap">
               <div class="tv-dial-label">ZOOM</div>
-              <div class="tv-rotary-dial" id="tv-dial-zoom" title="Zoom In/Out" aria-label="Zoom Living Graph">
+              <div class="tv-rotary-dial" id="tv-dial-zoom" title="Zoom In/Out" role="button" tabindex="0" aria-label="Zoom Living Graph">
                 <div class="tv-dial-notch"></div>
               </div>
             </div>
@@ -4628,7 +4630,7 @@ body.theme-mode-light .playlist-item.is-active,
 <!-- ============================================================
      STICKY NOTE REVEAL MODAL (LINEN CREAM AUTHENTIC PALETTE)
      ============================================================ -->
-<div id="tv-sticky-modal" class="tv-sticky-modal" aria-hidden="true">
+<div id="tv-sticky-modal" class="tv-sticky-modal" aria-hidden="true" inert>
   <div class="tv-sticky-backdrop" id="tv-sticky-backdrop"></div>
   <div class="tv-sticky-modal-card">
     <div class="tv-modal-tape"></div>
@@ -4950,6 +4952,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openModal = () => {
       stickyModal.classList.add('is-open');
       stickyModal.setAttribute('aria-hidden', 'false');
+      stickyModal.removeAttribute('inert');
       if (window._haptics && typeof window._haptics.trigger === 'function') {
         window._haptics.trigger('light');
       }
@@ -4957,6 +4960,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = () => {
       stickyModal.classList.remove('is-open');
       stickyModal.setAttribute('aria-hidden', 'true');
+      stickyModal.setAttribute('inert', '');
     };
 
     stickyTrigger.addEventListener('click', openModal);

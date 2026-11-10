@@ -33,7 +33,8 @@ function isExcludedPage(){const e=window.location.pathname.replace(/\/$/,"")||"/
     const isHeading = e.classList.contains("h1") || parsedFs >= 36;
     if (isHeading) {
       if (!e._split) {
-        e._split = new SplitText(e, { type: "lines" });
+        e._split = new SplitText(e, { type: "lines", aria: "none" });
+        if (e.hasAttribute('aria-label') && !e.hasAttribute('role')) e.removeAttribute('aria-label');
       }
       e._split.lines.forEach(i);
       const itemDelay = o * stagger;
@@ -103,7 +104,8 @@ function isExcludedPage(){const e=window.location.pathname.replace(/\/$/,"")||"/
     } else {
       const isTag = e.classList.contains("personal-tag") || e.classList.contains("personal-year") || e.classList.contains("playlist-item") || e.classList.contains("book-search-note");
       if (!isTag && !e._split) {
-        e._split = new SplitText(e, { type: "lines" });
+        e._split = new SplitText(e, { type: "lines", aria: "none" });
+        if (e.hasAttribute('aria-label') && !e.hasAttribute('role')) e.removeAttribute('aria-label');
       }
       const targets = (isTag || !e._split?.lines?.length) ? [e] : e._split.lines;
       const itemDelay = o * stagger;
