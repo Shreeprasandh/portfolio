@@ -4925,7 +4925,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.ensureBrainLoaded = ensureBrainLoaded;
 
-  // Lazy-load when user scrolls near the TV section (or clicks vault) to preserve initial boot speed across all devices
+  // Lazy-load when user scrolls near the TV section (or clicks vault / browser is idle)
   const tvSection = document.getElementById('tv-brain');
   if (tvSection && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
@@ -4933,10 +4933,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ensureBrainLoaded();
         observer.disconnect();
       }
-    }, { rootMargin: '800px' });
+    }, { rootMargin: '150px' });
     observer.observe(tvSection);
+  }
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => ensureBrainLoaded(), { timeout: 6000 });
   } else {
-    setTimeout(ensureBrainLoaded, 3000);
+    setTimeout(ensureBrainLoaded, 5000);
   }
 
   const stickyTrigger = document.getElementById('tv-sticky-note-trigger');
