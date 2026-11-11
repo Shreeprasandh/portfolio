@@ -5110,7 +5110,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. VIEWPORT INTERSECTION OBSERVER FOR 3D CRT IFRAME
   // Freezes the 3D WebGL loop when the TV section is off-screen to guarantee 0% background overhead
-  const tvSection = document.getElementById('tv-brain');
   if (tvSection && window.IntersectionObserver) {
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
