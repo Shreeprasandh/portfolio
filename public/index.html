@@ -4554,7 +4554,7 @@ body.theme-mode-light .playlist-item.is-active,
     <!-- 1. The Vault Gate (Standalone Vault guarding Luna's Brain) -->
     <div class="standalone-vault-wrapper" id="tv-vault-wrapper">
       <div id="tv-vault-mount" class="standalone-vault-mount"></div>
-      <div class="standalone-vault-reading" id="tv-vault-readout-text">DIAL 40</div>
+      <div class="standalone-vault-reading" id="tv-vault-readout-text">DIAL 22</div>
     </div>
 
     <!-- 2. TV Living Brain Chassis (Revealed upon Vault Unlock) -->
@@ -5159,13 +5159,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (readoutEl) {
               if (text.includes('open')) {
-                readoutEl.textContent = 'DIAL 40 · OPEN';
+                readoutEl.textContent = 'DIAL 22 · OPEN';
                 readoutEl.classList.add('is-open');
               } else if (text.startsWith('dial')) {
                 readoutEl.textContent = text.toUpperCase();
                 readoutEl.classList.remove('is-open');
               } else {
-                readoutEl.textContent = 'DIAL 40';
+                readoutEl.textContent = 'DIAL 22';
                 readoutEl.classList.remove('is-open');
               }
             }
@@ -5285,8 +5285,11 @@ document.addEventListener('DOMContentLoaded', () => {
             vaultWrap.style.visibility = 'visible';
             vaultWrap.style.pointerEvents = 'auto';
             vaultUnlocked = false;
+            if (vaultInstance && typeof vaultInstance.reset === 'function') {
+              vaultInstance.reset(7);
+            }
             if (readoutEl) {
-              readoutEl.textContent = 'DIAL 40';
+              readoutEl.textContent = 'DIAL 22';
               readoutEl.classList.remove('is-open');
             }
             gsap.fromTo(vaultWrap,
@@ -5302,8 +5305,11 @@ document.addEventListener('DOMContentLoaded', () => {
         vaultWrap.style.pointerEvents = 'auto';
         vaultWrap.style.opacity = '1';
         vaultUnlocked = false;
+        if (vaultInstance && typeof vaultInstance.reset === 'function') {
+          vaultInstance.reset(7);
+        }
         if (readoutEl) {
-          readoutEl.textContent = 'DIAL 40';
+          readoutEl.textContent = 'DIAL 22';
           readoutEl.classList.remove('is-open');
         }
       }

@@ -5467,8 +5467,10 @@ var WX0 = -70;
 var WX1 = 70;
 var WZ1 = 130;
 var WT2 = 14;
-var COMBO = 40;
-var REST16 = 30;
+var COMBO = 22;
+var START_POS = 67;
+var REST16 = 7;
+var REST_POS = 7;
 var STEP6 = 50;
 var WMAX2 = 150;
 var THETA = [72, 26, -20];
@@ -5521,8 +5523,8 @@ var mount33 = ({ stage, svg, read }, value) => {
     b.drawn = s1;
     put(b.el, bar(P, [0, DP / 2, ZC3], b.e, b.t, Y, circ(BR4, 24), circ(BR4 - 0.9, 24), R8 - 0.2, s1));
   };
-  const spin = { a: REST16, w: 0, mode: "rest", tgt: REST16 };
-  let raw = REST16, said = "", last2 = null, lastT = 0, lastMove = -1e9, over = false, opened = false, from = 1, lit2 = null, drawnA = NaN;
+  const spin = { a: START_POS, w: 0, mode: "rest", tgt: START_POS };
+  let raw = START_POS, said = "", last2 = null, lastT = 0, lastMove = -1e9, over = false, opened = false, from = 1, lit2 = null, drawnA = NaN;
   function drawDial() {
     if (spin.a === drawnA) return;
     drawnA = spin.a;
@@ -5533,6 +5535,8 @@ var mount33 = ({ stage, svg, read }, value) => {
       if (m === COMBO) combo.setAttribute("d", d);
       else (m % 10 ? tk : lg).push(d);
     }
+    const thCombo = 90 + (COMBO - spin.a) * 3.6, eCombo = dir(thCombo), r0Combo = RD - 6.5, r1Combo = RD - 1.8;
+    combo.setAttribute("d", seg(P(eCombo[0] * r0Combo, z, ZC3 + eCombo[2] * r0Combo), P(eCombo[0] * r1Combo, z, ZC3 + eCombo[2] * r1Combo)));
     ticks.setAttribute("d", tk.join(""));
     longs.setAttribute("d", lg.join(""));
   }
@@ -5558,7 +5562,11 @@ var mount33 = ({ stage, svg, read }, value) => {
         spin.a += spin.w * h;
         if (Math.abs(spin.w) < 12 && now - lastMove > 90) {
           spin.mode = "settle";
-          spin.tgt = Math.round((spin.a + spin.w * 0.15) / 10) * 10;
+          if (Math.abs(wrap(spin.a - COMBO)) < 2.5) {
+            spin.tgt = COMBO;
+          } else {
+            spin.tgt = Math.round((spin.a + spin.w * 0.15) / 10) * 10;
+          }
         }
       } else {
         spin.w += (-90 * (spin.a - spin.tgt) - 16 * spin.w) * h;
@@ -5636,6 +5644,19 @@ var mount33 = ({ stage, svg, read }, value) => {
   bag.add(() => svg.replaceChildren());
   return { set: (v) => {
     coast = v;
+    B6.wake();
+  }, reset: (pos) => {
+    const p = typeof pos === "number" ? pos : REST_POS;
+    spin.a = p;
+    spin.tgt = p;
+    spin.w = 0;
+    spin.mode = "rest";
+    raw = p;
+    opened = false;
+    setOpen(false, performance.now());
+    drawnA = NaN;
+    drawDial();
+    light();
     B6.wake();
   }, destroy: bag.dispose };
 };
@@ -5749,7 +5770,7 @@ function branches(el, options) {
 function vault(el, options) {
   return create({
     id: "vault",
-    label: "A vault door: circling the pointer turns its dial, which coasts and catches every ten; on forty its three bolts draw back.",
+    label: "A vault door: circling the pointer turns its dial, which coasts and catches every ten; on twenty-two its three bolts draw back.",
     rest: "rest",
     engine: mount33
   }, el, options);
